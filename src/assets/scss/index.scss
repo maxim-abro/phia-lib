@@ -1,0 +1,10 @@
+@import '_mixins';
+@import './colors';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}

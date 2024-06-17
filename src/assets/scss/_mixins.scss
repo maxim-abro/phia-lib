@@ -1,0 +1,60 @@
+@import "colors";
+
+@mixin themeBtn($theme: primary) {
+  @if ($theme == default) {
+    background: rgb(var(--m-white));
+    border: 1px solid rgb(var(--m-border-color));
+    color: rgb(var(--m-text-color));
+    &:hover:not(.disabled) {
+      background: rgb(var(--m-primary-light));
+      color: rgb(var(--m-primary));
+      border-color: rgb(var(--m-primary));
+    }
+    &:active:not(.disabled) {
+      background: rgb(var(--m-primary-700));
+      color: rgb(var(--m-primary));
+      border-color: rgb(var(--m-primary-400));
+    }
+  }
+  @else {
+    background: rgb(var(--m-#{$theme}));
+    border: 1px solid rgb(var(--m-#{$theme}));
+    color: rgb(var(--m-white));
+    &:hover:not(.disabled) {
+      background: rgb(var(--m-#{$theme}-600));
+      border-color: rgb(var(--m-#{$theme}-600));
+    }
+    &:active:not(.disabled) {
+      background: rgb(var(--m-#{$theme}-400));
+      border-color: rgb(var(--m-#{$theme}-400));
+    }
+  }
+}
+
+@mixin themePlainBtn($theme: primary) {
+  @if ($theme == default) {
+    background: rgb(var(--m-white));
+    border: 1px solid rgb(var(--m-border-color));
+    color: rgb(var(--m-text-color));
+    &:hover:not(.disabled) {
+      color: rgb(var(--m-primary));
+      border-color: rgb(var(--m-primary));
+    }
+    &:active:not(.disabled) {
+      color: rgb(var(--m-primary));
+      border-color: rgb(var(--m-primary-400));
+    }
+  }
+  @else {
+    background: rgb(var(--m-#{$theme}-light));
+    color: rgb(var(--m-#{$theme}));
+    &:hover:not(.disabled) {
+      background: rgb(var(--m-#{$theme}));
+      color: rgb(var(--m-white));
+    }
+    &:active:not(.disabled) {
+      background: rgb(var(--m-#{$theme}-400));
+      border-color: rgb(var(--m-#{$theme}-400));
+    }
+  }
+}
