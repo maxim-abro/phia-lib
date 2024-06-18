@@ -38,18 +38,32 @@
       get notify
     </m-button>
   </div>
+  <div>
+    <m-link style="margin: 30px" href="/">link</m-link>
+    <m-link style="margin: 30px" type="primary" href="/">link</m-link>
+    <m-link style="margin: 30px" type="success" href="/">link</m-link>
+    <m-link style="margin: 30px" type="info" href="/">link</m-link>
+    <m-link style="margin: 30px" type="warning" href="/">link</m-link>
+    <m-link style="margin: 30px" type="danger" href="/">link</m-link>
+  </div>
+  <div>
+    <m-link disabled style="margin: 30px" href="/">link</m-link>
+    <m-link disabled style="margin: 30px" type="primary" href="/">link</m-link>
+    <m-link disabled style="margin: 30px" type="success" href="/">link</m-link>
+    <m-link disabled style="margin: 30px" type="info" href="/">link</m-link>
+    <m-link disabled style="margin: 30px" type="warning" href="/">link</m-link>
+    <m-link disabled style="margin: 30px" type="danger" href="/">link</m-link>
+  </div>
 </template>
 
 <script lang="ts" setup>
-
-import { MButton } from '@/components'
+import { MButton, MLink } from '@/components'
 import useNotify from '@/components/MNotify/useNotify'
 import type { INotifyProps } from '@/components/MNotify/Type'
 
 const propsNotify: INotifyProps = {
   title: 'title',
   message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, harum?',
-  id: '1'
 }
 const notify = useNotify()
 </script>
