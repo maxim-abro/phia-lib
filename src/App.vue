@@ -54,17 +54,26 @@
     <m-link disabled style="margin: 30px" type="warning" href="/">link</m-link>
     <m-link disabled style="margin: 30px" type="danger" href="/">link</m-link>
   </div>
+  <div style="margin: 30px;">
+    <m-input
+      v-model="testVal"
+      placeholder="placeholder"
+    />
+    {{ testVal }}
+  </div>
 </template>
 
 <script lang="ts" setup>
-import { MButton, MLink } from '@/components'
+import { MButton, MLink, MInput } from '@/components'
 import useNotify from '@/components/MNotify/useNotify'
 import type { INotifyProps } from '@/components/MNotify/Type'
+import { ref } from 'vue'
 
 const propsNotify: INotifyProps = {
   title: 'title',
   message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, harum?',
 }
+const testVal = ref('')
 const notify = useNotify()
 </script>
 
