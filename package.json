@@ -3,12 +3,14 @@
   "version": "0.2.0",
   "private": true,
   "type": "module",
+  "author": "Abrosimov Maxim <maxim.abro@yandex.ru>",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "test:unit": "vitest",
     "build-only": "vite build",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s --commit-path .",
     "type-check": "vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/"
@@ -30,6 +32,8 @@
     "@vue/tsconfig": "^0.5.1",
     "eslint": "^8.57.0",
     "eslint-plugin-vue": "^9.23.0",
+    "conventional-changelog": "^5.1.0",
+    "conventional-changelog-cli": "^4.1.0",
     "jsdom": "^24.0.0",
     "npm-run-all2": "^6.1.2",
     "prettier": "^3.2.5",
@@ -39,6 +43,9 @@
     "vite-plugin-dts": "^3.9.1",
     "vitest": "^1.4.0",
     "vue-tsc": "^2.0.11"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.47"
   },
   "main": "dist/index.js",
   "module": "dist/index.js",
