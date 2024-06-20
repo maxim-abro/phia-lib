@@ -211,10 +211,16 @@ href="/">link</m-link>
       </m-button>
     </m-badge>
   </div>
+  <div style="margin: 30px;">
+    <m-input-number v-model="testValNumber" />
+    <m-input-number v-model="testValNumber" :steps="5" />
+    <m-input-number v-model="testValNumber" :min="-5" :max="5" />
+    <m-input-number v-model="testValNumber" disabled :min="-5" :max="5" />
+  </div>
 </template>
 
 <script lang="ts" setup>
-import { MButton, MLink, MInput, MBadge } from '@/components';
+import { MButton, MLink, MInput, MBadge,MInputNumber } from '@/components';
 import useNotify from '@/components/MNotify/useNotify';
 import type { INotifyProps } from '@/components/MNotify/Type';
 import { ref } from 'vue';
@@ -224,6 +230,7 @@ const propsNotify: INotifyProps = {
   message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, harum?',
 };
 const testVal = ref('');
+const testValNumber = ref(0);
 const notify = useNotify();
 </script>
 
