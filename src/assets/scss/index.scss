@@ -8,3 +8,14 @@
   margin: 0;
   font-weight: normal;
 }
+
+.top-right {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  gap: 8px;
+  max-width: 30%;
+}

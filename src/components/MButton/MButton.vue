@@ -18,15 +18,15 @@
 </template>
 
 <script setup lang="ts">
-import type { IButtonProps } from '@/components/MButton/Type'
-import { computed } from 'vue'
+import type { IButtonProps } from '@/components/MButton/Type';
+import { computed } from 'vue';
 
 const props = withDefaults(defineProps<IButtonProps>(), {
   type: 'default',
   size: 'default',
-})
+});
 
-const getClassByType = computed<string>(() => `m-button__${props.type}`)
+const getClassByType = computed<string>(() => `m-button__${props.type}`);
 </script>
 
 <style lang="scss" scoped>

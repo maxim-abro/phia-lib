@@ -1,25 +1,28 @@
 {
   "name": "phia-lib",
-  "version": "0.0.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
+  "author": "Abrosimov Maxim <maxim.abro@yandex.ru>",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "test:unit": "vitest",
     "build-only": "vite build",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s --commit-path .",
     "type-check": "vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "vue": "^3.4.21"
+    "vue": "^3.2.47"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
     "@rushstack/eslint-patch": "^1.8.0",
+    "@stylistic/eslint-plugin-js": "^2.2.2",
     "@tsconfig/node20": "^20.1.4",
     "@types/jsdom": "^21.1.6",
     "@types/node": "^20.12.5",
@@ -28,7 +31,10 @@
     "@vue/eslint-config-typescript": "^13.0.0",
     "@vue/test-utils": "^2.4.5",
     "@vue/tsconfig": "^0.5.1",
+    "conventional-changelog": "^5.1.0",
+    "conventional-changelog-cli": "^4.1.0",
     "eslint": "^8.57.0",
+    "eslint-plugin-css": "^0.9.2",
     "eslint-plugin-vue": "^9.23.0",
     "jsdom": "^24.0.0",
     "npm-run-all2": "^6.1.2",
@@ -39,6 +45,9 @@
     "vite-plugin-dts": "^3.9.1",
     "vitest": "^1.4.0",
     "vue-tsc": "^2.0.11"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.47"
   },
   "main": "dist/index.js",
   "module": "dist/index.js",
