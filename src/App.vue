@@ -144,10 +144,77 @@ href="/">link</m-link>
     />
     {{ testVal }}
   </div>
+  <div style="margin: 30px;">
+    <m-badge
+      value="100"
+      :max="99"
+    >
+      <m-button>
+        badge
+      </m-button>
+    </m-badge>
+    <m-badge
+      show-zero
+      :value="0"
+    >
+      <m-button>
+        badge
+      </m-button>
+    </m-badge>
+    <m-badge
+      is-dot
+    >
+      <m-button>
+        badge
+      </m-button>
+    </m-badge>
+  </div>
+  <div style="margin: 30px;">
+    <m-badge
+      is-dot
+      type="primary"
+    >
+      <m-button>
+        badge
+      </m-button>
+    </m-badge>
+    <m-badge
+      is-dot
+      type="success"
+    >
+      <m-button>
+        badge
+      </m-button>
+    </m-badge>
+    <m-badge
+      is-dot
+      type="info"
+    >
+      <m-button>
+        badge
+      </m-button>
+    </m-badge>
+    <m-badge
+      is-dot
+      type="warning"
+    >
+      <m-button>
+        badge
+      </m-button>
+    </m-badge>
+    <m-badge
+      is-dot
+      type="danger"
+    >
+      <m-button>
+        badge
+      </m-button>
+    </m-badge>
+  </div>
 </template>
 
 <script lang="ts" setup>
-import { MButton, MLink, MInput } from '@/components';
+import { MButton, MLink, MInput, MBadge } from '@/components';
 import useNotify from '@/components/MNotify/useNotify';
 import type { INotifyProps } from '@/components/MNotify/Type';
 import { ref } from 'vue';
