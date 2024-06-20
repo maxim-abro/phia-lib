@@ -32,15 +32,15 @@
 <script lang="ts">
 export default {
   name: 'MLink',
-}
+};
 </script>
 
 <script setup lang="ts">
-import type { ILinkProps } from '@/components/MLink/Type'
+import type { ILinkProps } from '@/components/MLink/Type';
 withDefaults(defineProps<ILinkProps>(), {
   target: '_self',
   type: 'default'
-})
+});
 </script>
 
 <style scoped lang="scss">

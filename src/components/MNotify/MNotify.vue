@@ -1,5 +1,6 @@
 <template>
-  <div class="notify-container" :id="id">
+  <div :id="id"
+class="notify-container">
     <div class="notify-container__title">
       {{ title }}
     </div>
@@ -10,9 +11,9 @@
 </template>
 
 <script setup lang="ts">
-import type { INotifyProps } from '@/components/MNotify/Type'
+import type { INotifyProps } from '@/components/MNotify/Type';
 
-defineProps<INotifyProps>()
+defineProps<INotifyProps>();
 </script>
 
 <style lang="scss" scoped>

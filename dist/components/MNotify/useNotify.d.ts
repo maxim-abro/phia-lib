@@ -1,6 +1,5 @@
-import { App } from 'vue';
-import { INotifyPosition, INotifyProps } from './Type';
-
+import { type App } from 'vue';
+import type { INotifyPosition, INotifyProps } from '@/components/MNotify/Type';
 export default function useNotify(): {
     openNotify: (props: Partial<INotifyProps>) => void;
     closeNotify: (id: string, position: INotifyPosition) => void;
