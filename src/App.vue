@@ -213,14 +213,39 @@ href="/">link</m-link>
   </div>
   <div style="margin: 30px;">
     <m-input-number v-model="testValNumber" />
-    <m-input-number v-model="testValNumber" :steps="5" />
-    <m-input-number v-model="testValNumber" :min="-5" :max="5" />
-    <m-input-number v-model="testValNumber" disabled :min="-5" :max="5" />
+    <m-input-number
+      v-model="testValNumber"
+      :steps="5"
+    />
+    <m-input-number
+      v-model="testValNumber"
+      :min="-5"
+      :max="5"
+    />
+    <m-input-number v-model="testValNumber"
+disabled
+:min="-5"
+:max="5" />
+  </div>
+  <div style="margin: 30px">
+    <m-dropdown>
+      <template #default="{ props }">
+        <m-button v-bind="props">open dropdown</m-button>
+      </template>
+
+      <template #menu>
+        <m-dropdown-menu>
+          <m-dropdown-menu-item>1asdsadd asdasd aadsa</m-dropdown-menu-item>
+          <m-dropdown-menu-item>2asddsadsasadda</m-dropdown-menu-item>
+          <m-dropdown-menu-item disabled>3a sdasd asdsadasd as</m-dropdown-menu-item>
+        </m-dropdown-menu>
+      </template>
+    </m-dropdown>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { MButton, MLink, MInput, MBadge,MInputNumber } from '@/components';
+import { MButton, MLink, MInput, MBadge,MInputNumber, MDropdown, MDropdownMenu, MDropdownMenuItem } from '@/components';
 import useNotify from '@/components/MNotify/useNotify';
 import type { INotifyProps } from '@/components/MNotify/Type';
 import { ref } from 'vue';

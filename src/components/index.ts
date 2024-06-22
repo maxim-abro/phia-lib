@@ -4,3 +4,4 @@ export * from './MLink';
 export * from './MInput';
 export * from './MBadge';
 export * from './MInputNumber';
+export * from './MDropdown';
