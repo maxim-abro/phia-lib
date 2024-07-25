@@ -242,10 +242,24 @@ disabled
       </template>
     </m-dropdown>
   </div>
+  <div style="margin: 30px">
+    <m-collapse>
+      <template #default="{toggleCollapse}">
+        <div
+          @click="toggleCollapse"
+        >
+          collapse 1
+        </div>
+      </template>
+      <template #expand>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aperiam assumenda at, consequatur corporis delectus dignissimos doloremque fuga inventore magnam nostrum odit optio tenetur. Commodi doloremque ipsa nostrum possimus vel.
+      </template>
+    </m-collapse>
+  </div>
 </template>
 
 <script lang="ts" setup>
-import { MButton, MLink, MInput, MBadge,MInputNumber, MDropdown, MDropdownMenu, MDropdownMenuItem } from '@/components';
+import { MButton, MLink, MInput, MBadge,MInputNumber, MDropdown, MDropdownMenu, MDropdownMenuItem, MCollapse } from '@/components';
 import useNotify from '@/components/MNotify/useNotify';
 import type { INotifyProps } from '@/components/MNotify/Type';
 import { ref } from 'vue';
