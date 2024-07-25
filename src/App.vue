@@ -243,6 +243,28 @@ disabled
     </m-dropdown>
   </div>
   <div style="margin: 30px">
+    <m-card
+    >
+      body
+    </m-card>
+    <m-card
+      header="header"
+      footer="footer"
+    >
+      body
+    </m-card>
+    <m-card>
+      <template #header>
+        header
+      </template>
+      <template #footer>
+        footer
+      </template>
+      body
+    </m-card>
+    <m-card>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aspernatur autem delectus deserunt dolor dolores doloribus harum maxime minus, neque odio perferendis, quas qui quis recusandae rem sed veniam voluptatum? Adipisci, alias aut cum cupiditate dolor eaque neque obcaecati, officiis optio reiciendis tempora voluptas voluptatibus! Ab alias beatae deserunt ducimus et facere fuga fugit, inventore maiores necessitatibus nulla officia quo sit. Accusantium adipisci alias asperiores earum. Aliquam, amet delectus dicta eveniet exercitationem fugit inventore, iste molestias nemo quaerat quod sit temporibus ullam voluptas voluptatem. At enim fuga necessitatibus, nostrum quis sint sunt vero vitae. Alias dicta ducimus ea eligendi error id itaque, laudantium, numquam quaerat quas quidem quis rerum similique! Amet aut consectetur dolores earum eius expedita explicabo, fugit iure libero, maiores neque numquam rerum similique soluta totam velit, voluptate voluptates. Adipisci laborum provident voluptates! Expedita labore magni molestias quidem. Adipisci aspernatur atque corporis cum cumque eligendi facilis iure laborum magnam magni numquam pariatur, porro, quae saepe, tenetur voluptatem voluptates. Ad adipisci alias at, beatae consequatur dolorem eos et incidunt, laboriosam laudantium maxime minima nobis officia quae quis reiciendis sequi, suscipit totam ullam voluptas. Animi assumenda cupiditate dolor doloremque ea eligendi excepturi, illum maxime, modi nesciunt nihil nostrum odio placeat quis reiciendis sit voluptatibus? Assumenda aut blanditiis consequatur cupiditate, debitis delectus esse, eum ex explicabo facilis illo impedit laboriosam molestias nulla obcaecati perspiciatis praesentium quasi qui quidem ratione repellat soluta veritatis. Ad aliquid, assumenda doloremque esse excepturi fugit neque quasi quo, similique tenetur veritatis voluptas! A accusamus architecto assumenda at atque cupiditate delectus dolore ea eligendi, error eveniet illo inventore ipsum itaque natus nobis placeat quasi quia quibusdam quos reiciendis repellendus rerum saepe tenetur unde vel veritatis voluptas voluptate voluptates voluptatibus. Accusamus amet culpa dicta dolorem eligendi fugit illo, magni maxime nesciunt odit officia placeat reiciendis reprehenderit sapiente, sint voluptatem?
+    </m-card>
     <m-collapse>
       <template #default="{toggleCollapse}">
         <div
@@ -259,7 +281,7 @@ disabled
 </template>
 
 <script lang="ts" setup>
-import { MButton, MLink, MInput, MBadge,MInputNumber, MDropdown, MDropdownMenu, MDropdownMenuItem, MCollapse } from '@/components';
+import { MButton, MLink, MInput, MBadge,MInputNumber, MDropdown, MDropdownMenu, MDropdownMenuItem, MCard, MCollapse } from '@/components';
 import useNotify from '@/components/MNotify/useNotify';
 import type { INotifyProps } from '@/components/MNotify/Type';
 import { ref } from 'vue';
