@@ -1,0 +1,1 @@
+{"version":3,"file":"Type.d.ts","sourceRoot":"","sources":["../../../src/components/MCollapse/Type.ts"],"names":[],"mappings":"AAAA,MAAM,WAAW,cAAc;IAC7B,UAAU,CAAC,EAAE,WAAW,GAAG,MAAM,CAAC;IAClC,UAAU,CAAC,EAAE,OAAO,CAAC;CACtB;AAED,MAAM,WAAW,cAAc;IAC7B,CAAC,CAAC,EAAE,mBAAmB,EAAE,KAAK,EAAE,OAAO,GAAG,IAAI,CAAC;CAChD"}

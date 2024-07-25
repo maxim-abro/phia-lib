@@ -36,7 +36,7 @@ const getValue = computed(() => {
 });
 
 const props = withDefaults(defineProps<IBadgeProps>(), {
-  type: 'default',
+  type: 'primary',
 });
 </script>
 
