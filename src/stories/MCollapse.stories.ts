@@ -6,8 +6,8 @@ const meta = {
   component: MCollapse,
   tags: ['autodocs'],
   argTypes: {
-    modelValue: { control: 'text' },
-    toTeleport: { control: 'text' }
+    modelValue: { control: 'boolean' },
+    toTeleport: { control: 'text' },
   },
   args: {
     modelValue: false,
