@@ -1,4 +1,4 @@
-import { defineComponent as v, computed as h, openBlock as a, createElementBlock as n, normalizeClass as $, renderSlot as p, createElementVNode as b, toDisplayString as g, ref as M, withDirectives as B, vModelDynamic as I, createCommentVNode as _, vModelText as V, normalizeStyle as C, onMounted as w, reactive as D, normalizeProps as N, guardReactiveProps as L, createBlock as T, Teleport as z } from "vue";
+import { defineComponent as v, computed as h, openBlock as a, createElementBlock as n, normalizeClass as $, renderSlot as p, createElementVNode as b, toDisplayString as g, ref as M, withDirectives as I, vModelDynamic as B, createCommentVNode as _, vModelText as V, normalizeStyle as C, onMounted as w, reactive as D, normalizeProps as N, guardReactiveProps as L, createBlock as T, Teleport as z } from "vue";
 const F = ["disabled"], P = /* @__PURE__ */ v({
   __name: "MButton",
   props: {
@@ -34,7 +34,7 @@ const F = ["disabled"], P = /* @__PURE__ */ v({
   for (const [o, d] of e)
     t[o] = d;
   return t;
-}, Me = /* @__PURE__ */ m(P, [["__scopeId", "data-v-c8c4791b"]]), S = ["id"], E = { class: "notify-container__title" }, H = { class: "notify-container__body" }, O = /* @__PURE__ */ v({
+}, Me = /* @__PURE__ */ m(P, [["__scopeId", "data-v-f765b75f"]]), S = ["id"], E = { class: "notify-container__title" }, H = { class: "notify-container__body" }, O = /* @__PURE__ */ v({
   __name: "MNotify",
   props: {
     title: {},
@@ -54,7 +54,7 @@ const F = ["disabled"], P = /* @__PURE__ */ v({
       b("div", H, g(e.message), 1)
     ], 8, S));
   }
-}), ke = /* @__PURE__ */ m(O, [["__scopeId", "data-v-4765145f"]]), U = ["href", "target"], R = {
+}), ke = /* @__PURE__ */ m(O, [["__scopeId", "data-v-701a75cf"]]), U = ["href", "target"], R = {
   name: "MLink"
 }, Z = /* @__PURE__ */ v({
   ...R,
@@ -92,7 +92,7 @@ const F = ["disabled"], P = /* @__PURE__ */ v({
       p(e.$slots, "default", {}, void 0, !0)
     ], 10, U));
   }
-}), Be = /* @__PURE__ */ m(Z, [["__scopeId", "data-v-b0c00adc"]]), j = ["type", "disabled", "placeholder", "autocomplete", "autofocus"], q = {
+}), Ie = /* @__PURE__ */ m(Z, [["__scopeId", "data-v-be744edc"]]), j = ["type", "disabled", "placeholder", "autocomplete"], q = {
   name: "MInput"
 }, A = /* @__PURE__ */ v({
   ...q,
@@ -102,53 +102,51 @@ const F = ["disabled"], P = /* @__PURE__ */ v({
     maxLength: {},
     clearable: { type: Boolean },
     disabled: { type: Boolean },
-    autofocus: { type: Boolean },
-    autocomplete: {},
+    autocomplete: { default: "" },
     modelValue: { default: "" },
     formatter: {}
   },
   emits: ["blur", "focus", "change", "input", "clear", "update:modelValue"],
   setup(l, { emit: e }) {
     const t = M(!1);
-    function o(u) {
-      const i = u.target;
-      s.maxLength && (i == null ? void 0 : i.value.length) > s.maxLength && (d.value = d.value.substring(0, s.maxLength));
+    function o(i) {
+      const u = i.target;
+      s.maxLength && (u == null ? void 0 : u.value.length) > s.maxLength && (d.value = d.value.substring(0, s.maxLength));
     }
     const d = h({
       get() {
         return s.modelValue;
       },
-      set(u) {
-        f("update:modelValue", u);
+      set(i) {
+        f("update:modelValue", i);
       }
     }), s = l, f = e;
-    return (u, i) => (a(), n("div", {
+    return (i, u) => (a(), n("div", {
       class: $(["m-input", {
         "is-focus": t.value,
-        disabled: u.disabled
+        disabled: i.disabled
       }])
     }, [
-      B(b("input", {
-        "onUpdate:modelValue": i[0] || (i[0] = (c) => d.value = c),
-        type: u.type,
-        disabled: u.disabled,
-        placeholder: u.placeholder,
-        autocomplete: u.autocomplete,
-        autofocus: u.autofocus,
-        onFocus: i[1] || (i[1] = (c) => t.value = !0),
-        onBlur: i[2] || (i[2] = (c) => t.value = !1),
+      I(b("input", {
+        "onUpdate:modelValue": u[0] || (u[0] = (c) => d.value = c),
+        type: i.type,
+        disabled: i.disabled,
+        placeholder: i.placeholder,
+        autocomplete: i.autocomplete,
+        onFocus: u[1] || (u[1] = (c) => t.value = !0),
+        onBlur: u[2] || (u[2] = (c) => t.value = !1),
         onInput: o
       }, null, 40, j), [
-        [I, d.value]
+        [B, d.value]
       ]),
-      u.clearable && d.value ? (a(), n("button", {
+      i.clearable && d.value ? (a(), n("button", {
         key: 0,
         class: "m-input__clear",
-        onClick: i[3] || (i[3] = (c) => d.value = "")
+        onClick: u[3] || (u[3] = (c) => d.value = "")
       }, " clear ")) : _("", !0)
     ], 2));
   }
-}), Ie = /* @__PURE__ */ m(A, [["__scopeId", "data-v-31ff7c60"]]), G = { class: "m-badge-wrap" }, J = { key: 0 }, K = {
+}), Be = /* @__PURE__ */ m(A, [["__scopeId", "data-v-22af735f"]]), G = { class: "m-badge-wrap" }, J = { key: 0 }, K = {
   name: "MBadge"
 }, Q = /* @__PURE__ */ v({
   ...K,
@@ -177,7 +175,7 @@ const F = ["disabled"], P = /* @__PURE__ */ v({
       ], 2))
     ]));
   }
-}), Ve = /* @__PURE__ */ m(Q, [["__scopeId", "data-v-2c9ecba5"]]), W = { class: "m-input-number" }, X = ["disabled"], Y = ["disabled"], x = ["disabled"], ee = {
+}), Ve = /* @__PURE__ */ m(Q, [["__scopeId", "data-v-c82c06d9"]]), W = { class: "m-input-number" }, X = ["disabled"], Y = ["disabled"], x = ["disabled"], ee = {
   name: "MInputNumber"
 }, te = /* @__PURE__ */ v({
   ...ee,
@@ -204,33 +202,33 @@ const F = ["disabled"], P = /* @__PURE__ */ v({
     function f(r) {
       (r || r === 0) && (t.value = r + ""), d("update:modelValue", r);
     }
-    function u() {
+    function i() {
       t.value = t.value.replace(/[^0-9]/gi, ""), parseInt(t.value, 10) >= o.max && (t.value = o.max + ""), parseInt(t.value, 10) <= o.min && (t.value = o.min + "");
     }
-    const i = h(() => parseInt(t.value, 10) === o.min), c = h(() => parseInt(t.value, 10) === o.max);
+    const u = h(() => parseInt(t.value, 10) === o.min), c = h(() => parseInt(t.value, 10) === o.max);
     return (r, y) => (a(), n("div", W, [
       b("button", {
         class: "m-input-number__button-left",
-        onClick: y[0] || (y[0] = (k) => s("-")),
-        disabled: i.value || r.disabled
+        disabled: u.value || r.disabled,
+        onClick: y[0] || (y[0] = (k) => s("-"))
       }, " - ", 8, X),
-      B(b("input", {
-        onBlur: u,
+      I(b("input", {
         "onUpdate:modelValue": y[1] || (y[1] = (k) => t.value = k),
         type: "text",
         disabled: r.disabled,
-        class: "m-input-number__input"
+        class: "m-input-number__input",
+        onBlur: i
       }, null, 40, Y), [
         [V, t.value]
       ]),
       b("button", {
         class: "m-input-number__button-right",
-        onClick: y[2] || (y[2] = (k) => s("+")),
-        disabled: c.value || r.disabled
+        disabled: c.value || r.disabled,
+        onClick: y[2] || (y[2] = (k) => s("+"))
       }, " + ", 8, x)
     ]));
   }
-}), Ce = /* @__PURE__ */ m(te, [["__scopeId", "data-v-cd5a6c44"]]), oe = { class: "m-dropdown" }, ae = {
+}), Ce = /* @__PURE__ */ m(te, [["__scopeId", "data-v-2ae6e9a5"]]), oe = { class: "m-dropdown" }, ae = {
   name: "MDropdown"
 }, se = /* @__PURE__ */ v({
   ...ae,
@@ -261,7 +259,7 @@ const F = ["disabled"], P = /* @__PURE__ */ v({
       ], 4)) : _("", !0)
     ]));
   }
-}), we = /* @__PURE__ */ m(se, [["__scopeId", "data-v-1817b7fb"]]), ne = {
+}), we = /* @__PURE__ */ m(se, [["__scopeId", "data-v-8f486435"]]), ne = {
   name: "MDropdownMenu"
 }, le = { class: "m-dropdown-menu" };
 function de(l, e, t, o, d, s) {
@@ -269,7 +267,7 @@ function de(l, e, t, o, d, s) {
     p(l.$slots, "default", {}, void 0, !0)
   ]);
 }
-const De = /* @__PURE__ */ m(ne, [["render", de], ["__scopeId", "data-v-382d1b46"]]), ue = {
+const De = /* @__PURE__ */ m(ne, [["render", de], ["__scopeId", "data-v-762ed40f"]]), ue = {
   name: "MDropdownMenuItem"
 }, ie = /* @__PURE__ */ v({
   ...ue,
@@ -285,7 +283,7 @@ const De = /* @__PURE__ */ m(ne, [["render", de], ["__scopeId", "data-v-382d1b46
       p(e.$slots, "default", {}, void 0, !0)
     ], 2));
   }
-}), Ne = /* @__PURE__ */ m(ie, [["__scopeId", "data-v-a90c1a98"]]), re = { class: "m-card" }, pe = {
+}), Ne = /* @__PURE__ */ m(ie, [["__scopeId", "data-v-e2653670"]]), re = { class: "m-card" }, pe = {
   key: 0,
   class: "m-card__header"
 }, ce = { key: 0 }, me = { class: "m-card__body" }, _e = {
@@ -316,7 +314,7 @@ const De = /* @__PURE__ */ m(ne, [["render", de], ["__scopeId", "data-v-382d1b46
       ])) : _("", !0)
     ]));
   }
-}), Le = /* @__PURE__ */ m(be, [["__scopeId", "data-v-1976ace9"]]), $e = { class: "m-collapse" }, ye = {
+}), Le = /* @__PURE__ */ m(be, [["__scopeId", "data-v-469b759e"]]), $e = { class: "m-collapse" }, ye = {
   name: "MCollapse"
 }, he = /* @__PURE__ */ v({
   ...ye,
@@ -330,14 +328,14 @@ const De = /* @__PURE__ */ m(ne, [["render", de], ["__scopeId", "data-v-382d1b46
     w(() => {
       s.value = o.modelValue, f.value = !0;
     });
-    const u = () => {
+    const i = () => {
       s.value = !s.value, d("update:modelValue", s.value);
     };
     e({
-      toggleCollapse: u
+      toggleCollapse: i
     });
-    const i = D({
-      toggleCollapse: u,
+    const u = D({
+      toggleCollapse: i,
       isExpand: s
     });
     return (c, r) => (a(), n("div", $e, [
@@ -346,7 +344,7 @@ const De = /* @__PURE__ */ m(ne, [["render", de], ["__scopeId", "data-v-382d1b46
           "m-activator": s.value
         })
       }, [
-        p(c.$slots, "default", N(L(i)), void 0, !0)
+        p(c.$slots, "default", N(L(u)), void 0, !0)
       ], 2),
       f.value ? (a(), T(z, {
         key: 0,
@@ -357,7 +355,7 @@ const De = /* @__PURE__ */ m(ne, [["render", de], ["__scopeId", "data-v-382d1b46
       ], 8, ["disabled", "to"])) : _("", !0)
     ]));
   }
-}), Te = /* @__PURE__ */ m(he, [["__scopeId", "data-v-e90c2409"]]);
+}), Te = /* @__PURE__ */ m(he, [["__scopeId", "data-v-cb410d69"]]);
 export {
   Ve as MBadge,
   Me as MButton,
@@ -366,9 +364,9 @@ export {
   we as MDropdown,
   De as MDropdownMenu,
   Ne as MDropdownMenuItem,
-  Ie as MInput,
+  Be as MInput,
   Ce as MInputNumber,
-  Be as MLink,
+  Ie as MLink,
   ke as MNotify
 };
 //# sourceMappingURL=index.js.map

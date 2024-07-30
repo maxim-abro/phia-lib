@@ -1,8 +1,10 @@
 <template>
   <div class="m-collapse">
-    <div :class="{
-      'm-activator': isExpand
-    }">
+    <div
+      :class="{
+        'm-activator': isExpand
+      }"
+    >
       <slot
         name="default"
         v-bind="activatorProps"
@@ -22,10 +24,9 @@
   </div>
 </template>
 
-
 <script lang="ts">
 export default {
-  name: 'MCollapse',
+  name: 'MCollapse'
 };
 </script>
 

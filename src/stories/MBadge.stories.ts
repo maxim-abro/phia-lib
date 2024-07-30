@@ -1,4 +1,4 @@
-import type { Meta, StoryFn, StoryObj } from '@storybook/vue3'
+import type { Meta, StoryFn, StoryObj } from '@storybook/vue3';
 import MBadge from '@/components/MBadge/index.vue';
 
 const meta = {
@@ -14,7 +14,7 @@ const meta = {
 const Template: StoryFn<typeof MBadge> = (args) => ({
   components: { MBadge },
   setup() {
-    return { args }
+    return { args };
   },
   template: `
     <MBadge v-bind="args">badge</MBadge>
@@ -22,9 +22,9 @@ const Template: StoryFn<typeof MBadge> = (args) => ({
 });
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof meta>
 
 export const Primary: Story = Template.bind({});
 Primary.args = {
-  type: "primary"
-}
+  type: 'primary'
+};

@@ -1,5 +1,5 @@
 import { type App, createVNode, render } from 'vue';
-import MNotify from "./MNotify.vue";
+import MNotify from './MNotify.vue';
 import type { AppContext } from 'vue';
 import type { INotifyPosition, INotifyProps, NotificationQueue } from '@/components/MNotify/Type';
 
@@ -9,7 +9,7 @@ const notifications: Record<INotifyPosition, NotificationQueue> = {
   'top-left': [],
   'top-right': []
 };
-let _context: AppContext|null = null;
+let _context: AppContext | null = null;
 let seed: number = 1;
 
 export default function useNotify() {
@@ -59,7 +59,6 @@ export default function useNotify() {
 
     orientedNotifications.splice(idx, 1);
     document.querySelector(`#${id}`)?.remove();
-
   }
 
   return {

@@ -1,8 +1,6 @@
 <template>
   <div class="m-dropdown">
-    <slot
-      :props="activatorPropsClick"
-    />
+    <slot :props="activatorPropsClick" />
     <div
       v-if="isOpenDropdown"
       class="m-dropdown__menu"
@@ -15,7 +13,7 @@
 
 <script lang="ts">
 export default {
-  name: "MDropdown",
+  name: 'MDropdown'
 };
 </script>
 

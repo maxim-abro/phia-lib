@@ -7,23 +7,23 @@
       size,
       getClassByType,
       {
-        'round': round,
+        round: round,
         'is-plain': plain,
-        'disabled': disabled
-      },
+        disabled: disabled
+      }
     ]"
   >
-    <slot/>
+    <slot />
   </button>
 </template>
 
 <script setup lang="ts">
-import type { IButtonProps, IButtonSlots } from '@/components/MButton/Type'
+import type { IButtonProps, IButtonSlots } from '@/components/MButton/Type';
 import { computed } from 'vue';
 
 const props = withDefaults(defineProps<IButtonProps>(), {
   type: 'default',
-  size: 'default',
+  size: 'default'
 });
 
 defineSlots<IButtonSlots>();
@@ -32,7 +32,7 @@ const getClassByType = computed<string>(() => `m-button__${props.type}`);
 </script>
 
 <style lang="scss" scoped>
-@import "src/assets/scss/_mixins";
+@import 'src/assets/scss/_mixins';
 .m-button {
   padding: 8px 16px;
   border-radius: 4px;
@@ -42,8 +42,8 @@ const getClassByType = computed<string>(() => `m-button__${props.type}`);
     border-radius: 20px;
   }
   &.disabled {
-    opacity: .5;
-    cursor:not-allowed;
+    opacity: 0.5;
+    cursor: not-allowed;
   }
   &__default {
     @include themeBtn(default);

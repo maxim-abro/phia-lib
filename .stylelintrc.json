@@ -1,0 +1,12 @@
+{
+  "extends": "stylelint-config-recommended-vue/scss",
+  "overrides": [
+    {
+      "files": ["*.vue", "**/*.vue"],
+      "rules": {
+        "comment-no-empty": null,
+        "scss/comment-no-empty": true
+      }
+    }
+  ]
+}

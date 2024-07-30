@@ -1,4 +1,4 @@
-import { VNode } from '../../../vue/dist/vue.esm-bundler.js';
+import { VNode } from 'vue';
 
 export interface INotifyProps {
     title: string;

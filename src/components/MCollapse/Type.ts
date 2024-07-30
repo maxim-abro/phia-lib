@@ -1,8 +1,8 @@
 export interface ICollapseProps {
-  toTeleport?: HTMLElement | string;
-  modelValue?: boolean;
+  toTeleport?: HTMLElement | string
+  modelValue?: boolean
 }
 
 export interface ICollapseEmits {
-  (e: 'update:modelValue', value: boolean): void;
+  (e: 'update:modelValue', value: boolean): void
 }

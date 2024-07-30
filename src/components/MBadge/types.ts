@@ -1,16 +1,16 @@
 export interface IBadgeProps {
   /** Значение */
-  value?: string | number;
+  value?: string | number
   /** Максимальное значение. Выше максимального значение будет показываться например "25+" */
-  max?: number;
+  max?: number
   /** Показывать точку, вместо значения */
-  isDot?: boolean;
+  isDot?: boolean
   /** Скрыть бейдж */
-  hidden?: boolean;
+  hidden?: boolean
   /** Цвет бейджа */
-  type: Type;
+  type: Type
   /** Показывать ноль */
-  showZero?: boolean;
+  showZero?: boolean
 }
 
-export type Type = 'primary' | 'success' | 'warning' | 'danger' | 'info';
+export type Type = 'primary' | 'success' | 'warning' | 'danger' | 'info'

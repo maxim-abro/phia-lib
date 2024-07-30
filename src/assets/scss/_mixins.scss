@@ -1,4 +1,4 @@
-@import "colors";
+@import 'colors';
 
 @mixin themeBtn($theme: primary) {
   @if ($theme == default) {
@@ -15,8 +15,7 @@
       color: rgb(var(--m-primary));
       border-color: rgb(var(--m-primary-400));
     }
-  }
-  @else {
+  } @else {
     background: rgb(var(--m-#{$theme}));
     border: 1px solid rgb(var(--m-#{$theme}));
     color: rgb(var(--m-white));
@@ -44,8 +43,7 @@
       color: rgb(var(--m-primary));
       border-color: rgb(var(--m-primary-400));
     }
-  }
-  @else {
+  } @else {
     background: rgb(var(--m-#{$theme}-light));
     color: rgb(var(--m-#{$theme}));
     &:hover:not(.disabled) {

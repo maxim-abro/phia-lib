@@ -1,6 +1,8 @@
 <template>
-  <div :id="id"
-class="notify-container">
+  <div
+    :id="id"
+    class="notify-container"
+  >
     <div class="notify-container__title">
       {{ title }}
     </div>

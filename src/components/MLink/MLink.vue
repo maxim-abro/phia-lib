@@ -5,14 +5,14 @@
     :class="[
       {
         'm-link__disabled': disabled,
-        'm-link__underline': underline,
+        'm-link__underline': underline
       },
       type
     ]"
     :href="!disabled ? href : ''"
     :target="target"
   >
-    <slot/>
+    <slot />
   </a>
   <span
     v-else
@@ -20,18 +20,18 @@
     :class="[
       {
         'm-link__disabled': disabled,
-        'm-link__underline': underline,
+        'm-link__underline': underline
       },
       type
     ]"
   >
-    <slot/>
+    <slot />
   </span>
 </template>
 
 <script lang="ts">
 export default {
-  name: 'MLink',
+  name: 'MLink'
 };
 </script>
 
@@ -52,7 +52,7 @@ withDefaults(defineProps<ILinkProps>(), {
     }
   }
   &__disabled {
-    opacity: .4;
+    opacity: 0.4;
     cursor: not-allowed;
   }
   &.default {

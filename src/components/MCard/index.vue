@@ -9,7 +9,7 @@
       </slot>
     </div>
     <div class="m-card__body">
-      <slot/>
+      <slot />
     </div>
     <div
       v-if="$slots.footer || footer"
@@ -22,10 +22,9 @@
   </div>
 </template>
 
-
 <script lang="ts">
 export default {
-  name: 'MCard',
+  name: 'MCard'
 };
 </script>
 
@@ -39,7 +38,7 @@ defineProps<ICardProps>();
 .m-card {
   border-radius: 4px;
   border: 1px solid rgb(var(--m-border-color));
-  box-shadow: 0 0 12px rgba(0, 0, 0, .12);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.12);
   &__footer,
   &__body,
   &__header {
