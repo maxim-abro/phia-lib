@@ -4,7 +4,6 @@ export interface MInputProps {
     maxLength?: number;
     clearable?: boolean;
     disabled?: boolean;
-    autofocus?: boolean;
     autocomplete?: string;
     modelValue?: string;
     formatter?: (value: string | number) => string;

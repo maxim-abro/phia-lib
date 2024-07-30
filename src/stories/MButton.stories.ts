@@ -1,4 +1,4 @@
-import type { Meta, StoryFn, StoryObj } from '@storybook/vue3'
+import type { Meta, StoryFn, StoryObj } from '@storybook/vue3';
 import MButton from '@/components/MButton/MButton.vue';
 
 const meta = {
@@ -6,7 +6,10 @@ const meta = {
   component: MButton,
   tags: ['autodocs'],
   argTypes: {
-    type: { control: 'select', options: ['primary', 'success', 'warning', 'danger', 'info', 'default'] },
+    type: {
+      control: 'select',
+      options: ['primary', 'success', 'warning', 'danger', 'info', 'default']
+    },
     size: { control: 'select', options: ['large', 'default', 'small'] }
   },
   args: {
@@ -18,7 +21,7 @@ const meta = {
 const Template: StoryFn<typeof MButton> = (args) => ({
   components: { MButton },
   setup() {
-    return { args }
+    return { args };
   },
   template: `
     <MButton
@@ -29,11 +32,11 @@ const Template: StoryFn<typeof MButton> = (args) => ({
 });
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof meta>
 
 export const Primary: Story = Template.bind({});
 Primary.args = {
-  size: "default",
-  type: "primary",
+  size: 'default',
+  type: 'primary',
   round: false
-}
+};

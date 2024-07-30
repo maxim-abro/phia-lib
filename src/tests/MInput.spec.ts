@@ -12,15 +12,15 @@ describe('MInput', () => {
         placeholder: 'placeholder',
         modelValue: 'Test value',
         //@ts-ignore
-        "onUpdate:modelValue": (e) => wrapper.setProps({ modelValue: e })
+        'onUpdate:modelValue': (e) => wrapper.setProps({ modelValue: e })
       }
     });
   });
 
   it('emits input value when changed', async () => {
     //@ts-ignore
-    await wrapper.find('input').setValue("New Test Value");
+    await wrapper.find('input').setValue('New Test Value');
     //@ts-ignore
-    expect(wrapper.props("modelValue")).toBe("New Test Value");
+    expect(wrapper.props('modelValue')).toBe('New Test Value');
   });
 });

@@ -1,8 +1,10 @@
 <template>
   <div class="m-collapse">
-    <div :class="{
-      'm-activator': isExpand
-    }">
+    <div
+      :class="{
+        'm-activator': isExpand
+      }"
+    >
       <slot
         name="default"
         v-bind="activatorProps"
@@ -22,16 +24,15 @@
   </div>
 </template>
 
-
 <script lang="ts">
 export default {
-  name: 'MCollapse',
+  name: 'MCollapse'
 };
 </script>
 
 <script setup lang="ts">
 import { onMounted, reactive, ref } from 'vue';
-import type { ICollapseEmits, ICollapseProps } from '@/components/MCollapse/Type';
+import type { ICollapseEmits, ICollapseProps, ICollapseSlots } from '@/components/MCollapse/Type';
 
 const props = defineProps<ICollapseProps>();
 const emits = defineEmits<ICollapseEmits>();
@@ -49,6 +50,7 @@ const toggleCollapse = (): void => {
   emits('update:modelValue', isExpand.value);
 };
 
+defineSlots<ICollapseSlots>();
 defineExpose({
   toggleCollapse
 });

@@ -3,6 +3,7 @@ import { MInputProps } from './Type';
 declare const _default: import('vue').DefineComponent<__VLS_WithDefaults<__VLS_TypePropsToRuntimeProps<MInputProps>, {
     type: string;
     modelValue: string;
+    autocomplete: string;
 }>, {}, unknown, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {
     blur: (value: FocusEvent) => void;
     focus: (value: FocusEvent) => void;
@@ -13,6 +14,7 @@ declare const _default: import('vue').DefineComponent<__VLS_WithDefaults<__VLS_T
 }, string, import('vue').PublicProps, Readonly<import('vue').ExtractPropTypes<__VLS_WithDefaults<__VLS_TypePropsToRuntimeProps<MInputProps>, {
     type: string;
     modelValue: string;
+    autocomplete: string;
 }>>> & {
     onFocus?: ((value: FocusEvent) => any) | undefined;
     onBlur?: ((value: FocusEvent) => any) | undefined;
@@ -23,6 +25,7 @@ declare const _default: import('vue').DefineComponent<__VLS_WithDefaults<__VLS_T
 }, {
     type: import('./Type').MInputType;
     modelValue: string;
+    autocomplete: string;
 }, {}>;
 export default _default;
 type __VLS_NonUndefinedable<T> = T extends undefined ? never : T;

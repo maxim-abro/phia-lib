@@ -1,8 +1,17 @@
 export interface ICollapseProps {
-  toTeleport?: HTMLElement | string;
-  modelValue?: boolean;
+  /** Телепорт скрываемой части */
+  toTeleport?: HTMLElement | string
+  /** Значение открытия скрываемой части */
+  modelValue?: boolean
 }
 
 export interface ICollapseEmits {
-  (e: 'update:modelValue', value: boolean): void;
+  (e: 'update:modelValue', value: boolean): void
+}
+
+export interface ICollapseSlots {
+  /** Триггер */
+  default(props: object): unknown
+  /** Скрываемая часть */
+  expand(props: object): unknown
 }

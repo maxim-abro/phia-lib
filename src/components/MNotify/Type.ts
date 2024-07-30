@@ -1,8 +1,8 @@
-import type {VNode} from 'vue';
+import type { VNode } from 'vue';
 
 export interface INotifyProps {
-  title: string;
-  message: string;
+  title: string
+  message: string
   type?: INotifyType
   position?: INotifyPosition
   id?: string
@@ -27,6 +27,6 @@ export interface NotifyQueueItem {
 export type NotificationQueue = NotifyQueueItem[]
 
 export interface IUseNotification {
-  openNotify: (props: Partial<INotifyProps>) => void;
-  closeNotify: (id: string, position: INotifyPosition) => void;
+  openNotify: (props: Partial<INotifyProps>) => void
+  closeNotify: (id: string, position: INotifyPosition) => void
 }

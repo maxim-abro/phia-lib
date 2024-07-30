@@ -9,7 +9,7 @@ export interface IButtonProps {
   round?: boolean
   link?: string
   loading?: boolean
-  /** Кнопка не автивная */
+  /** Кнопка не активная */
   disabled?: boolean
   /** иконка  */
   icon?: boolean
@@ -17,10 +17,10 @@ export interface IButtonProps {
   plain?: boolean
 }
 
-type IBtnSize = 'large' | 'default'| 'small'
+type IBtnSize = 'large' | 'default' | 'small'
 type IBtnType = 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'default'
 
 export interface IButtonSlots {
   /** Стандартный слот  */
-  default(props: {}): any;
+  default(props: object): unknown
 }

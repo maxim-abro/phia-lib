@@ -1,5 +1,3 @@
-
-
 export interface IInputNumberProps {
   steps?: number
   min?: number
@@ -9,5 +7,5 @@ export interface IInputNumberProps {
 }
 
 export interface IInputNumberEmits {
-  (e: 'update:modelValue', value: number): void;
+  (e: 'update:modelValue', value: number): void
 }
