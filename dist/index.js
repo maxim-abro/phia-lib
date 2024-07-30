@@ -1,4 +1,4 @@
-import { defineComponent as v, computed as h, openBlock as a, createElementBlock as n, normalizeClass as $, renderSlot as p, createElementVNode as b, toDisplayString as g, ref as M, withDirectives as I, vModelDynamic as B, createCommentVNode as _, vModelText as V, normalizeStyle as C, onMounted as w, reactive as D, normalizeProps as N, guardReactiveProps as L, createBlock as T, Teleport as z } from "vue";
+import { defineComponent as v, computed as h, openBlock as a, createElementBlock as n, normalizeClass as b, renderSlot as p, createElementVNode as $, toDisplayString as g, ref as M, withDirectives as I, vModelDynamic as B, createCommentVNode as _, vModelText as V, normalizeStyle as C, onMounted as w, reactive as D, normalizeProps as N, guardReactiveProps as L, createBlock as T, Teleport as z } from "vue";
 const F = ["disabled"], P = /* @__PURE__ */ v({
   __name: "MButton",
   props: {
@@ -14,7 +14,7 @@ const F = ["disabled"], P = /* @__PURE__ */ v({
   setup(l) {
     const e = l, t = h(() => `m-button__${e.type}`);
     return (o, d) => (a(), n("button", {
-      class: $(["m-button", [
+      class: b(["m-button", [
         o.size,
         t.value,
         {
@@ -50,8 +50,8 @@ const F = ["disabled"], P = /* @__PURE__ */ v({
       id: e.id,
       class: "notify-container"
     }, [
-      b("div", E, g(e.title), 1),
-      b("div", H, g(e.message), 1)
+      $("div", E, g(e.title), 1),
+      $("div", H, g(e.message), 1)
     ], 8, S));
   }
 }), ke = /* @__PURE__ */ m(O, [["__scopeId", "data-v-701a75cf"]]), U = ["href", "target"], R = {
@@ -68,7 +68,7 @@ const F = ["disabled"], P = /* @__PURE__ */ v({
   setup(l) {
     return (e, t) => e.disabled ? (a(), n("span", {
       key: 1,
-      class: $(["m-link", [
+      class: b(["m-link", [
         {
           "m-link__disabled": e.disabled,
           "m-link__underline": e.underline
@@ -79,7 +79,7 @@ const F = ["disabled"], P = /* @__PURE__ */ v({
       p(e.$slots, "default", {}, void 0, !0)
     ], 2)) : (a(), n("a", {
       key: 0,
-      class: $(["m-link", [
+      class: b(["m-link", [
         {
           "m-link__disabled": e.disabled,
           "m-link__underline": e.underline
@@ -122,12 +122,12 @@ const F = ["disabled"], P = /* @__PURE__ */ v({
       }
     }), s = l, f = e;
     return (i, u) => (a(), n("div", {
-      class: $(["m-input", {
+      class: b(["m-input", {
         "is-focus": t.value,
         disabled: i.disabled
       }])
     }, [
-      I(b("input", {
+      I($("input", {
         "onUpdate:modelValue": u[0] || (u[0] = (c) => d.value = c),
         type: i.type,
         disabled: i.disabled,
@@ -164,7 +164,7 @@ const F = ["disabled"], P = /* @__PURE__ */ v({
       p(o.$slots, "default", {}, void 0, !0),
       o.hidden ? _("", !0) : (a(), n("div", {
         key: 0,
-        class: $(["m-badge-wrap__item", [
+        class: b(["m-badge-wrap__item", [
           {
             "is-dot": o.value === void 0 || o.isDot
           },
@@ -207,12 +207,12 @@ const F = ["disabled"], P = /* @__PURE__ */ v({
     }
     const u = h(() => parseInt(t.value, 10) === o.min), c = h(() => parseInt(t.value, 10) === o.max);
     return (r, y) => (a(), n("div", W, [
-      b("button", {
+      $("button", {
         class: "m-input-number__button-left",
         disabled: u.value || r.disabled,
         onClick: y[0] || (y[0] = (k) => s("-"))
       }, " - ", 8, X),
-      I(b("input", {
+      I($("input", {
         "onUpdate:modelValue": y[1] || (y[1] = (k) => t.value = k),
         type: "text",
         disabled: r.disabled,
@@ -221,7 +221,7 @@ const F = ["disabled"], P = /* @__PURE__ */ v({
       }, null, 40, Y), [
         [V, t.value]
       ]),
-      b("button", {
+      $("button", {
         class: "m-input-number__button-right",
         disabled: c.value || r.disabled,
         onClick: y[2] || (y[2] = (k) => s("+"))
@@ -276,7 +276,7 @@ const De = /* @__PURE__ */ m(ne, [["render", de], ["__scopeId", "data-v-762ed40f
   },
   setup(l) {
     return (e, t) => (a(), n("div", {
-      class: $(["m-dropdown-menu-item", {
+      class: b(["m-dropdown-menu-item", {
         disabled: e.disabled
       }])
     }, [
@@ -291,7 +291,7 @@ const De = /* @__PURE__ */ m(ne, [["render", de], ["__scopeId", "data-v-762ed40f
   class: "m-card__footer"
 }, ve = { key: 0 }, fe = {
   name: "MCard"
-}, be = /* @__PURE__ */ v({
+}, $e = /* @__PURE__ */ v({
   ...fe,
   props: {
     header: {},
@@ -304,7 +304,7 @@ const De = /* @__PURE__ */ m(ne, [["render", de], ["__scopeId", "data-v-762ed40f
           e.header ? (a(), n("span", ce, g(e.header), 1)) : _("", !0)
         ], !0)
       ])) : _("", !0),
-      b("div", me, [
+      $("div", me, [
         p(e.$slots, "default", {}, void 0, !0)
       ]),
       e.$slots.footer || e.footer ? (a(), n("div", _e, [
@@ -314,7 +314,7 @@ const De = /* @__PURE__ */ m(ne, [["render", de], ["__scopeId", "data-v-762ed40f
       ])) : _("", !0)
     ]));
   }
-}), Le = /* @__PURE__ */ m(be, [["__scopeId", "data-v-469b759e"]]), $e = { class: "m-collapse" }, ye = {
+}), Le = /* @__PURE__ */ m($e, [["__scopeId", "data-v-7cd1dd93"]]), be = { class: "m-collapse" }, ye = {
   name: "MCollapse"
 }, he = /* @__PURE__ */ v({
   ...ye,
@@ -338,9 +338,9 @@ const De = /* @__PURE__ */ m(ne, [["render", de], ["__scopeId", "data-v-762ed40f
       toggleCollapse: i,
       isExpand: s
     });
-    return (c, r) => (a(), n("div", $e, [
-      b("div", {
-        class: $({
+    return (c, r) => (a(), n("div", be, [
+      $("div", {
+        class: b({
           "m-activator": s.value
         })
       }, [
@@ -355,7 +355,7 @@ const De = /* @__PURE__ */ m(ne, [["render", de], ["__scopeId", "data-v-762ed40f
       ], 8, ["disabled", "to"])) : _("", !0)
     ]));
   }
-}), Te = /* @__PURE__ */ m(he, [["__scopeId", "data-v-cb410d69"]]);
+}), Te = /* @__PURE__ */ m(he, [["__scopeId", "data-v-feaba461"]]);
 export {
   Ve as MBadge,
   Me as MButton,

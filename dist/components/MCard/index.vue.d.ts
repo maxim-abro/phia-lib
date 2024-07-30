@@ -1,10 +1,6 @@
-import { ICardProps } from './types';
+import { ICardProps, ICardSlots } from './types';
 
-declare const _default: __VLS_WithTemplateSlots<import('vue').DefineComponent<__VLS_TypePropsToRuntimeProps<ICardProps>, {}, unknown, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {}, string, import('vue').PublicProps, Readonly<import('vue').ExtractPropTypes<__VLS_TypePropsToRuntimeProps<ICardProps>>>, {}, {}>, {
-    header?(_: {}): any;
-    default?(_: {}): any;
-    footer?(_: {}): any;
-}>;
+declare const _default: __VLS_WithTemplateSlots<import('vue').DefineComponent<__VLS_TypePropsToRuntimeProps<ICardProps>, {}, unknown, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {}, string, import('vue').PublicProps, Readonly<import('vue').ExtractPropTypes<__VLS_TypePropsToRuntimeProps<ICardProps>>>, {}, {}>, Readonly<ICardSlots> & ICardSlots>;
 export default _default;
 type __VLS_NonUndefinedable<T> = T extends undefined ? never : T;
 type __VLS_TypePropsToRuntimeProps<T> = {

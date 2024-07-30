@@ -1,4 +1,4 @@
-import { ICollapseProps } from './Type';
+import { ICollapseProps, ICollapseSlots } from './Type';
 
 declare const _default: __VLS_WithTemplateSlots<import('vue').DefineComponent<__VLS_TypePropsToRuntimeProps<ICollapseProps>, {
     toggleCollapse: () => void;
@@ -6,13 +6,7 @@ declare const _default: __VLS_WithTemplateSlots<import('vue').DefineComponent<__
     "update:modelValue": (value: boolean) => void;
 }, string, import('vue').PublicProps, Readonly<import('vue').ExtractPropTypes<__VLS_TypePropsToRuntimeProps<ICollapseProps>>> & {
     "onUpdate:modelValue"?: ((value: boolean) => any) | undefined;
-}, {}, {}>, {
-    default?(_: {
-        toggleCollapse: () => void;
-        isExpand: boolean;
-    }): any;
-    expand?(_: {}): any;
-}>;
+}, {}, {}>, Readonly<ICollapseSlots> & ICollapseSlots>;
 export default _default;
 type __VLS_NonUndefinedable<T> = T extends undefined ? never : T;
 type __VLS_TypePropsToRuntimeProps<T> = {
