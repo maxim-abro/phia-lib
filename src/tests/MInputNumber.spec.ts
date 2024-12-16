@@ -3,23 +3,25 @@ import { mount } from '@vue/test-utils';
 import MInputNumber from '@/components/MInputNumber/index.vue';
 
 describe('MInputNumber', () => {
-  //@ts-ignore
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-expect-error
   let wrapper;
 
   beforeEach(() => {
     wrapper = mount(MInputNumber, {
       props: {
         modelValue: 5,
-        //@ts-ignore
         'onUpdate:modelValue': (e) => wrapper.setProps({ modelValue: e })
       }
     });
   });
 
   it('emits input value when changed', async () => {
-    //@ts-ignore
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
     await wrapper.find('input').setValue(5);
-    //@ts-ignore
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
     expect(wrapper.props('modelValue')).toBe(5);
   });
 });

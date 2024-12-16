@@ -7,3 +7,4 @@ export * from './MInputNumber';
 export * from './MDropdown';
 export * from './MCard';
 export * from './MCollapse';
+export * from './MSelect';
