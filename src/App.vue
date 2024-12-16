@@ -368,7 +368,7 @@
       dicta dolorem eligendi fugit illo, magni maxime nesciunt odit officia placeat reiciendis
       reprehenderit sapiente, sint voluptatem?
     </m-card>
-    <m-collapse>
+    <m-collapse style="margin-bottom: 100px;">
       <template #default="{ toggleCollapse }">
         <div @click="toggleCollapse">collapse 1</div>
       </template>
@@ -378,6 +378,11 @@
         optio tenetur. Commodi doloremque ipsa nostrum possimus vel.
       </template>
     </m-collapse>
+    <m-select
+      v-model="selectedValue"
+      :values="valuesSelect"
+      style="width: 255px; margin-bottom: 300px;"
+    />
   </div>
 </template>
 
@@ -397,6 +402,7 @@ import {
 import useNotify from '@/components/MNotify/useNotify';
 import type { INotifyProps } from '@/components/MNotify/Type';
 import { ref } from 'vue';
+import MSelect from '@/components/MSelect/index.vue';
 
 const propsNotify: INotifyProps = {
   title: 'title',
@@ -405,6 +411,27 @@ const propsNotify: INotifyProps = {
 const testVal = ref('');
 const testValNumber = ref(0);
 const notify = useNotify();
+
+
+const selectedValue = ref<string|null>(null);
+const valuesSelect = ref([
+  {
+    title: 'Moscow',
+    value: 'msk'
+  },
+  {
+    title: 'Saint Petersburg',
+    value: 'spb'
+  },
+  {
+    title: 'Kazan',
+    value: 'kzn'
+  },
+  {
+    title: 'KazanKazanKazanKazanKazanKazanKazanKazan',
+    value: 'kzn2'
+  }
+]);
 </script>
 
 <style lang="scss" scoped>

@@ -56,3 +56,12 @@
     }
   }
 }
+
+@mixin borderRadius() {
+  border-radius: 4px;
+}
+
+@mixin lightBoxShadow() {
+  box-shadow: 0 2px 32px 4px rgba(var(--m-black), .04),
+  0 8px 20px 0 rgba(var(--m-black), .08);
+}

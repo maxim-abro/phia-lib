@@ -1,4 +1,4 @@
-import { App } from 'vue';
+import { App } from '../../../vue/dist/vue.esm-bundler.js';
 import { INotifyPosition, INotifyProps } from './Type';
 
 export default function useNotify(): {
