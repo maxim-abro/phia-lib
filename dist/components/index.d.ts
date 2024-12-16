@@ -8,4 +8,5 @@ export * from './MDropdown';
 export * from './MCard';
 export * from './MCollapse';
 export * from './MSelect';
+export * from './MTag';
 //# sourceMappingURL=index.d.ts.map

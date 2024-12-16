@@ -383,6 +383,15 @@
       :values="valuesSelect"
       style="width: 255px; margin-bottom: 300px;"
     />
+
+    <div style="margin-bottom: 300px;">
+      <m-tag>default</m-tag>
+      <m-tag type="primary">primary</m-tag>
+      <m-tag type="success">success</m-tag>
+      <m-tag type="info">info</m-tag>
+      <m-tag type="danger">danger</m-tag>
+      <m-tag type="warning">warning</m-tag>
+    </div>
   </div>
 </template>
 
@@ -397,13 +406,13 @@ import {
   MDropdownMenu,
   MDropdownMenuItem,
   MCard,
-  MCollapse
+  MCollapse,
+  MSelect,
+  MTag
 } from '@/components';
 import useNotify from '@/components/MNotify/useNotify';
 import type { INotifyProps } from '@/components/MNotify/Type';
 import { ref } from 'vue';
-import MSelect from '@/components/MSelect/index.vue';
-
 const propsNotify: INotifyProps = {
   title: 'title',
   message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, harum?'

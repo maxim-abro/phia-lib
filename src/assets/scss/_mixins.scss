@@ -57,6 +57,18 @@
   }
 }
 
+@mixin themeTag($theme: primary) {
+  @if ($theme == default) {
+    background: rgb(var(--m-white));
+    border: 1px solid rgb(var(--m-border-color));
+    color: rgb(var(--m-text-color));
+  } @else {
+    background: rgb(var(--m-#{$theme}));
+    border: 1px solid rgb(var(--m-#{$theme}));
+    color: rgb(var(--m-white));
+  }
+}
+
 @mixin borderRadius() {
   border-radius: 4px;
 }

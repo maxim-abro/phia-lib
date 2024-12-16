@@ -4,6 +4,7 @@ declare const _default: import('../../../vue/dist/vue.esm-bundler.js').DefineCom
     valueKey: string;
     titleKey: string;
     placeholder: string;
+    noDataText: string;
 }>, {}, unknown, {}, {}, import('../../../vue/dist/vue.esm-bundler.js').ComponentOptionsMixin, import('../../../vue/dist/vue.esm-bundler.js').ComponentOptionsMixin, {
     change: (value: string | number | boolean) => void;
     focus: () => void;
@@ -13,6 +14,7 @@ declare const _default: import('../../../vue/dist/vue.esm-bundler.js').DefineCom
     valueKey: string;
     titleKey: string;
     placeholder: string;
+    noDataText: string;
 }>>> & {
     onFocus?: (() => any) | undefined;
     onBlur?: (() => any) | undefined;
@@ -22,6 +24,7 @@ declare const _default: import('../../../vue/dist/vue.esm-bundler.js').DefineCom
     placeholder: string;
     valueKey: string | number | symbol;
     titleKey: string | number | symbol;
+    noDataText: string;
 }, {}>;
 export default _default;
 type __VLS_NonUndefinedable<T> = T extends undefined ? never : T;
