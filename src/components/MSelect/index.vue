@@ -64,11 +64,9 @@ const props = withDefaults(defineProps<IPropsSelect>(), {
   placeholder: 'Выбрать',
   noDataText: 'Нет данных'
 });
+
 const emits = defineEmits<IEmitsSelect>();
-
-
-
-const openMenu = ref(true);
+const openMenu = ref(false);
 
 const chosenValue = computed({
   get() {
