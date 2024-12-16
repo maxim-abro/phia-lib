@@ -22,8 +22,8 @@ declare const _default: import('../../../vue/dist/vue.esm-bundler.js').DefineCom
     "onUpdate:modelValue"?: ((value: string | number | boolean) => any) | undefined;
 }, {
     placeholder: string;
-    valueKey: string | number | symbol;
-    titleKey: string | number | symbol;
+    valueKey: string;
+    titleKey: string;
     noDataText: string;
 }, {}>;
 export default _default;

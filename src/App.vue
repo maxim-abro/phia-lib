@@ -393,6 +393,12 @@
       <m-tag type="warning">warning</m-tag>
     </div>
   </div>
+
+  <m-tree
+    style="margin-bottom: 300px;"
+    :data="dataTree"
+    @node-click="test"
+  />
 </template>
 
 <script lang="ts" setup>
@@ -408,7 +414,8 @@ import {
   MCard,
   MCollapse,
   MSelect,
-  MTag
+  MTag,
+  MTree
 } from '@/components';
 import useNotify from '@/components/MNotify/useNotify';
 import type { INotifyProps } from '@/components/MNotify/Type';
@@ -441,6 +448,67 @@ const valuesSelect = ref([
     value: 'kzn2'
   }
 ]);
+const dataTree: MTree[] = [
+  {
+    label: 'Level one 1',
+    children: [
+      {
+        label: 'Level two 1-1',
+        children: [
+          {
+            label: 'Level three 1-1-1',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    label: 'Level one 2',
+    children: [
+      {
+        label: 'Level two 2-1',
+        children: [
+          {
+            label: 'Level three 2-1-1',
+          },
+        ],
+      },
+      {
+        label: 'Level two 2-2',
+        children: [
+          {
+            label: 'Level three 2-2-1',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    label: 'Level one 3',
+    children: [
+      {
+        label: 'Level two 3-1',
+        children: [
+          {
+            label: 'Level three 3-1-1',
+          },
+        ],
+      },
+      {
+        label: 'Level two 3-2',
+        children: [
+          {
+            label: 'Level three 3-2-1',
+          },
+        ],
+      },
+    ],
+  },
+];
+
+function test(val: unknown): void {
+  console.log(val);
+}
 </script>
 
 <style lang="scss" scoped>
