@@ -7,7 +7,7 @@ export interface IPropsSelect {
     placeholder?: string;
     loading?: boolean;
     noDataText?: string;
-    values?: (object | string | number)[];
+    values: unknown[];
 }
 export interface IEmitsSelect {
     (e: 'change', value: boolean | string | number): void;
