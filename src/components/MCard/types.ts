@@ -1,4 +1,4 @@
 export interface ICardProps {
-  header?: string;
-  footer?: string;
+  header?: string
+  footer?: string
 }

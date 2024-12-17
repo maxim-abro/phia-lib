@@ -1,27 +1,25 @@
 <template>
-  <div
-    class="m-input-number"
-  >
+  <div class="m-input-number">
     <button
       class="m-input-number__button-left"
-      @click="editValue('-')"
       :disabled="isMin || disabled"
+      @click="editValue('-')"
     >
       -
     </button>
 
     <input
-      @blur="validateInput"
       v-model="input"
       type="text"
       :disabled="disabled"
       class="m-input-number__input"
+      @blur="validateInput"
     />
 
     <button
       class="m-input-number__button-right"
-      @click="editValue('+')"
       :disabled="isMax || disabled"
+      @click="editValue('+')"
     >
       +
     </button>
@@ -35,17 +33,15 @@ export default {
 </script>
 
 <script setup lang="ts">
-
-
 import type { IInputNumberProps, IInputNumberEmits } from '@/components/MInputNumber/Type'
 import { computed } from 'vue'
 
 const input = computed({
   get() {
-    return String(props.modelValue);
+    return String(props.modelValue)
   },
   set(value) {
-    emits('update:modelValue', Number(value));
+    emits('update:modelValue', Number(value))
   }
 })
 
@@ -55,11 +51,11 @@ const props = withDefaults(defineProps<IInputNumberProps>(), {
   modelValue: 0,
   max: 999999,
   min: -999999
-});
+})
 
-const emits = defineEmits<IInputNumberEmits>();
+const emits = defineEmits<IInputNumberEmits>()
 
-function editValue(symbol: string) {
+function editValue(symbol: string): void {
   if (symbol === '+') {
     props.max !== parseInt(input.value, 10)
       ? updateValue(parseInt(input.value, 10) + props.steps)

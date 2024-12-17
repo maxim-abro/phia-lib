@@ -13,7 +13,10 @@ module.exports = {
   plugins: ['@stylistic/js', 'css', '@typescript-eslint'],
   parserOptions: {
     ecmaVersion: 'latest',
-    sourceType: 'module'
+    sourceType: 'module',
+    ecmaFeatures : {
+      jsx : false
+    }
   },
   // parser: '@typescript-eslint/parser', // При включении багует парсер vue файлов
   rules: {

@@ -1,10 +1,9 @@
-
 export interface ILinkProps {
-  type?: ILinkType;
-  underline?: boolean;
-  disabled?: boolean;
-  target?: IlinkTarget;
-  href: string;
+  type?: ILinkType
+  underline?: boolean
+  disabled?: boolean
+  target?: IlinkTarget
+  href: string
 }
 
 type ILinkType = 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'default'

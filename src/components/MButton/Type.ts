@@ -9,5 +9,5 @@ export interface IButtonProps {
   plain?: boolean
 }
 
-type IBtnSize = 'large' | 'default'| 'small'
+type IBtnSize = 'large' | 'default' | 'small'
 type IBtnType = 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'default'

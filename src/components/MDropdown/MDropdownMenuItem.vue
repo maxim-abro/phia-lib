@@ -2,24 +2,23 @@
   <div
     class="m-dropdown-menu-item"
     :class="{
-    'disabled': disabled
+      disabled: disabled
     }"
   >
-    <slot/>
+    <slot />
   </div>
 </template>
 
 <script lang="ts">
 export default {
-  name: "MDropdownMenuItem",
-};
+  name: 'MDropdownMenuItem'
+}
 </script>
 
 <script setup lang="ts">
-
 import type { IDropdownMenuItemProps } from '@/components/MDropdown/types'
 
-defineProps<IDropdownMenuItemProps>();
+defineProps<IDropdownMenuItemProps>()
 </script>
 
 <style scoped lang="scss">

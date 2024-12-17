@@ -1,67 +1,64 @@
 <template>
-<div
-  class="m-input"
-  :class="{
-    'is-focus': isFocus,
-    'disabled': disabled
-  }"
->
-  <input
-    v-model="value"
-    :type="type"
-    :disabled="disabled"
-    :placeholder="placeholder"
-    :autocomplete="autocomplete"
-    :autofocus="autofocus"
-    @focus="isFocus = true"
-    @blur="isFocus = false"
-    @input="maxLength"
+  <div
+    class="m-input"
+    :class="{
+      'is-focus': isFocus,
+      disabled: disabled
+    }"
   >
-  <button
-    v-if="clearable && !!value"
-    class="m-input__clear"
-    @click="value = ''"
-  >
-    clear
-  </button>
-</div>
+    <input
+      v-model="value"
+      :type="type"
+      :disabled="disabled"
+      :placeholder="placeholder"
+      :autocomplete="autocomplete"
+      :autofocus="autofocus"
+      @focus="isFocus = true"
+      @blur="isFocus = false"
+      @input="maxLength"
+    />
+    <button
+      v-if="clearable && !!value"
+      class="m-input__clear"
+      @click="value = ''"
+    >
+      clear
+    </button>
+  </div>
 </template>
 
 <script lang="ts">
 export default {
-  name: 'MInput',
-};
+  name: 'MInput'
+}
 </script>
 
 <script setup lang="ts">
-import type { MInputEmits, MInputProps } from '@/components/MInput/Type';
-import { computed, ref } from 'vue';
+import type { MInputEmits, MInputProps } from '@/components/MInput/Type'
+import { computed, ref } from 'vue'
 
-const isFocus = ref<boolean>(false);
+const isFocus = ref<boolean>(false)
 
-
-function maxLength(e:Event) {
-  const input = (<HTMLInputElement>e.target)
-  if (props.maxLength) {
-    if (input?.value.length > props.maxLength) {
-      value.value = value.value.substring(0,props.maxLength);
-    }
+function maxLength(e: Event): void {
+  const input = <HTMLInputElement>e.target
+  if (props.maxLength && input?.value.length > props.maxLength) {
+    value.value = value.value.substring(0, props.maxLength)
   }
 }
 const value = computed({
   get() {
-    return props.modelValue;
+    return props.modelValue
   },
   set(value) {
-    emits('update:modelValue', value);
+    emits('update:modelValue', value)
   }
-});
+})
 
 const props = withDefaults(defineProps<MInputProps>(), {
   type: 'text',
   modelValue: ''
-});
-const emits = defineEmits<MInputEmits>();
+})
+const emits = defineEmits<MInputEmits>()
 </script>
 
 <style scoped lang="scss">

@@ -1,19 +1,19 @@
 <template>
-<div class="m-badge-wrap">
-  <slot/>
-  <div
-    v-if="!hidden"
-    class="m-badge-wrap__item"
-    :class="[
-      {
-        'is-dot': value === undefined || isDot,
-      },
-      type
-    ]"
-  >
-    <span v-if="value !== undefined && !isDot">{{ getValue }}</span>
+  <div class="m-badge-wrap">
+    <slot />
+    <div
+      v-if="!hidden"
+      class="m-badge-wrap__item"
+      :class="[
+        {
+          'is-dot': value === undefined || isDot
+        },
+        type
+      ]"
+    >
+      <span v-if="value !== undefined && !isDot">{{ getValue }}</span>
+    </div>
   </div>
-</div>
 </template>
 
 <script lang="ts">
@@ -23,21 +23,20 @@ export default {
 </script>
 
 <script setup lang="ts">
-
 import type { IBadgeProps } from '@/components/MBadge/types'
 import { computed } from 'vue'
 
 const getValue = computed(() => {
   if (props.max) {
-    return Number(props.value) > props.max ? `${props.max}+` : props.value;
+    return Number(props.value) > props.max ? `${props.max}+` : props.value
   } else {
-    return props.value;
+    return props.value
   }
-});
+})
 
 const props = withDefaults(defineProps<IBadgeProps>(), {
-  type: 'default',
-});
+  type: 'default'
+})
 </script>
 
 <style scoped lang="scss">
