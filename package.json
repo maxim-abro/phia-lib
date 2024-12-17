@@ -74,6 +74,7 @@
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
+  "license": "MIT",
   "files": [
     "dist",
     "README.md",
