@@ -33,7 +33,7 @@ export default {
 </script>
 
 <script setup lang="ts">
-import type { IInputNumberProps, IInputNumberEmits } from '@/components/MInputNumber/Type';
+import type { IInputNumberProps, IInputNumberEmits } from '@/components/MInputNumber/types';
 import { computed } from 'vue';
 
 const input = computed({

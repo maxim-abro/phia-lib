@@ -1,6 +1,6 @@
 export interface MInputProps {
   //** Стандартный атрибут инпута *//
-  type?: MInputType
+  type?: TInputType
   //** Стандартный атрибут инпута *//
   placeholder?: string
   // minLength?: number
@@ -26,4 +26,4 @@ export interface MInputEmits {
   (e: 'update:modelValue', value: string): void
 }
 
-export type MInputType = 'text' | 'textarea' | 'password' | 'button' | 'number'
+export type TInputType = 'text' | 'textarea' | 'password' | 'button' | 'number'

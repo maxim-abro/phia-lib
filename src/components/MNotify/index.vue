@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-import type { INotifyProps } from '@/components/MNotify/Type';
+import type { INotifyProps } from '@/components/MNotify/types';
 
 defineProps<INotifyProps>();
 </script>

@@ -33,7 +33,7 @@ export default {
 </script>
 
 <script setup lang="ts">
-import type { MInputEmits, MInputProps } from '@/components/MInput/Type'
+import type { MInputEmits, MInputProps } from '@/components/MInput/types'
 import { computed, ref } from 'vue'
 
 const isFocus = ref<boolean>(false)

@@ -1,7 +1,7 @@
 import { type App, createVNode, render } from 'vue';
-import MNotify from './MNotify.vue';
+import MNotify from './index.vue';
 import type { AppContext } from 'vue';
-import type { INotifyPosition, INotifyProps, NotificationQueue } from '@/components/MNotify/Type';
+import type { INotifyPosition, INotifyProps, NotificationQueue } from '@/components/MNotify/types';
 
 const notifications: Record<INotifyPosition, NotificationQueue> = {
   'bottom-left': [],

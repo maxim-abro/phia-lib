@@ -36,7 +36,7 @@ export default {
 </script>
 
 <script setup lang="ts">
-import type { ILinkProps } from '@/components/MLink/Type';
+import type { ILinkProps } from '@/components/MLink/types';
 withDefaults(defineProps<ILinkProps>(), {
   target: '_self',
   type: 'default'

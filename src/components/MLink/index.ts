@@ -1,1 +1,1 @@
-export { default as MLink } from './MLink.vue';
+export { default as MLink } from './index.vue';
