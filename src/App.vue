@@ -399,6 +399,10 @@
     :data="dataTree"
     @node-click="test"
   />
+
+  <div style="margin-bottom: 300px">
+    <MIcon icon="mdi-account" />
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -415,7 +419,8 @@ import {
   MCollapse,
   MSelect,
   MTag,
-  MTree
+  MTree,
+  MIcon
 } from '@/components';
 import useNotify from '@/components/MNotify/useNotify';
 import type { INotifyProps } from '@/components/MNotify/types';

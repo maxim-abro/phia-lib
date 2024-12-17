@@ -10,3 +10,4 @@ export * from './MCollapse';
 export * from './MSelect';
 export * from './MTag';
 export * from './MTree';
+export * from './MIcon';

@@ -5,7 +5,7 @@
       :disabled="isMin || disabled"
       @click="editValue('-')"
     >
-      -
+      <MIcon icon="mdi-minus" />
     </button>
 
     <input
@@ -21,7 +21,7 @@
       :disabled="isMax || disabled"
       @click="editValue('+')"
     >
-      +
+      <MIcon icon="mdi-plus" />
     </button>
   </div>
 </template>
@@ -33,6 +33,7 @@ export default {
 </script>
 
 <script setup lang="ts">
+import MIcon from '@/components/MIcon/index.vue';
 import type { IInputNumberProps, IInputNumberEmits } from '@/components/MInputNumber/types';
 import { computed } from 'vue';
 

@@ -17,20 +17,16 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "prepare": "husky",
-    "pre-commit": "npm run lint && npm run format && git add ."
+    "pre-commit": "npm run lint && npm run format && npm run changelog && git add ."
   },
   "dependencies": {
+    "@mdi/font": "^7.4.47",
     "vue": "^3.2.47"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.6.1",
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
-    "eslint": "^8.49.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-css": "^0.9.1",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-vue": "^9.17.0",
     "@rushstack/eslint-patch": "^1.8.0",
     "@storybook/addon-essentials": "^8.2.6",
     "@storybook/addon-interactions": "^8.2.6",
@@ -53,6 +49,11 @@
     "c8": "^10.1.2",
     "conventional-changelog": "^5.1.0",
     "conventional-changelog-cli": "^4.1.0",
+    "eslint": "^8.49.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-css": "^0.9.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.17.0",
     "jsdom": "^24.0.0",
     "npm-run-all2": "^6.1.2",
     "prettier": "^3.2.5",

@@ -9,6 +9,15 @@
       @click="onClick(item.children?.length, item.id || item.label, _idx)"
     >
       {{ item.label }}
+
+      <MIcon
+        icon="mdi-chevron-right"
+        class="tree-item__icon"
+        :class="{
+          opened: item.collapse
+        }"
+      />
+      {{ item.collapse }}
     </div>
 
     <div
@@ -32,6 +41,7 @@ export default {
 <script setup lang="ts">
 import { ITreeEmits, ITreeProps, MTreeWithToggle } from '@/components/MTree/types';
 import { onBeforeMount, ref } from 'vue';
+import MIcon from '@/components/MIcon/index.vue';
 
 const props = defineProps<ITreeProps>();
 const emits = defineEmits<ITreeEmits>();
@@ -62,8 +72,18 @@ onBeforeMount(() => {
 .child {
   padding-left: 24px;
 }
-.tree-item:hover {
-  cursor: pointer;
-  background: rgb(var(--m-primary-light));
+.tree-item {
+  &:hover {
+    cursor: pointer;
+    background: rgb(var(--m-primary-light));
+  }
+  &__icon {
+    transition: all 200ms;
+    &.opened {
+      display: inline-block;
+      transform: rotate(90deg);
+      transition: all 200ms;
+    }
+  }
 }
 </style>
