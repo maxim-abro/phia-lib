@@ -418,7 +418,7 @@ import {
   MTree
 } from '@/components';
 import useNotify from '@/components/MNotify/useNotify';
-import type { INotifyProps } from '@/components/MNotify/Type';
+import type { INotifyProps } from '@/components/MNotify/types';
 import { ref } from 'vue';
 const propsNotify: INotifyProps = {
   title: 'title',

@@ -18,7 +18,7 @@
 </template>
 
 <script setup lang="ts">
-import type { IButtonProps, IButtonSlots } from '@/components/MButton/Type';
+import type { IButtonProps, IButtonSlots } from '@/components/MButton/types';
 import { computed } from 'vue';
 
 const props = withDefaults(defineProps<IButtonProps>(), {

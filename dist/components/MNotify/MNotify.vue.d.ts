@@ -11,4 +11,4 @@ type __VLS_TypePropsToRuntimeProps<T> = {
         required: true;
     };
 };
-//# sourceMappingURL=MNotify.vue.d.ts.map
+//# sourceMappingURL=index.vue.d.ts.map

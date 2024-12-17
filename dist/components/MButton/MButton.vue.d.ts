@@ -33,4 +33,4 @@ type __VLS_WithTemplateSlots<T, S> = T & {
         $slots: S;
     };
 };
-//# sourceMappingURL=MButton.vue.d.ts.map
+//# sourceMappingURL=index.vue.d.ts.map

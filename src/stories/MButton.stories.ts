@@ -1,5 +1,5 @@
 import type { Meta, StoryFn, StoryObj } from '@storybook/vue3';
-import MButton from '@/components/MButton/MButton.vue';
+import MButton from '@/components/MButton/index.vue';
 
 const meta = {
   title: 'Example/MButton',

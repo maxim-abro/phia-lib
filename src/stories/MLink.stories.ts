@@ -1,5 +1,5 @@
 import type { Meta, StoryFn, StoryObj } from '@storybook/vue3';
-import MLink from '@/components/MLink/MLink.vue';
+import MLink from '@/components/MLink/index.vue';
 
 const meta = {
   title: 'Example/MLink',
