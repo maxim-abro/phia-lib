@@ -18,7 +18,7 @@
           rotate: openMenu
         }"
       >
-        arrow
+        <MIcon icon="mdi-chevron-down" />
       </span>
     </div>
 
@@ -55,6 +55,7 @@ export default {
 <script setup lang="ts">
 import { IEmitsSelect, IPropsSelect } from '@/components/MSelect/types';
 import { computed, ref } from 'vue';
+import MIcon from '@/components/MIcon/index.vue';
 
 const props = withDefaults(defineProps<IPropsSelect>(), {
   valueKey: 'value',

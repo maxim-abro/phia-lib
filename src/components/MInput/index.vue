@@ -21,7 +21,7 @@
       class="m-input__clear"
       @click="value = ''"
     >
-      clear
+      <MIcon icon="mdi-close" />
     </button>
   </div>
 </template>
@@ -35,6 +35,7 @@ export default {
 <script setup lang="ts">
 import type { MInputEmits, MInputProps } from '@/components/MInput/types';
 import { computed, ref } from 'vue';
+import MIcon from '@/components/MIcon/index.vue';
 
 const isFocus = ref<boolean>(false);
 
