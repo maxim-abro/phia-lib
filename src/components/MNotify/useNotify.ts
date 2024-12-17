@@ -12,7 +12,7 @@ const notifications: Record<INotifyPosition, NotificationQueue> = {
 let _context: AppContext | null = null;
 let seed: number = 1;
 
-export default function useNotify() {
+export default function useNotify(): IUseNotification {
   function openNotify(props: Partial<INotifyProps>): void {
     let topRight = document.querySelector('.top-right');
     if (!topRight) {

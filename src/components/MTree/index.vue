@@ -1,26 +1,26 @@
 <template>
-<!--  {{treeWithToggle}}-->
-<div
-  v-for="(item, _idx) of treeWithToggle"
-  :key="_idx"
->
+  <!--  {{treeWithToggle}}-->
   <div
-    class="tree-item"
-    @click="onClick(item.children?.length, item.id || item.label, _idx)"
+    v-for="(item, _idx) of treeWithToggle"
+    :key="_idx"
   >
-    {{ item.label }}
-  </div>
+    <div
+      class="tree-item"
+      @click="onClick(item.children?.length, item.id || item.label, _idx)"
+    >
+      {{ item.label }}
+    </div>
 
-  <div
-    v-if="item.children?.length && item.collapse"
-    class="child"
-  >
-    <MTree
-      :data="item.children"
-      @node-click="emits('node-click', $event)"
-    />
+    <div
+      v-if="item.children?.length && item.collapse"
+      class="child"
+    >
+      <MTree
+        :data="item.children"
+        @node-click="emits('node-click', $event)"
+      />
+    </div>
   </div>
-</div>
 </template>
 
 <script lang="ts">

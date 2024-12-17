@@ -7,10 +7,10 @@ const meta = {
   tags: ['autodocs'],
   argTypes: {
     modelValue: { control: 'boolean' },
-    toTeleport: { control: 'text' },
+    toTeleport: { control: 'text' }
   },
   args: {
-    modelValue: false,
+    modelValue: false
   }
 } satisfies Meta<typeof MCollapse>;
 
@@ -34,7 +34,7 @@ const Template: StoryFn<typeof MCollapse> = (args) => ({
 });
 
 export default meta;
-type Story = StoryObj<typeof meta>
+type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = Template.bind({});
 Primary.args = {

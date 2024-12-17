@@ -1,7 +1,7 @@
 export interface MTree {
-  id?: number | string
+  id?: number | string;
   label: string;
-  children?: MTree[]
+  children?: MTree[];
 }
 
 export interface ITreeProps {

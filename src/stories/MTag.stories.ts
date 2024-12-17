@@ -1,7 +1,6 @@
 import type { Meta, StoryFn, StoryObj } from '@storybook/vue3';
 import MTag from '@/components/MTag/index.vue';
 
-
 const meta = {
   title: 'Example/MTag',
   component: MTag,
@@ -34,7 +33,7 @@ const Template: StoryFn<typeof BTag> = (args) => ({
 });
 
 export default meta;
-type Story = StoryObj<typeof meta>
+type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = Template.bind({});
 Primary.args = {

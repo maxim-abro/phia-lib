@@ -368,7 +368,7 @@
       dicta dolorem eligendi fugit illo, magni maxime nesciunt odit officia placeat reiciendis
       reprehenderit sapiente, sint voluptatem?
     </m-card>
-    <m-collapse style="margin-bottom: 100px;">
+    <m-collapse style="margin-bottom: 100px">
       <template #default="{ toggleCollapse }">
         <div @click="toggleCollapse">collapse 1</div>
       </template>
@@ -381,10 +381,10 @@
     <m-select
       v-model="selectedValue"
       :values="valuesSelect"
-      style="width: 255px; margin-bottom: 300px;"
+      style="width: 255px; margin-bottom: 300px"
     />
 
-    <div style="margin-bottom: 300px;">
+    <div style="margin-bottom: 300px">
       <m-tag>default</m-tag>
       <m-tag type="primary">primary</m-tag>
       <m-tag type="success">success</m-tag>
@@ -395,7 +395,7 @@
   </div>
 
   <m-tree
-    style="margin-bottom: 300px;"
+    style="margin-bottom: 300px"
     :data="dataTree"
     @node-click="test"
   />
@@ -428,8 +428,7 @@ const testVal = ref('');
 const testValNumber = ref(0);
 const notify = useNotify();
 
-
-const selectedValue = ref<string|null>(null);
+const selectedValue = ref<string | null>(null);
 const valuesSelect = ref([
   {
     title: 'Moscow',
@@ -456,11 +455,11 @@ const dataTree: MTree[] = [
         label: 'Level two 1-1',
         children: [
           {
-            label: 'Level three 1-1-1',
-          },
-        ],
-      },
-    ],
+            label: 'Level three 1-1-1'
+          }
+        ]
+      }
+    ]
   },
   {
     label: 'Level one 2',
@@ -469,19 +468,19 @@ const dataTree: MTree[] = [
         label: 'Level two 2-1',
         children: [
           {
-            label: 'Level three 2-1-1',
-          },
-        ],
+            label: 'Level three 2-1-1'
+          }
+        ]
       },
       {
         label: 'Level two 2-2',
         children: [
           {
-            label: 'Level three 2-2-1',
-          },
-        ],
-      },
-    ],
+            label: 'Level three 2-2-1'
+          }
+        ]
+      }
+    ]
   },
   {
     label: 'Level one 3',
@@ -490,20 +489,20 @@ const dataTree: MTree[] = [
         label: 'Level two 3-1',
         children: [
           {
-            label: 'Level three 3-1-1',
-          },
-        ],
+            label: 'Level three 3-1-1'
+          }
+        ]
       },
       {
         label: 'Level two 3-2',
         children: [
           {
-            label: 'Level three 3-2-1',
-          },
-        ],
-      },
-    ],
-  },
+            label: 'Level three 3-2-1'
+          }
+        ]
+      }
+    ]
+  }
 ];
 
 function test(val: unknown): void {

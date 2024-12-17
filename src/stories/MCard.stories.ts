@@ -7,7 +7,7 @@ const meta = {
   tags: ['autodocs'],
   argTypes: {
     header: { control: 'text' },
-    footer: { control: 'text' },
+    footer: { control: 'text' }
   },
   args: {
     header: 'header',
@@ -30,7 +30,7 @@ const Template: StoryFn<typeof MCard> = (args) => ({
 });
 
 export default meta;
-type Story = StoryObj<typeof meta>
+type Story = StoryObj<typeof meta>;
 
 export const Props: Story = Template.bind({});
 Props.args = {

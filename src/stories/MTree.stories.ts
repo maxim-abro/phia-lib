@@ -17,12 +17,12 @@ const meta = {
             label: 'Level two 1-1',
             children: [
               {
-                label: 'Level three 1-1-1',
-              },
-            ],
-          },
-        ],
-      },
+                label: 'Level three 1-1-1'
+              }
+            ]
+          }
+        ]
+      }
     ]
   }
 } satisfies Meta<typeof MTree>;
@@ -40,7 +40,7 @@ const Template: StoryFn<typeof MTree> = (args) => ({
 });
 
 export default meta;
-type Story = StoryObj<typeof meta>
+type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = Template.bind({});
 Primary.args = {
@@ -52,11 +52,11 @@ Primary.args = {
           label: 'Level two 1-1',
           children: [
             {
-              label: 'Level three 1-1-1',
-            },
-          ],
-        },
-      ],
-    },
+              label: 'Level three 1-1-1'
+            }
+          ]
+        }
+      ]
+    }
   ]
 };

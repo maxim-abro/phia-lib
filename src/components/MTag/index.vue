@@ -1,16 +1,16 @@
 <template>
-<span
-  class="m-tag"
-  :class="[
-    size,
-    getClassByType,
-    {
-      round
-    }
-  ]"
->
-  <slot/>
-</span>
+  <span
+    class="m-tag"
+    :class="[
+      size,
+      getClassByType,
+      {
+        round
+      }
+    ]"
+  >
+    <slot />
+  </span>
 </template>
 
 <script lang="ts">
@@ -20,7 +20,7 @@ export default {
 </script>
 
 <script setup lang="ts">
-import { ITagProps, ITagSlots } from '@/components/MTag/types'
+import { ITagProps, ITagSlots } from '@/components/MTag/types';
 import { computed } from 'vue';
 
 const props = withDefaults(defineProps<ITagProps>(), {

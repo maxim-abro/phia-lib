@@ -55,7 +55,7 @@ const props = withDefaults(defineProps<IInputNumberProps>(), {
 
 const emits = defineEmits<IInputNumberEmits>();
 
-function editValue(symbol: string) {
+function editValue(symbol: string): void {
   if (symbol === '+') {
     props.max !== parseInt(input.value, 10)
       ? updateValue(parseInt(input.value, 10) + props.steps)

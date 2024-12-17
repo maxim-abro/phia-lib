@@ -1,15 +1,15 @@
 export interface ILinkProps {
   /** Цвет ссылки */
-  type?: TLinkType
+  type?: TLinkType;
   /** Нижнее подчёркивание при наведении */
-  underline?: boolean
+  underline?: boolean;
   /** Ссылка не активна */
-  disabled?: boolean
+  disabled?: boolean;
   /** Стандартный атрибут ссылки */
-  target?: TLinkTarget
+  target?: TLinkTarget;
   /** Ссылка */
-  href: string
+  href: string;
 }
 
-type TLinkType = 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'default'
-type TLinkTarget = '_blank' | '_parent' | '_self' | '_top'
+type TLinkType = 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'default';
+type TLinkTarget = '_blank' | '_parent' | '_self' | '_top';

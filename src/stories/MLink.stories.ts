@@ -28,7 +28,7 @@ const Template: StoryFn<typeof MLink> = (args) => ({
 });
 
 export default meta;
-type Story = StoryObj<typeof meta>
+type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = Template.bind({
   type: 'primary',

@@ -2,25 +2,25 @@ export interface IButtonProps {
   /**
    * Размер кнопки
    */
-  size?: IBtnSize
+  size?: IBtnSize;
   /** Цвет кнопки  */
-  type?: IBtnType
+  type?: IBtnType;
   /** Округлые края */
-  round?: boolean
-  link?: string
-  loading?: boolean
+  round?: boolean;
+  link?: string;
+  loading?: boolean;
   /** Кнопка не активная */
-  disabled?: boolean
+  disabled?: boolean;
   /** иконка  */
-  icon?: boolean
+  icon?: boolean;
   /** Вид кнопки  */
-  plain?: boolean
+  plain?: boolean;
 }
 
-type IBtnSize = 'large' | 'default' | 'small'
-type IBtnType = 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'default'
+type IBtnSize = 'large' | 'default' | 'small';
+type IBtnType = 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'default';
 
 export interface IButtonSlots {
   /** Стандартный слот  */
-  default(props: object): unknown
+  default(props: object): unknown;
 }

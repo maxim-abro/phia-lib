@@ -8,13 +8,13 @@ describe('MTree', () => {
       props: {
         data: [
           {
-            "label": "Level one 1",
-            "children": [
+            label: 'Level one 1',
+            children: [
               {
-                "label": "Level two 1-1",
-                "children": [
+                label: 'Level two 1-1',
+                children: [
                   {
-                    "label": "Level three 1-1-1"
+                    label: 'Level three 1-1-1'
                   }
                 ]
               }

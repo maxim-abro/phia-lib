@@ -1,51 +1,49 @@
 <template>
-<div class="select">
-  <div
-    v-click-outside="closeMenu"
-    class="select__activator"
-    :class="{
-      'active': openMenu,
-      'disabled': disabled
-    }"
-    @click="toggleMenu"
-  >
-    <span class="select__activator__text">
-      {{ chosenTitle }}
-    </span>
-    <span
-      class="select__activator__icon"
-      :class="{
-        'rotate': openMenu
-      }"
-    >
-      arrow
-    </span>
-  </div>
-
-  <div
-    v-show="openMenu"
-    class="select__menu"
-  >
+  <div class="select">
     <div
-      v-for="(item,_idx) of values"
-      :key="_idx"
-      class="select__menu__item"
+      v-click-outside="closeMenu"
+      class="select__activator"
       :class="{
-        'active': item[valueKey] === chosenValue
+        active: openMenu,
+        disabled: disabled
       }"
-      @click="chooseItem(item?.[valueKey])"
+      @click="toggleMenu"
     >
-      <span>
-        {{ item?.[titleKey] }}
+      <span class="select__activator__text">
+        {{ chosenTitle }}
+      </span>
+      <span
+        class="select__activator__icon"
+        :class="{
+          rotate: openMenu
+        }"
+      >
+        arrow
       </span>
     </div>
+
     <div
-      v-if="!values?.length"
+      v-show="openMenu"
+      class="select__menu"
     >
-      {{ noDataText }}
+      <div
+        v-for="(item, _idx) of values"
+        :key="_idx"
+        class="select__menu__item"
+        :class="{
+          active: item[valueKey] === chosenValue
+        }"
+        @click="chooseItem(item?.[valueKey])"
+      >
+        <span>
+          {{ item?.[titleKey] }}
+        </span>
+      </div>
+      <div v-if="!values?.length">
+        {{ noDataText }}
+      </div>
     </div>
   </div>
-</div>
 </template>
 
 <script lang="ts">
@@ -80,7 +78,7 @@ const chosenTitle = computed(() => {
   if (!chosenValue.value) {
     return props.placeholder;
   }
-  const foundValue = props.values?.find(item => {
+  const foundValue = props.values?.find((item) => {
     if (item?.[props.valueKey]) {
       return item?.[props.valueKey] === chosenValue.value;
     }
@@ -98,7 +96,7 @@ function closeMenu(): void {
   openMenu.value = false;
 }
 
-function chooseItem(value: string|number|boolean): void {
+function chooseItem(value: string | number | boolean): void {
   chosenValue.value = value;
   openMenu.value = false;
 }

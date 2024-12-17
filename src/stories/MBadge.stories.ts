@@ -22,7 +22,7 @@ const Template: StoryFn<typeof MBadge> = (args) => ({
 });
 
 export default meta;
-type Story = StoryObj<typeof meta>
+type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = Template.bind({});
 Primary.args = {

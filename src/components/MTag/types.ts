@@ -1,4 +1,3 @@
-
 export interface ITagProps {
   /** Цвет тега  */
   type?: TTagType;
@@ -11,11 +10,8 @@ export interface ITagProps {
   round?: boolean;
 }
 
-
-
-
-type TTagSize = 'large' | 'default' | 'small'
-type TTagType = 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'default'
+type TTagSize = 'large' | 'default' | 'small';
+type TTagType = 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'default';
 
 export interface ITagSlots {
   /** Стандартный слот  */

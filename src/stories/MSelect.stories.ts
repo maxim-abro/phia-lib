@@ -45,7 +45,7 @@ const Template: StoryFn<typeof MSelect> = (args) => ({
   `
 });
 export default meta;
-type Story = StoryObj<typeof meta>
+type Story = StoryObj<typeof meta>;
 
 export const Props: Story = Template.bind({});
 Props.args = {

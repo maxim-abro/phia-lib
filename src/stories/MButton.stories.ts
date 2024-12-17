@@ -32,7 +32,7 @@ const Template: StoryFn<typeof MButton> = (args) => ({
 });
 
 export default meta;
-type Story = StoryObj<typeof meta>
+type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = Template.bind({});
 Primary.args = {
