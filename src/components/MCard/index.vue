@@ -25,13 +25,14 @@
 <script lang="ts">
 export default {
   name: 'MCard'
-}
+};
 </script>
 
 <script setup lang="ts">
-import type { ICardProps } from '@/components/MCard/types'
+import type { ICardProps, ICardSlots } from '@/components/MCard/types';
 
-defineProps<ICardProps>()
+defineProps<ICardProps>();
+defineSlots<ICardSlots>();
 </script>
 
 <style scoped lang="scss">

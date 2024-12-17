@@ -368,7 +368,37 @@
       dicta dolorem eligendi fugit illo, magni maxime nesciunt odit officia placeat reiciendis
       reprehenderit sapiente, sint voluptatem?
     </m-card>
+    <m-collapse style="margin-bottom: 100px">
+      <template #default="{ toggleCollapse }">
+        <div @click="toggleCollapse">collapse 1</div>
+      </template>
+      <template #expand>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aperiam assumenda at,
+        consequatur corporis delectus dignissimos doloremque fuga inventore magnam nostrum odit
+        optio tenetur. Commodi doloremque ipsa nostrum possimus vel.
+      </template>
+    </m-collapse>
+    <m-select
+      v-model="selectedValue"
+      :values="valuesSelect"
+      style="width: 255px; margin-bottom: 300px"
+    />
+
+    <div style="margin-bottom: 300px">
+      <m-tag>default</m-tag>
+      <m-tag type="primary">primary</m-tag>
+      <m-tag type="success">success</m-tag>
+      <m-tag type="info">info</m-tag>
+      <m-tag type="danger">danger</m-tag>
+      <m-tag type="warning">warning</m-tag>
+    </div>
   </div>
+
+  <m-tree
+    style="margin-bottom: 300px"
+    :data="dataTree"
+    @node-click="test"
+  />
 </template>
 
 <script lang="ts" setup>
@@ -381,19 +411,103 @@ import {
   MDropdown,
   MDropdownMenu,
   MDropdownMenuItem,
-  MCard
-} from '@/components'
-import useNotify from '@/components/MNotify/useNotify'
-import type { INotifyProps } from '@/components/MNotify/Type'
-import { ref } from 'vue'
-
+  MCard,
+  MCollapse,
+  MSelect,
+  MTag,
+  MTree
+} from '@/components';
+import useNotify from '@/components/MNotify/useNotify';
+import type { INotifyProps } from '@/components/MNotify/types';
+import { ref } from 'vue';
 const propsNotify: INotifyProps = {
   title: 'title',
   message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, harum?'
+};
+const testVal = ref('');
+const testValNumber = ref(0);
+const notify = useNotify();
+
+const selectedValue = ref<string | null>(null);
+const valuesSelect = ref([
+  {
+    title: 'Moscow',
+    value: 'msk'
+  },
+  {
+    title: 'Saint Petersburg',
+    value: 'spb'
+  },
+  {
+    title: 'Kazan',
+    value: 'kzn'
+  },
+  {
+    title: 'KazanKazanKazanKazanKazanKazanKazanKazan',
+    value: 'kzn2'
+  }
+]);
+const dataTree: MTree[] = [
+  {
+    label: 'Level one 1',
+    children: [
+      {
+        label: 'Level two 1-1',
+        children: [
+          {
+            label: 'Level three 1-1-1'
+          }
+        ]
+      }
+    ]
+  },
+  {
+    label: 'Level one 2',
+    children: [
+      {
+        label: 'Level two 2-1',
+        children: [
+          {
+            label: 'Level three 2-1-1'
+          }
+        ]
+      },
+      {
+        label: 'Level two 2-2',
+        children: [
+          {
+            label: 'Level three 2-2-1'
+          }
+        ]
+      }
+    ]
+  },
+  {
+    label: 'Level one 3',
+    children: [
+      {
+        label: 'Level two 3-1',
+        children: [
+          {
+            label: 'Level three 3-1-1'
+          }
+        ]
+      },
+      {
+        label: 'Level two 3-2',
+        children: [
+          {
+            label: 'Level three 3-2-1'
+          }
+        ]
+      }
+    ]
+  }
+];
+
+function test(val: unknown): void {
+  console.log(val);
 }
-const testVal = ref('')
-const testValNumber = ref(0)
-const notify = useNotify()
 </script>
 
 <style lang="scss" scoped>

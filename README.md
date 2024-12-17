@@ -1,17 +1,24 @@
-# phia-lib
+# <center>phia-lib</center>
 
-Vue.js 3 UI library
+## <center>Phia-Lib - A vue 3 UI library.
+
+* For vue 3
+* Written in TS
+* Covered by test
 
 ## commit types
+* build
+* chore
+* ci
+* docs
+* feat
+* fix
+* perf
+* refactor
+* revert
+* styler
+* test
 
-- build
-- chore
-- ci
-- docs
-- feat
-- fix
-- perf
-- refactor
-- revert
-- style
-- test
+## License
+
+Phia-Lib is open source software licensed as [MIT](https://github.com/maxim-abro/phia-lib/blob/master/LICENSE).

@@ -19,24 +19,24 @@
 <script lang="ts">
 export default {
   name: 'MBadge'
-}
+};
 </script>
 
 <script setup lang="ts">
-import type { IBadgeProps } from '@/components/MBadge/types'
-import { computed } from 'vue'
+import type { IBadgeProps } from '@/components/MBadge/types';
+import { computed } from 'vue';
 
 const getValue = computed(() => {
   if (props.max) {
-    return Number(props.value) > props.max ? `${props.max}+` : props.value
+    return Number(props.value) > props.max ? `${props.max}+` : props.value;
   } else {
-    return props.value
+    return props.value;
   }
-})
+});
 
 const props = withDefaults(defineProps<IBadgeProps>(), {
-  type: 'default'
-})
+  type: 'primary'
+});
 </script>
 
 <style scoped lang="scss">

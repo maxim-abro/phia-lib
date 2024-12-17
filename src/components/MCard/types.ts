@@ -1,4 +1,15 @@
 export interface ICardProps {
-  header?: string
-  footer?: string
+  /** Шапка карточки */
+  header?: string;
+  /** Подвал карточки */
+  footer?: string;
+}
+
+export interface ICardSlots {
+  /** Тело карточки */
+  default(props: object): unknown;
+  /** Шапка карточки */
+  header(props: object): unknown;
+  /** Подвал карточки */
+  footer(props: object): unknown;
 }

@@ -1,6 +1,6 @@
-import { describe, it, expect } from 'vitest'
-import { mount } from '@vue/test-utils'
-import MBadge from '../components/MBadge/index.vue'
+import { describe, it, expect } from 'vitest';
+import { mount } from '@vue/test-utils';
+import MBadge from '../components/MBadge/index.vue';
 
 describe('MBadge', () => {
   it('renders correctly', () => {
@@ -13,7 +13,7 @@ describe('MBadge', () => {
         max: 99,
         value: 100
       }
-    })
-    expect(wrapper.text()).toContain('hi dude')
-  })
-})
+    });
+    expect(wrapper.text()).toContain('hi dude');
+  });
+});

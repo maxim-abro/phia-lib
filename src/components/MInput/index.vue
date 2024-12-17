@@ -12,7 +12,6 @@
       :disabled="disabled"
       :placeholder="placeholder"
       :autocomplete="autocomplete"
-      :autofocus="autofocus"
       @focus="isFocus = true"
       @blur="isFocus = false"
       @input="maxLength"
@@ -30,35 +29,36 @@
 <script lang="ts">
 export default {
   name: 'MInput'
-}
+};
 </script>
 
 <script setup lang="ts">
-import type { MInputEmits, MInputProps } from '@/components/MInput/Type'
-import { computed, ref } from 'vue'
+import type { MInputEmits, MInputProps } from '@/components/MInput/types';
+import { computed, ref } from 'vue';
 
-const isFocus = ref<boolean>(false)
+const isFocus = ref<boolean>(false);
 
 function maxLength(e: Event): void {
-  const input = <HTMLInputElement>e.target
+  const input = <HTMLInputElement>e.target;
   if (props.maxLength && input?.value.length > props.maxLength) {
-    value.value = value.value.substring(0, props.maxLength)
+    value.value = value.value.substring(0, props.maxLength);
   }
 }
 const value = computed({
   get() {
-    return props.modelValue
+    return props.modelValue;
   },
   set(value) {
-    emits('update:modelValue', value)
+    emits('update:modelValue', value);
   }
-})
+});
 
 const props = withDefaults(defineProps<MInputProps>(), {
   type: 'text',
-  modelValue: ''
-})
-const emits = defineEmits<MInputEmits>()
+  modelValue: '',
+  autocomplete: ''
+});
+const emits = defineEmits<MInputEmits>();
 </script>
 
 <style scoped lang="scss">

@@ -1,1 +1,1 @@
-export { default as MBadge } from './index.vue'
+export { default as MBadge } from './index.vue';

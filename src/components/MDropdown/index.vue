@@ -14,28 +14,28 @@
 <script lang="ts">
 export default {
   name: 'MDropdown'
-}
+};
 </script>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-import type { IDropdownProps } from '@/components/MDropdown/types'
+import { ref } from 'vue';
+import type { IDropdownProps } from '@/components/MDropdown/types';
 
-defineProps<IDropdownProps>()
+defineProps<IDropdownProps>();
 
-const isOpenDropdown = ref(false)
+const isOpenDropdown = ref(false);
 
 function toggleMenu(): void {
-  isOpenDropdown.value = !isOpenDropdown.value
+  isOpenDropdown.value = !isOpenDropdown.value;
 }
 
 defineExpose({
   toggleMenu
-})
+});
 
 const activatorPropsClick = {
   onClick: toggleMenu
-}
+};
 </script>
 
 <style scoped lang="scss">

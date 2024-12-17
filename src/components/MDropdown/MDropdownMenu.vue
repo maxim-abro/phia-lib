@@ -7,7 +7,7 @@
 <script lang="ts">
 export default {
   name: 'MDropdownMenu'
-}
+};
 </script>
 
 <style scoped lang="scss">

@@ -29,21 +29,21 @@
 <script lang="ts">
 export default {
   name: 'MInputNumber'
-}
+};
 </script>
 
 <script setup lang="ts">
-import type { IInputNumberProps, IInputNumberEmits } from '@/components/MInputNumber/Type'
-import { computed } from 'vue'
+import type { IInputNumberProps, IInputNumberEmits } from '@/components/MInputNumber/types';
+import { computed } from 'vue';
 
 const input = computed({
   get() {
-    return String(props.modelValue)
+    return String(props.modelValue);
   },
   set(value) {
-    emits('update:modelValue', Number(value))
+    emits('update:modelValue', Number(value));
   }
-})
+});
 
 const props = withDefaults(defineProps<IInputNumberProps>(), {
   steps: 1,
@@ -51,46 +51,46 @@ const props = withDefaults(defineProps<IInputNumberProps>(), {
   modelValue: 0,
   max: 999999,
   min: -999999
-})
+});
 
-const emits = defineEmits<IInputNumberEmits>()
+const emits = defineEmits<IInputNumberEmits>();
 
 function editValue(symbol: string): void {
   if (symbol === '+') {
     props.max !== parseInt(input.value, 10)
       ? updateValue(parseInt(input.value, 10) + props.steps)
-      : ''
+      : '';
   } else if (symbol === '-') {
     props.min !== parseInt(input.value, 10)
       ? updateValue(parseInt(input.value, 10) - props.steps)
-      : ''
+      : '';
   }
 }
 
 function updateValue(value: number): void {
   if (value || value === 0) {
-    input.value = value + ''
+    input.value = value + '';
   }
-  emits('update:modelValue', value)
+  emits('update:modelValue', value);
 }
 
 function validateInput(): void {
-  input.value = input.value.replace(/[^0-9]/gi, '')
+  input.value = input.value.replace(/[^0-9]/gi, '');
   if (parseInt(input.value, 10) >= props.max) {
-    input.value = props.max + ''
+    input.value = props.max + '';
   }
   if (parseInt(input.value, 10) <= props.min) {
-    input.value = props.min + ''
+    input.value = props.min + '';
   }
 }
 
 const isMin = computed((): boolean => {
-  return parseInt(input.value, 10) === props.min
-})
+  return parseInt(input.value, 10) === props.min;
+});
 
 const isMax = computed((): boolean => {
-  return parseInt(input.value, 10) === props.max
-})
+  return parseInt(input.value, 10) === props.max;
+});
 </script>
 
 <style scoped lang="scss">

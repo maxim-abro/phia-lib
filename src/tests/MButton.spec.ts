@@ -1,6 +1,6 @@
-import { describe, it, expect } from 'vitest'
-import { mount } from '@vue/test-utils'
-import MButton from '../components/MButton/MButton.vue'
+import { describe, it, expect } from 'vitest';
+import { mount } from '@vue/test-utils';
+import MButton from '../components/MButton/./index.vue';
 
 describe('MButton', () => {
   it('renders correctly', () => {
@@ -11,7 +11,7 @@ describe('MButton', () => {
       props: {
         type: 'primary'
       }
-    })
-    expect(wrapper.text()).toContain('my button')
-  })
-})
+    });
+    expect(wrapper.text()).toContain('my button');
+  });
+});
