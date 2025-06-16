@@ -1,5 +1,8 @@
 <template>
-  <div class="m-dropdown">
+  <div
+    v-click-outside="toggleMenu"
+    class="m-dropdown"
+  >
     <slot :props="activatorPropsClick" />
     <div
       v-if="isOpenDropdown"
@@ -45,6 +48,7 @@ const activatorPropsClick = {
     position: absolute;
     top: 100%;
     left: 0;
+    z-index: 1000;
   }
 }
 </style>
