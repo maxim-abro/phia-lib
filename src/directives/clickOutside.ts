@@ -1,7 +1,3 @@
-/**
- * Modified for Vue 3 from https://github.com/ndelvalle/v-click-outside
- * Cf. https://github.com/ndelvalle/v-click-outside/issues/238
- */
 const HANDLERS_PROPERTY = '__v-click-outside';
 const HAS_WINDOWS = typeof window !== 'undefined';
 const HAS_NAVIGATOR = typeof navigator !== 'undefined';
