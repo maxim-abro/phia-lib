@@ -403,6 +403,15 @@
   <div style="margin-bottom: 300px">
     <MIcon icon="mdi-account" />
   </div>
+
+  <div style="margin-bottom: 300px">
+    <MTimeSelect
+      v-model="selectTime"
+      style="width: 255px; margin-bottom: 300px"
+      step="0:12"
+    />
+    select time: {{ selectTime }}
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -420,7 +429,8 @@ import {
   MSelect,
   MTag,
   MTree,
-  MIcon
+  MIcon,
+  MTimeSelect
 } from '@/components';
 import useNotify from '@/components/MNotify/useNotify';
 import type { INotifyProps } from '@/components/MNotify/types';
@@ -432,6 +442,8 @@ const propsNotify: INotifyProps = {
 const testVal = ref('');
 const testValNumber = ref(0);
 const notify = useNotify();
+
+const selectTime = ref(null);
 
 const selectedValue = ref<string | null>(null);
 const valuesSelect = ref([
