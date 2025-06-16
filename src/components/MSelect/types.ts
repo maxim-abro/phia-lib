@@ -7,9 +7,9 @@ export interface IPropsSelect {
   //** Заблокирован элемент *//
   disabled?: boolean;
   //** Ключ для modelValue *//
-  valueKey?: string;
+  valueKey?: string | null;
   //** Ключ для названия выбранного modelValue *//
-  titleKey?: string;
+  titleKey?: string | null;
   //** Значение, когда ничего не выбрано *//
   placeholder?: string;
   // todo доделать загрузку.

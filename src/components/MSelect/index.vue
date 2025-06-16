@@ -31,12 +31,12 @@
         :key="_idx"
         class="select__menu__item"
         :class="{
-          active: item[valueKey] === chosenValue
+          active: valueKey ? item[valueKey] === chosenValue : item === chosenValue
         }"
-        @click="chooseItem(item?.[valueKey])"
+        @click="chooseItem(valueKey ? item[valueKey] : item)"
       >
         <span>
-          {{ item?.[titleKey] }}
+          {{ titleKey ? item[titleKey] : item }}
         </span>
       </div>
       <div v-if="!values?.length">
@@ -81,10 +81,10 @@ const chosenTitle = computed(() => {
   }
   const foundValue = props.values?.find((item) => {
     if (item?.[props.valueKey]) {
-      return item?.[props.valueKey] === chosenValue.value;
+      return props.valueKey ? item?.[props.valueKey] : item === chosenValue.value;
     }
   });
-  return foundValue?.[props.titleKey] || chosenValue.value;
+  return props.titleKey ? foundValue?.[props.titleKey] : foundValue || chosenValue.value;
 });
 
 function toggleMenu(): void {
@@ -149,6 +149,8 @@ function chooseItem(value: string | number | boolean): void {
     position: absolute;
     left: 0;
     bottom: 0;
+    max-height: 150px;
+    overflow: auto;
     transform: translateY(110%);
     background: rgb(var(--m-white));
     @include lightBoxShadow;
