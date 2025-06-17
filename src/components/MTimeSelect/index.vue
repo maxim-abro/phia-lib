@@ -10,7 +10,7 @@
 <script lang="ts">
 export default {
   name: 'MTimeSelect',
-}
+};
 </script>
 
 <script setup lang="ts">

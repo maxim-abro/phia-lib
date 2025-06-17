@@ -1,11 +1,11 @@
 <template>
   <div
-    v-click-outside="toggleMenu"
     class="m-dropdown"
   >
     <slot :props="activatorPropsClick" />
     <div
       v-if="isOpenDropdown"
+      v-click-outside="closeMenu"
       class="m-dropdown__menu"
       :style="`max-height: ${maxHeight || 'auto'}`"
     >
@@ -30,6 +30,10 @@ const isOpenDropdown = ref(false);
 
 function toggleMenu(): void {
   isOpenDropdown.value = !isOpenDropdown.value;
+}
+
+function closeMenu(): void {
+  isOpenDropdown.value = false;
 }
 
 defineExpose({

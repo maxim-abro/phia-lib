@@ -412,6 +412,16 @@
     />
     select time: {{ selectTime }}
   </div>
+
+  <div style="margin-bottom: 300px">
+    <MDataTransfer
+      v-model="selectedValues"
+      :items="valuesSelect"
+      left-button-text="удалить"
+      right-button-text="добавить"
+      filterable
+    />
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -435,6 +445,8 @@ import {
 import useNotify from '@/components/MNotify/useNotify';
 import type { INotifyProps } from '@/components/MNotify/types';
 import { ref } from 'vue';
+import { IMTree } from '@/components/MTree/types';
+import MDataTransfer from '@/components/MDataTransfer/index.vue';
 const propsNotify: INotifyProps = {
   title: 'title',
   message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, harum?'
@@ -460,11 +472,12 @@ const valuesSelect = ref([
     value: 'kzn'
   },
   {
-    title: 'KazanKazanKazanKazanKazanKazanKazanKazan',
+    title: 'KazanKazan KazanKazan KazanKazanKazan Kazan',
     value: 'kzn2'
   }
 ]);
-const dataTree: MTree[] = [
+
+const dataTree: IMTree[] = [
   {
     label: 'Level one 1',
     children: [
@@ -521,6 +534,8 @@ const dataTree: MTree[] = [
     ]
   }
 ];
+
+const selectedValues = ref([]);
 
 function test(val: unknown): void {
   console.log(val);
