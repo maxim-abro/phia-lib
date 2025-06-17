@@ -12,7 +12,7 @@ export interface ITimeSelectProps {
   /** Конечное значение */
   end?: string;
   /** Шаг изменения времени */
-  step?: number;
+  step?: string;
   /** Значение */
   modelValue?: string | null;
 }
