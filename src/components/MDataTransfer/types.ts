@@ -1,4 +1,4 @@
-export interface IDataTransferProps extends IDataTransferAbstractProps{
+export interface IDataTransferProps extends IDataTransferAbstractProps {
   modelValue: (string | number)[];
 }
 

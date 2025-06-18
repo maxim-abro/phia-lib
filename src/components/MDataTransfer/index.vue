@@ -51,7 +51,7 @@ export default {
 
 <script setup lang="ts">
 import MButton from '@/components/MButton/index.vue';
-import { IDataTransferEmits, IDataTransferProps } from '@/components/MDataTransfer/types';
+import type { IDataTransferEmits, IDataTransferProps } from '@/components/MDataTransfer/types';
 import MDataTransferPanel from '@/components/MDataTransfer/MDataTransferPanel.vue';
 import MIcon from '@/components/MIcon/index.vue';
 import { computed, ref } from 'vue';
