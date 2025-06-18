@@ -1,9 +1,7 @@
 <template>
   <div class="m-collapse">
     <div
-      :class="{
-        'm-activator': isExpand
-      }"
+      class="m-activator"
     >
       <slot
         name="default"
@@ -16,10 +14,17 @@
       :disabled="!toTeleport"
       :to="toTeleport"
     >
-      <slot
-        v-if="isExpand"
-        name="expand"
-      />
+      <Transition
+        @before-enter="beforeEnter"
+        @enter="enter"
+        @leave="leave"
+      >
+        <div v-if="isExpand">
+          <slot
+            name="expand"
+          />
+        </div>
+      </Transition>
     </Teleport>
   </div>
 </template>
@@ -59,6 +64,48 @@ const activatorProps = reactive({
   toggleCollapse,
   isExpand
 });
+
+const beforeEnter = (el: Element): void => {
+  const element = el as HTMLElement;
+  element.style.height = '0';
+  element.style.opacity = '0';
+  element.style.overflow = 'hidden';
+};
+
+const enter = (el: Element, done: () => void): void => {
+  const element = el as HTMLElement;
+  const height = element.scrollHeight;
+
+  requestAnimationFrame(() => {
+    element.style.transition = 'height 0.3s ease, opacity 0.3s ease';
+    element.style.height = `${height}px`;
+    element.style.opacity = '1';
+
+    setTimeout(() => {
+      element.style.height = 'auto';
+      done();
+    }, 300);
+  });
+};
+
+const leave = (el: Element, done: () => void): void => {
+  const element = el as HTMLElement;
+  const height = element.scrollHeight;
+
+  element.style.height = `${height}px`;
+  element.style.opacity = '1';
+
+  requestAnimationFrame(() => {
+    element.style.transition = 'height 0.3s ease, opacity 0.3s ease';
+
+    requestAnimationFrame(() => {
+      element.style.height = '0';
+      element.style.opacity = '0';
+
+      setTimeout(done, 300);
+    });
+  });
+};
 </script>
 
 <style scoped lang="scss">
@@ -69,5 +116,6 @@ const activatorProps = reactive({
 }
 .m-activator {
   margin-bottom: 8px;
+  cursor: pointer;
 }
 </style>
