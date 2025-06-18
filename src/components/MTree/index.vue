@@ -6,26 +6,27 @@
   >
     <div
       class="tree-item"
-      @click="onClick(item.children?.length, item.id || item.label, _idx)"
+      @click="onClick(!!item.children?.length, item.id || item.label, _idx)"
     >
       {{ item.label }}
 
       <MIcon
+        v-if="item.children?.length"
         icon="mdi-chevron-right"
         class="tree-item__icon"
         :class="{
           opened: item.collapse
         }"
       />
-      {{ item.collapse }}
     </div>
 
     <div
-      v-if="item.children?.length && item.collapse"
+      v-if="item.children?.length"
+      v-show="item?.collapse"
       class="child"
     >
       <MTree
-        :data="item.children"
+        :data="item.children || []"
         @node-click="emits('node-click', $event)"
       />
     </div>
