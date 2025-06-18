@@ -422,6 +422,34 @@
       filterable
     />
   </div>
+
+  <div style="margin-bottom: 300px">
+    <MTabs
+      v-model="activeTab"
+    >
+      <MTab
+        title="Главная"
+        :active-index="activeTab"
+        :index="0"
+      >
+        Главная
+      </MTab>
+      <MTab
+        title="Категории"
+        :active-index="activeTab"
+        :index="1"
+      >
+        Категории
+      </MTab>
+      <MTab
+        title="Контакты"
+        :active-index="activeTab"
+        :index="2"
+      >
+        Контакты
+      </MTab>
+    </MTabs>
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -440,7 +468,9 @@ import {
   MTag,
   MTree,
   MIcon,
-  MTimeSelect
+  MTimeSelect,
+  MTabs,
+  MTab
 } from '@/components';
 import useNotify from '@/components/MNotify/useNotify';
 import type { INotifyProps } from '@/components/MNotify/types';
@@ -457,24 +487,110 @@ const notify = useNotify();
 
 const selectTime = ref(null);
 
+const activeTab = ref(0);
+
 const selectedValue = ref<string | null>(null);
 const valuesSelect = ref([
-  {
-    title: 'Moscow',
-    value: 'msk'
-  },
-  {
-    title: 'Saint Petersburg',
-    value: 'spb'
-  },
-  {
-    title: 'Kazan',
-    value: 'kzn'
-  },
-  {
-    title: 'KazanKazan KazanKazan KazanKazanKazan Kazan',
-    value: 'kzn2'
-  }
+  { title: 'Moscow', value: 'moscow_0' },
+  { title: 'Pyatigorsk', value: 'ptg' },
+  { title: 'Kislovodsk', value: 'kvg' },
+  { title: 'Essentuki', value: 'etk' },
+  { title: 'Saint Petersburg', value: 'spb' },
+  { title: 'Kazan', value: 'kzn' },
+  { title: 'London', value: 'london_1' },
+  { title: 'Paris', value: 'paris_2' },
+  { title: 'Berlin', value: 'berlin_3' },
+  { title: 'Tokyo', value: 'tokyo_4' },
+  { title: 'Beijing', value: 'beijing_5' },
+  { title: 'Istanbul', value: 'istanbul_6' },
+  { title: 'Dubai', value: 'dubai_7' },
+  { title: 'New York', value: 'new_york_8' },
+  { title: 'Sydney', value: 'sydney_9' },
+  { title: 'Madrid', value: 'madrid_10' },
+  { title: 'Rome', value: 'rome_11' },
+  { title: 'Toronto', value: 'toronto_12' },
+  { title: 'Chicago', value: 'chicago_13' },
+  { title: 'Los Angeles', value: 'los_angeles_14' },
+  { title: 'Singapore', value: 'singapore_15' },
+  { title: 'Hong Kong', value: 'hong_kong_16' },
+  { title: 'Bangkok', value: 'bangkok_17' },
+  { title: 'Seoul', value: 'seoul_18' },
+  { title: 'Mumbai', value: 'mumbai_19' },
+  { title: 'Cairo', value: 'cairo_20' },
+  { title: 'Cape Town', value: 'cape_town_21' },
+  { title: 'Rio de Janeiro', value: 'rio_de_janeiro_22' },
+  { title: 'Mexico City', value: 'mexico_city_23' },
+  { title: 'Buenos Aires', value: 'buenos_aires_24' },
+  { title: 'Amsterdam', value: 'amsterdam_25' },
+  { title: 'Vienna', value: 'vienna_26' },
+  { title: 'Prague', value: 'prague_27' },
+  { title: 'Warsaw', value: 'warsaw_28' },
+  { title: 'Stockholm', value: 'stockholm_29' },
+  { title: 'Oslo', value: 'oslo_30' },
+  { title: 'Copenhagen', value: 'copenhagen_31' },
+  { title: 'Helsinki', value: 'helsinki_32' },
+  { title: 'Dublin', value: 'dublin_33' },
+  { title: 'Brussels', value: 'brussels_34' },
+  { title: 'Athens', value: 'athens_35' },
+  { title: 'Lisbon', value: 'lisbon_36' },
+  { title: 'Budapest', value: 'budapest_37' },
+  { title: 'Bucharest', value: 'bucharest_38' },
+  { title: 'Sofia', value: 'sofia_39' },
+  { title: 'Zagreb', value: 'zagreb_40' },
+  { title: 'Belgrade', value: 'belgrade_41' },
+  { title: 'Bratislava', value: 'bratislava_42' },
+  { title: 'Luxembourg', value: 'luxembourg_43' },
+  { title: 'Monaco', value: 'monaco_44' },
+  { title: 'San Marino', value: 'san_marino_45' },
+  { title: 'Vatican', value: 'vatican_46' },
+  { title: 'Andorra', value: 'andorra_47' },
+  { title: 'Ljubljana', value: 'ljubljana_48' },
+  { title: 'Valletta', value: 'valletta_49' },
+  { title: 'Reykjavik', value: 'reykjavik_50' },
+  { title: 'Manila', value: 'manila_51' },
+  { title: 'Jakarta', value: 'jakarta_52' },
+  { title: 'Kuala Lumpur', value: 'kuala_lumpur_53' },
+  { title: 'Hanoi', value: 'hanoi_54' },
+  { title: 'Ho Chi Minh City', value: 'ho_chi_minh_city_55' },
+  { title: 'Taipei', value: 'taipei_56' },
+  { title: 'Osaka', value: 'osaka_57' },
+  { title: 'Kyoto', value: 'kyoto_58' },
+  { title: 'Nagoya', value: 'nagoya_59' },
+  { title: 'Yokohama', value: 'yokohama_60' },
+  { title: 'Sapporo', value: 'sapporo_61' },
+  { title: 'Shanghai', value: 'shanghai_62' },
+  { title: 'Guangzhou', value: 'guangzhou_63' },
+  { title: 'Shenzhen', value: 'shenzhen_64' },
+  { title: 'Delhi', value: 'delhi_65' },
+  { title: 'Bangalore', value: 'bangalore_66' },
+  { title: 'Jakarta', value: 'jakarta_67' },
+  { title: 'Bogota', value: 'bogota_68' },
+  { title: 'Lima', value: 'lima_69' },
+  { title: 'Santiago', value: 'santiago_70' },
+  { title: 'Caracas', value: 'caracas_71' },
+  { title: 'Havana', value: 'havana_72' },
+  { title: 'Kingston', value: 'kingston_73' },
+  { title: 'Nassau', value: 'nassau_74' },
+  { title: 'Bridgetown', value: 'bridgetown_75' },
+  { title: 'Port-au-Prince', value: 'port-au-prince_76' },
+  { title: 'San Juan', value: 'san_juan_77' },
+  { title: 'Santo Domingo', value: 'santo_domingo_78' },
+  { title: 'Georgetown', value: 'georgetown_79' },
+  { title: 'Paramaribo', value: 'paramaribo_80' },
+  { title: 'Cayenne', value: 'cayenne_81' },
+  { title: 'Brasilia', value: 'brasilia_82' },
+  { title: 'Sao Paulo', value: 'sao_paulo_83' },
+  { title: 'Lima', value: 'lima_84' },
+  { title: 'Quito', value: 'quito_85' },
+  { title: 'La Paz', value: 'la_paz_86' },
+  { title: 'Montevideo', value: 'montevideo_87' },
+  { title: 'Asuncion', value: 'asuncion_88' },
+  { title: 'Panama City', value: 'panama_city_89' },
+  { title: 'San Jose', value: 'san_jose_90' },
+  { title: 'Tegucigalpa', value: 'tegucigalpa_91' },
+  { title: 'Managua', value: 'managua_92' },
+  { title: 'San Salvador', value: 'san_salvador_93' },
+  { title: 'Guatemala City', value: 'guatemala_city_94' }
 ]);
 
 const dataTree: IMTree[] = [
