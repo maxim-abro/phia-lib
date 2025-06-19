@@ -18,7 +18,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "prepare": "husky",
-    "pre-commit": "npm run lint && npm run format && npm run changelog && git add ."
+    "pre-commit": "npm run lint && npm run format && git add ."
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
@@ -55,6 +55,7 @@
     "eslint-plugin-css": "^0.9.1",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.17.0",
+    "husky": "^9.1.7",
     "jsdom": "^24.0.0",
     "npm-run-all2": "^6.1.2",
     "prettier": "^3.2.5",
