@@ -4,6 +4,7 @@
   "private": false,
   "type": "module",
   "author": "Abrosimov Maxim <maxim.abro@yandex.ru>",
+  "description": "Vue 3 ui library",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
