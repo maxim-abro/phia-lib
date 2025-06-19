@@ -1,3 +1,14 @@
+## 1.0.0-alpha.2 (2025-06-19)
+
+* build setting vite ([53d4e65](https://github.com/maxim-abro/phia-lib/commit/53d4e65))
+* build: setting vite config ([13a967c](https://github.com/maxim-abro/phia-lib/commit/13a967c))
+* build: setting vite config ([27f1b3c](https://github.com/maxim-abro/phia-lib/commit/27f1b3c))
+* docs: add description for package.json ([9256158](https://github.com/maxim-abro/phia-lib/commit/9256158))
+* docs: add husky ([ac26f7e](https://github.com/maxim-abro/phia-lib/commit/ac26f7e))
+* docs: edit name ([9c8c46a](https://github.com/maxim-abro/phia-lib/commit/9c8c46a))
+
+
+
 ## 1.0.0-alpha.1 (2025-06-19)
 
 * fix: add animation for collapse component ([cc4f7e4](https://github.com/maxim-abro/phia-lib/commit/cc4f7e4))
