@@ -4,6 +4,7 @@ const HAS_NAVIGATOR = typeof navigator !== 'undefined';
 const IS_TOUCH =
   HAS_WINDOWS && ('ontouchstart' in window || (HAS_NAVIGATOR && navigator.msMaxTouchPoints > 0));
 const EVENTS = IS_TOUCH ? ['touchstart'] : ['click'];
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 const processDirectiveArguments = (bindingValue) => {
   const isFunction = typeof bindingValue === 'function';
   if (!isFunction && typeof bindingValue !== 'object') {
@@ -18,11 +19,13 @@ const processDirectiveArguments = (bindingValue) => {
     capture: Boolean(bindingValue.capture)
   };
 };
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 const execHandler = ({ event, handler, middleware }) => {
   if (middleware(event)) {
     handler(event);
   }
 };
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 const onFauxIframeClick = ({ el, event, handler, middleware }) => {
   setTimeout(() => {
     const { activeElement } = document;
@@ -31,6 +34,7 @@ const onFauxIframeClick = ({ el, event, handler, middleware }) => {
     }
   }, 0);
 };
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 const onEvent = ({ el, event, handler, middleware }) => {
   const path = event.path || (event.composedPath && event.composedPath());
   const isClickOutside = path ? path.indexOf(el) < 0 : !el.contains(event.target);
@@ -39,6 +43,7 @@ const onEvent = ({ el, event, handler, middleware }) => {
   }
   execHandler({ event, handler, middleware });
 };
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 const beforeMount = (el, { value }) => {
   const { events, handler, middleware, isActive, detectIframe, capture } =
     processDirectiveArguments(value);
@@ -69,6 +74,7 @@ const beforeMount = (el, { value }) => {
     }, 0)
   );
 };
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 const unmounted = (el) => {
   const handlers = el[HANDLERS_PROPERTY] || [];
   handlers.forEach(({ event, srcTarget, handler, capture }) =>
@@ -76,6 +82,7 @@ const unmounted = (el) => {
   );
   delete el[HANDLERS_PROPERTY];
 };
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 const updated = (el, { value, oldValue }) => {
   if (JSON.stringify(value) === JSON.stringify(oldValue)) {
     return;

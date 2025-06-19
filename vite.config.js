@@ -28,6 +28,7 @@ export default defineConfig({
     outDir: 'dist',
     sourcemap: true,
     lib: {
+      // eslint-disable-next-line
       entry: resolve(__dirname, 'src/index.ts'),
       formats: ['es'],
       fileName: function () {
