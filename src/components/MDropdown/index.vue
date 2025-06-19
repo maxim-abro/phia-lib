@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="m-dropdown"
-  >
+  <div class="m-dropdown">
     <slot :props="activatorPropsClick" />
     <div
       v-if="isOpenDropdown"

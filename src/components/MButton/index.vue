@@ -19,7 +19,7 @@
 
 <script lang="ts">
 export default {
-  name: 'MButton',
+  name: 'MButton'
 };
 </script>
 

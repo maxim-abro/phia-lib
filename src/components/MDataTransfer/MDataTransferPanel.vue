@@ -8,16 +8,15 @@
             :checked="isAllItemsChose"
             :disabled="itemsLength === 0"
             @click="toggleAllItems"
-          >
+          />
           {{ titlePanel }}
         </label>
       </div>
-      <div class="transfer-panel__header__right">
-        {{ activeItemsLength }}/{{ itemsLength }}
-      </div>
+      <div class="transfer-panel__header__right">{{ activeItemsLength }}/{{ itemsLength }}</div>
     </div>
     <div class="transfer-panel__input">
       <m-input
+        v-if="filterable"
         v-model="filterValue"
         class="transfer-panel__input__element"
         clearable
@@ -30,14 +29,12 @@
         :key="_idx"
         class="transfer-panel__list__item"
       >
-        <label
-          class="transfer-panel__list__item__label"
-        >
+        <label class="transfer-panel__list__item__label">
           <input
             v-model="chosenItems"
             :value="item[itemValue]"
             type="checkbox"
-          >
+          />
           {{ item[itemTitle] }}
         </label>
       </div>
@@ -47,16 +44,22 @@
 
 <script lang="ts">
 export default {
-  name: 'MDataTransferPanel',
+  name: 'MDataTransferPanel'
 };
 </script>
 
 <script setup lang="ts">
 import { IDataTransferPanelEmits, IDataTransferPanelProps } from '@/components/MDataTransfer/types';
 import { computed, ref } from 'vue';
-import MInput from '@/components/MInput/index.vue';
+import { MInput } from '@/components';
 
-const props = defineProps<IDataTransferPanelProps>();
+const props = withDefaults(defineProps<IDataTransferPanelProps>(), {
+  leftTitle: 'Не выбранные',
+  rightTitle: 'Выбранные',
+  filterPlaceholder: 'Ввести',
+  itemValue: 'value',
+  itemTitle: 'title'
+});
 const emits = defineEmits<IDataTransferPanelEmits>();
 
 const filterValue = ref<string>('');
@@ -72,21 +75,25 @@ const chosenItems = computed({
 
 const filteredItems = computed(() => {
   if (filterValue.value) {
-    return props.items.filter(item=> item[props.itemTitle].toLowerCase().includes(filterValue.value.toLowerCase()));
+    return props.items.filter((item) =>
+      item[props.itemTitle].toLowerCase().includes(filterValue.value.toLowerCase())
+    );
   }
   return props.items;
 });
 
 const itemsLength = computed(() => props.items.length);
 const activeItemsLength = computed(() => props.activeItems?.length);
-const isAllItemsChose = computed(() => (itemsLength.value === activeItemsLength.value) && itemsLength.value !== 0);
+const isAllItemsChose = computed(
+  () => itemsLength.value === activeItemsLength.value && itemsLength.value !== 0
+);
 
 function toggleAllItems(): void {
   if (isAllItemsChose.value) {
     chosenItems.value = [];
     return;
   }
-  chosenItems.value = props.items.map(item=>item[props.itemValue]);
+  chosenItems.value = props.items.map((item) => item[props.itemValue]);
 }
 </script>
 

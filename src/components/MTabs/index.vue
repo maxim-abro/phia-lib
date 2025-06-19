@@ -39,7 +39,8 @@ function extractTabTitles(): string[] {
   const children = slots.default?.() || [];
   return children
     .filter((child: VNode) => {
-      // @ts-ignore
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error
       return child.type?.name === 'MTab';
     })
     .map((tab: VNode) => tab.props?.title as string);

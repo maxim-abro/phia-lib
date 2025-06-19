@@ -139,7 +139,7 @@ const isMax = computed((): boolean => {
     width: 56px;
     height: 100%;
     &:disabled {
-      background: #FFFFFF;
+      background: #ffffff;
     }
   }
 }

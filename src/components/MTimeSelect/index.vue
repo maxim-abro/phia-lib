@@ -2,6 +2,8 @@
   <m-select
     v-model="choseValue"
     :values="values"
+    :disabled="disabled"
+    :placeholder="placeholder"
     :value-key="null"
     :title-key="null"
   />
@@ -9,7 +11,7 @@
 
 <script lang="ts">
 export default {
-  name: 'MTimeSelect',
+  name: 'MTimeSelect'
 };
 </script>
 
@@ -37,7 +39,6 @@ const choseValue = computed({
 });
 
 const values = computed(() => {
-  if (props.step <= 0) throw new Error('Шаг должен быть положительным числом');
   if (props.start >= props.end) throw new Error('Начальное время должно быть меньше конечного');
 
   const step = toMinutes(props.step);

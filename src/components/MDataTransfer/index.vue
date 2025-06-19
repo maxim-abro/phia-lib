@@ -17,7 +17,7 @@
         :disabled="!isHasRightItems"
         @click="removeItems"
       >
-        <m-icon icon="mdi-chevron-left"/>
+        <m-icon icon="mdi-chevron-left" />
         {{ leftButtonText }}
       </m-button>
       <m-button
@@ -27,7 +27,7 @@
         @click="addItems"
       >
         {{ rightButtonText }}
-        <m-icon icon="mdi-chevron-right"/>
+        <m-icon icon="mdi-chevron-right" />
       </m-button>
     </div>
     <MDataTransferPanel
@@ -45,7 +45,7 @@
 
 <script lang="ts">
 export default {
-  name: "MDataTransfer",
+  name: 'MDataTransfer'
 };
 </script>
 
@@ -71,9 +71,11 @@ const rightItems = ref<(string | number)[]>([]);
 const isHasLeftItems = computed(() => leftItems.value.length);
 const isHasRightItems = computed(() => rightItems.value.length);
 
-const chosenItems = computed(() => props.items.filter(item => props.modelValue.includes(item[props.itemValue])));
+const chosenItems = computed(() =>
+  props.items.filter((item) => props.modelValue.includes(item[props.itemValue]))
+);
 const filteredItems = computed(() => {
-  return props.items.filter(item => !props.modelValue.includes(item[props.itemValue]));
+  return props.items.filter((item) => !props.modelValue.includes(item[props.itemValue]));
 });
 
 function addItems(): void {
@@ -82,7 +84,7 @@ function addItems(): void {
 }
 
 function removeItems(): void {
-  const filteredItems = props.modelValue.filter(item => !rightItems.value.includes(item));
+  const filteredItems = props.modelValue.filter((item) => !rightItems.value.includes(item));
   emits('update:modelValue', filteredItems);
   rightItems.value = [];
 }
