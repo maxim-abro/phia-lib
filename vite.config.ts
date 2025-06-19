@@ -29,6 +29,7 @@ export default defineConfig({
     outDir: 'dist',
     sourcemap: true,
     lib: {
+      name: 'phia-ui',
       entry: resolve(__dirname, 'src/index.ts'),
       formats: ['es'],
       fileName: () => {
@@ -38,6 +39,7 @@ export default defineConfig({
     rollupOptions: {
       external: ['vue'],
       output: {
+        exports: 'named',
         globals: {
           vue: 'Vue'
         }

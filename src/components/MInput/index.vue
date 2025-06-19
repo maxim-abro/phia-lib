@@ -60,7 +60,7 @@ const props = withDefaults(defineProps<MInputProps>(), {
 const emits = defineEmits<MInputEmits>();
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .m-input {
   border-radius: 4px;
   border: 1px solid rgb(var(--m-text-color));

@@ -94,7 +94,7 @@ const isMax = computed((): boolean => {
 });
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .m-input-number {
   border: 1px solid rgb(var(--m-gray-color));
   border-radius: 4px;

@@ -39,7 +39,7 @@ const props = withDefaults(defineProps<IBadgeProps>(), {
 });
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .m-badge-wrap {
   position: relative;
   width: max-content;

@@ -21,7 +21,7 @@ import type { IDropdownMenuItemProps } from '@/components/MDropdown/types';
 defineProps<IDropdownMenuItemProps>();
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .m-dropdown-menu-item {
   padding: 5px 16px;
   cursor: pointer;

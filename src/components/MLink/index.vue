@@ -43,7 +43,7 @@ withDefaults(defineProps<ILinkProps>(), {
 });
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .m-link {
   text-decoration: none;
   &__underline {

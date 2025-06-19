@@ -90,7 +90,7 @@ function removeItems(): void {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .transfer {
   display: flex;
   align-items: center;

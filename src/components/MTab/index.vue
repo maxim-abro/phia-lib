@@ -22,7 +22,7 @@ const props = defineProps<ITabProps>();
 const isActive = computed(() => props.index === props.activeIndex);
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .tabs {
   &__content {
     &__item {

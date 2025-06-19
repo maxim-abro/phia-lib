@@ -103,7 +103,7 @@ function chooseItem(value: string | number | boolean): void {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 @import 'src/assets/scss/_mixins';
 .select {
   position: relative;

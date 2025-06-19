@@ -35,7 +35,7 @@ defineProps<ICardProps>();
 defineSlots<ICardSlots>();
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .m-card {
   border-radius: 4px;
   border: 1px solid rgb(var(--m-border-color));

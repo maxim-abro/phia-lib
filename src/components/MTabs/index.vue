@@ -59,7 +59,7 @@ onMounted(updateTabTitles);
 watch(() => slots.default?.(), updateTabTitles);
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .tabs {
   &__header {
     display: flex;
