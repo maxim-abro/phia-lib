@@ -13,7 +13,7 @@
     "build-only": "vite build",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s --commit-path .",
     "type-check": "vue-tsc --build --force",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-pattern \"/dist/\" --ignore-path \"/src/directives/\" --ignore-path .gitignore",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-pattern \"/dist/\" --ignore-pattern \"/docs/*\" --ignore-path \"/src/directives/\" --ignore-path .gitignore",
     "format": "prettier --write src/",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
