@@ -68,7 +68,7 @@ onBeforeMount(() => {
 });
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 @import 'src/assets/scss/colors';
 .child {
   padding-left: 24px;

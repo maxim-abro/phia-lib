@@ -97,7 +97,7 @@ function toggleAllItems(): void {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .transfer-panel {
   width: 300px;
   border-radius: 4px;

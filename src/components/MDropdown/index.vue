@@ -43,7 +43,7 @@ const activatorPropsClick = {
 };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .m-dropdown {
   position: relative;
   &__menu {

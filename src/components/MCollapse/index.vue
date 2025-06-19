@@ -104,7 +104,7 @@ const leave = (el: Element, done: () => void): void => {
 };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .m-collapse {
   border-top: 1px solid rgb(var(--m-border-color));
   border-bottom: 1px solid rgb(var(--m-border-color));

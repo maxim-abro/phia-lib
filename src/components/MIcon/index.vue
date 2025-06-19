@@ -14,6 +14,6 @@ import { IIconProps } from '@/components/MIcon/types';
 defineProps<IIconProps>();
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 @import '@mdi/font/css/materialdesignicons.min.css';
 </style>

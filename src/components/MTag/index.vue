@@ -33,7 +33,7 @@ defineSlots<ITagSlots>();
 const getClassByType = computed<string>(() => `m-tag__${props.type}`);
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 @import 'src/assets/scss/_mixins';
 .m-tag {
   padding: 2px 10px;

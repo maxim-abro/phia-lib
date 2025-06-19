@@ -18,7 +18,7 @@ import type { INotifyProps } from '@/components/MNotify/types';
 defineProps<INotifyProps>();
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .notify-container {
   background: rgb(var(--m-white));
   padding: 10px;
