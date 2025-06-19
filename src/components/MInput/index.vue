@@ -55,9 +55,7 @@ const value = computed({
 });
 
 const props = withDefaults(defineProps<MInputProps>(), {
-  type: 'text',
-  modelValue: '',
-  autocomplete: ''
+  type: 'text'
 });
 const emits = defineEmits<MInputEmits>();
 </script>

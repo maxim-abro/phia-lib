@@ -80,7 +80,7 @@ const chosenTitle = computed(() => {
     return props.placeholder;
   }
   const foundValue = props.values?.find((item) => {
-    if (item?.[props.valueKey]) {
+    if (typeof item === 'object' && item?.[props.valueKey]) {
       return props.valueKey ? item?.[props.valueKey] : item === chosenValue.value;
     }
   });

@@ -1,5 +1,3 @@
-
-
 export interface ITimeSelectProps {
   /** не активно */
   disabled?: boolean;

@@ -18,7 +18,7 @@ export interface IPropsSelect {
   //** Значение, когда нет элементов *//
   noDataText?: string;
   //** Список значений *//
-  values: unknown[];
+  values: (string | number | Record<string, string | number | boolean>)[];
 }
 
 export interface IEmitsSelect {

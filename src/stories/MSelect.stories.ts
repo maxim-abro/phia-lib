@@ -25,7 +25,7 @@ const meta = {
 } satisfies Meta<typeof MSelect>;
 
 const Template: StoryFn<typeof MSelect> = (args) => ({
-  computed: { MSelect },
+  components: { MSelect },
   setup() {
     const val = ref(null);
     const values = [
@@ -42,6 +42,7 @@ const Template: StoryFn<typeof MSelect> = (args) => ({
   },
   template: `
     <MSelect v-bind="args" v-model="val" :values="values"/>
+    Выбранное значение: {{ val }}
   `
 });
 export default meta;

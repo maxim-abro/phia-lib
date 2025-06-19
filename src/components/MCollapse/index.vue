@@ -1,8 +1,6 @@
 <template>
   <div class="m-collapse">
-    <div
-      class="m-activator"
-    >
+    <div class="m-activator">
       <slot
         name="default"
         v-bind="activatorProps"
@@ -20,9 +18,7 @@
         @leave="leave"
       >
         <div v-if="isExpand">
-          <slot
-            name="expand"
-          />
+          <slot name="expand" />
         </div>
       </Transition>
     </Teleport>

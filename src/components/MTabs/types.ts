@@ -3,7 +3,7 @@ export interface ITabsProps {
 }
 
 export interface ITabsEmits {
-  (e: 'update:modelValue', value: string | number): void;
+  (e: 'update:modelValue', value: number): void;
   (e: 'tab-click', value: Event): void;
 }
 

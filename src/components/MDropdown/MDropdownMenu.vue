@@ -12,7 +12,7 @@ export default {
 
 <style scoped lang="scss">
 .m-dropdown-menu {
-  background: #FFF;
+  background: #fff;
   box-shadow:
     0 4px 8px 0 rgba(0, 0, 0, 0.2),
     0 6px 20px 0 rgba(0, 0, 0, 0.19);

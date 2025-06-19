@@ -424,9 +424,7 @@
   </div>
 
   <div style="margin-bottom: 300px">
-    <MTabs
-      v-model="activeTab"
-    >
+    <MTabs v-model="activeTab">
       <MTab
         title="Главная"
         :active-index="activeTab"

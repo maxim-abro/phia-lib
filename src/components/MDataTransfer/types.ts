@@ -16,13 +16,13 @@ export interface IDataTransferPanelEmits {
 }
 
 interface IDataTransferAbstractProps {
-  items: Record<string, any>[];
+  items: Record<string, never>[];
   filterPlaceholder?: string;
   filterable?: boolean;
   leftTitle?: string;
   leftButtonText?: string;
   rightButtonText?: string;
   rightTitle?: string;
-  itemValue: string;
-  itemTitle: string;
+  itemValue?: string;
+  itemTitle?: string;
 }
