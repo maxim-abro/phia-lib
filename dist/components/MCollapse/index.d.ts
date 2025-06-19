@@ -1,2 +1,2 @@
-export { default as MCollapse } from './MCollapse.vue';
+export { default as MCollapse } from './index.vue';
 //# sourceMappingURL=index.d.ts.map

@@ -28,7 +28,7 @@ export default defineConfig({
     outDir: 'dist',
     sourcemap: true,
     lib: {
-      entry: resolve(__dirname, 'src/index.ts'), // eslint-disable-line no-undef
+      entry: resolve(__dirname, 'src/index.ts'),
       formats: ['es'],
       fileName: function () {
         return "[name].js";

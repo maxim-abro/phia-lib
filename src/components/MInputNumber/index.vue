@@ -124,11 +124,23 @@ const isMax = computed((): boolean => {
       color: rgb(var(--m-primary-400));
     }
   }
+  &__button-right,
+  &__button-left {
+    &:not(:disabled) {
+      cursor: pointer;
+      &:hover {
+        background: rgb(var(--m-gray-dark-color)) !important;
+      }
+    }
+  }
   &__input {
     border: none;
     text-align: center;
     width: 56px;
     height: 100%;
+    &:disabled {
+      background: #ffffff;
+    }
   }
 }
 </style>

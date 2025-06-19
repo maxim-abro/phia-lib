@@ -1,18 +1,18 @@
-export interface MTree {
+export interface IMTree {
     id?: number | string;
     label: string;
-    children?: MTree[];
+    children?: IMTree[];
 }
 export interface ITreeProps {
     /** Дата */
-    data: MTree[];
+    data: IMTree[];
     load?: boolean;
     showCheckbox?: boolean;
 }
 export interface ITreeEmits {
     (e: 'node-click', value: number | string): void;
 }
-export interface MTreeWithToggle extends MTree {
+export interface MTreeWithToggle extends IMTree {
     collapse: boolean;
 }
 //# sourceMappingURL=types.d.ts.map

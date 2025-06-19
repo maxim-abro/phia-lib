@@ -2,12 +2,12 @@ export interface IPropsSelect {
     modelValue: boolean | string | number;
     multiple?: boolean;
     disabled?: boolean;
-    valueKey?: string;
-    titleKey?: string;
+    valueKey?: string | null;
+    titleKey?: string | null;
     placeholder?: string;
     loading?: boolean;
     noDataText?: string;
-    values: unknown[];
+    values: (string | number | Record<string, string | number | boolean>)[];
 }
 export interface IEmitsSelect {
     (e: 'change', value: boolean | string | number): void;

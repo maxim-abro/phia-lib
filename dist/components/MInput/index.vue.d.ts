@@ -1,10 +1,8 @@
-import { MInputProps } from './Type';
+import { MInputProps } from './types';
 
-declare const _default: import('vue').DefineComponent<__VLS_WithDefaults<__VLS_TypePropsToRuntimeProps<MInputProps>, {
+declare const _default: import('vue').DefineComponent<import('vue').ExtractPropTypes<__VLS_WithDefaults<__VLS_TypePropsToRuntimeProps<MInputProps>, {
     type: string;
-    modelValue: string;
-    autocomplete: string;
-}>, {}, unknown, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {
+}>>, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {
     blur: (value: FocusEvent) => void;
     focus: (value: FocusEvent) => void;
     change: (value: string | number) => void;
@@ -13,20 +11,16 @@ declare const _default: import('vue').DefineComponent<__VLS_WithDefaults<__VLS_T
     "update:modelValue": (value: string) => void;
 }, string, import('vue').PublicProps, Readonly<import('vue').ExtractPropTypes<__VLS_WithDefaults<__VLS_TypePropsToRuntimeProps<MInputProps>, {
     type: string;
-    modelValue: string;
-    autocomplete: string;
-}>>> & {
-    onFocus?: ((value: FocusEvent) => any) | undefined;
+}>>> & Readonly<{
     onBlur?: ((value: FocusEvent) => any) | undefined;
     onChange?: ((value: string | number) => any) | undefined;
+    onFocus?: ((value: FocusEvent) => any) | undefined;
     onInput?: ((value: InputEvent) => any) | undefined;
     "onUpdate:modelValue"?: ((value: string) => any) | undefined;
     onClear?: (() => any) | undefined;
-}, {
-    type: import('./Type').MInputType;
-    modelValue: string;
-    autocomplete: string;
-}, {}>;
+}>, {
+    type: import('./types').TInputType;
+}, {}, {}, {}, string, import('vue').ComponentProvideOptions, true, {}, any>;
 export default _default;
 type __VLS_NonUndefinedable<T> = T extends undefined ? never : T;
 type __VLS_TypePropsToRuntimeProps<T> = {

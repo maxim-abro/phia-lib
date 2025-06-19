@@ -1,22 +1,22 @@
 import { ITagProps, ITagSlots } from './types';
 
-declare const _default: __VLS_WithTemplateSlots<import('../../../vue/dist/vue.esm-bundler.js').DefineComponent<__VLS_WithDefaults<__VLS_TypePropsToRuntimeProps<ITagProps>, {
+declare const _default: __VLS_WithTemplateSlots<import('vue').DefineComponent<import('vue').ExtractPropTypes<__VLS_WithDefaults<__VLS_TypePropsToRuntimeProps<ITagProps>, {
     type: string;
     size: string;
-}>, {}, unknown, {}, {}, import('../../../vue/dist/vue.esm-bundler.js').ComponentOptionsMixin, import('../../../vue/dist/vue.esm-bundler.js').ComponentOptionsMixin, {}, string, import('../../../vue/dist/vue.esm-bundler.js').PublicProps, Readonly<import('../../../vue/dist/vue.esm-bundler.js').ExtractPropTypes<__VLS_WithDefaults<__VLS_TypePropsToRuntimeProps<ITagProps>, {
+}>>, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {}, string, import('vue').PublicProps, Readonly<import('vue').ExtractPropTypes<__VLS_WithDefaults<__VLS_TypePropsToRuntimeProps<ITagProps>, {
     type: string;
     size: string;
-}>>>, {
+}>>> & Readonly<{}>, {
     type: "primary" | "success" | "warning" | "danger" | "info" | "default";
     size: "default" | "small" | "large";
-}, {}>, Readonly<ITagSlots> & ITagSlots>;
+}, {}, {}, {}, string, import('vue').ComponentProvideOptions, true, {}, any>, Readonly<ITagSlots> & ITagSlots>;
 export default _default;
 type __VLS_NonUndefinedable<T> = T extends undefined ? never : T;
 type __VLS_TypePropsToRuntimeProps<T> = {
     [K in keyof T]-?: {} extends Pick<T, K> ? {
-        type: import('../../../vue/dist/vue.esm-bundler.js').PropType<__VLS_NonUndefinedable<T[K]>>;
+        type: import('vue').PropType<__VLS_NonUndefinedable<T[K]>>;
     } : {
-        type: import('../../../vue/dist/vue.esm-bundler.js').PropType<T[K]>;
+        type: import('vue').PropType<T[K]>;
         required: true;
     };
 };

@@ -12,3 +12,6 @@ export * from './MTag';
 export * from './MTree';
 export * from './MIcon';
 export * from './MTimeSelect';
+export * from './MDataTransfer';
+export * from './MTabs';
+export * from './MTab';

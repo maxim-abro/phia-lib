@@ -1,2 +1,2 @@
-export { default as MNotify } from './MNotify.vue';
+export { default as MNotify } from './index.vue';
 //# sourceMappingURL=index.d.ts.map

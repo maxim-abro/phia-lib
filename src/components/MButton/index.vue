@@ -17,6 +17,12 @@
   </button>
 </template>
 
+<script lang="ts">
+export default {
+  name: 'MButton'
+};
+</script>
+
 <script setup lang="ts">
 import type { IButtonProps, IButtonSlots } from '@/components/MButton/types';
 import { computed } from 'vue';

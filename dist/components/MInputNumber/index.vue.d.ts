@@ -1,12 +1,12 @@
-import { IInputNumberProps } from './Type';
+import { IInputNumberProps } from './types';
 
-declare const _default: import('vue').DefineComponent<__VLS_WithDefaults<__VLS_TypePropsToRuntimeProps<IInputNumberProps>, {
+declare const _default: import('vue').DefineComponent<import('vue').ExtractPropTypes<__VLS_WithDefaults<__VLS_TypePropsToRuntimeProps<IInputNumberProps>, {
     steps: number;
     disabled: boolean;
     modelValue: number;
     max: number;
     min: number;
-}>, {}, unknown, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {
+}>>, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {
     "update:modelValue": (value: number) => void;
 }, string, import('vue').PublicProps, Readonly<import('vue').ExtractPropTypes<__VLS_WithDefaults<__VLS_TypePropsToRuntimeProps<IInputNumberProps>, {
     steps: number;
@@ -14,15 +14,15 @@ declare const _default: import('vue').DefineComponent<__VLS_WithDefaults<__VLS_T
     modelValue: number;
     max: number;
     min: number;
-}>>> & {
+}>>> & Readonly<{
     "onUpdate:modelValue"?: ((value: number) => any) | undefined;
-}, {
+}>, {
     max: number;
     disabled: boolean;
     modelValue: number;
-    steps: number;
     min: number;
-}, {}>;
+    steps: number;
+}, {}, {}, {}, string, import('vue').ComponentProvideOptions, true, {}, any>;
 export default _default;
 type __VLS_NonUndefinedable<T> = T extends undefined ? never : T;
 type __VLS_TypePropsToRuntimeProps<T> = {

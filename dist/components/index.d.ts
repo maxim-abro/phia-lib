@@ -10,4 +10,9 @@ export * from './MCollapse';
 export * from './MSelect';
 export * from './MTag';
 export * from './MTree';
+export * from './MIcon';
+export * from './MTimeSelect';
+export * from './MDataTransfer';
+export * from './MTabs';
+export * from './MTab';
 //# sourceMappingURL=index.d.ts.map

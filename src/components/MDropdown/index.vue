@@ -3,6 +3,7 @@
     <slot :props="activatorPropsClick" />
     <div
       v-if="isOpenDropdown"
+      v-click-outside="closeMenu"
       class="m-dropdown__menu"
       :style="`max-height: ${maxHeight || 'auto'}`"
     >
@@ -29,6 +30,10 @@ function toggleMenu(): void {
   isOpenDropdown.value = !isOpenDropdown.value;
 }
 
+function closeMenu(): void {
+  isOpenDropdown.value = false;
+}
+
 defineExpose({
   toggleMenu
 });
@@ -45,6 +50,7 @@ const activatorPropsClick = {
     position: absolute;
     top: 100%;
     left: 0;
+    z-index: 1000;
   }
 }
 </style>
