@@ -4,7 +4,7 @@ const HAS_NAVIGATOR = typeof navigator !== 'undefined';
 const IS_TOUCH =
   HAS_WINDOWS && ('ontouchstart' in window || (HAS_NAVIGATOR && navigator.msMaxTouchPoints > 0));
 const EVENTS = IS_TOUCH ? ['touchstart'] : ['click'];
-const processDirectiveArguments = (bindingValue): void => {
+const processDirectiveArguments = (bindingValue) => {
   const isFunction = typeof bindingValue === 'function';
   if (!isFunction && typeof bindingValue !== 'object') {
     throw new Error('v-click-outside: Binding value must be a function or an object');
