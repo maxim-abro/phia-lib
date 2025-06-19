@@ -37,7 +37,7 @@ defineSlots<IButtonSlots>();
 const getClassByType = computed<string>(() => `m-button__${props.type}`);
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import 'src/assets/scss/_mixins';
 .m-button {
   padding: 8px 16px;

@@ -1,23 +1,25 @@
-@import '_vars';
-@import '_mixins';
-@import './colors';
-@import '@mdi/font/css/materialdesignicons.min.css';
+:global {
+  @import '_vars';
+  @import '_mixins';
+  @import './colors';
+  @import '@mdi/font/css/materialdesignicons.min.css';
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  font-weight: normal;
-}
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    font-weight: normal;
+  }
 
-.top-right {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  gap: 8px;
-  max-width: 30%;
+  .top-right {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    gap: 8px;
+    max-width: 30%;
+  }
 }
