@@ -47,8 +47,10 @@ withDefaults(defineProps<ILinkProps>(), {
 .m-link {
   text-decoration: none;
   &__underline {
-    &:hover {
-      text-decoration: underline;
+    :not(.m-link__disabled) {
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
   &__disabled {
