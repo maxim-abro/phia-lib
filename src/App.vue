@@ -1,4 +1,10 @@
 <template>
+  <div style="margin-bottom: 300px">
+    <m-breadcrumbs
+      :items="bc"
+      separator="//"
+    />
+  </div>
   <div>
     <m-button style="margin: 30px">default button</m-button>
     <m-button
@@ -468,13 +474,15 @@ import {
   MIcon,
   MTimeSelect,
   MTabs,
-  MTab
+  MTab,
+  MBreadcrumbs
 } from '@/components';
 import useNotify from '@/components/MNotify/useNotify';
 import type { INotifyProps } from '@/components/MNotify/types';
 import { ref } from 'vue';
 import { IMTree } from '@/components/MTree/types';
 import MDataTransfer from '@/components/MDataTransfer/index.vue';
+import { IBreadcrumbItem } from '@/components/MBreadcrumbs/types';
 const propsNotify: INotifyProps = {
   title: 'title',
   message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, harum?'
@@ -486,6 +494,170 @@ const notify = useNotify();
 const selectTime = ref(null);
 
 const activeTab = ref(0);
+
+const bc = ref<IBreadcrumbItem[]>([
+  {
+    title: 'Главная',
+    href: '/'
+  },
+  {
+    title: 'Категории',
+    href: '/cat'
+  },
+  {
+    title: 'Автомобили',
+    href: '/cat/auto'
+  },
+  {
+    title: 'Фольксваген',
+    href: '/cat/auto/volkswagen'
+  },
+  {
+    title: 'Главная',
+    href: '/'
+  },
+  {
+    title: 'Категории',
+    href: '/cat'
+  },
+  {
+    title: 'Автомобили',
+    href: '/cat/auto'
+  },
+  {
+    title: 'Фольксваген',
+    href: '/cat/auto/volkswagen'
+  },
+  {
+    title: 'Главная',
+    href: '/'
+  },
+  {
+    title: 'Категории',
+    href: '/cat'
+  },
+  {
+    title: 'Автомобили',
+    href: '/cat/auto'
+  },
+  {
+    title: 'Фольксваген',
+    href: '/cat/auto/volkswagen'
+  },
+  {
+    title: 'Главная',
+    href: '/'
+  },
+  {
+    title: 'Категории',
+    href: '/cat'
+  },
+  {
+    title: 'Автомобили',
+    href: '/cat/auto'
+  },
+  {
+    title: 'Фольксваген',
+    href: '/cat/auto/volkswagen'
+  },
+  {
+    title: 'Главная',
+    href: '/'
+  },
+  {
+    title: 'Категории',
+    href: '/cat'
+  },
+  {
+    title: 'Автомобили',
+    href: '/cat/auto'
+  },
+  {
+    title: 'Фольксваген',
+    href: '/cat/auto/volkswagen'
+  },
+  {
+    title: 'Главная',
+    href: '/'
+  },
+  {
+    title: 'Категории',
+    href: '/cat'
+  },
+  {
+    title: 'Автомобили',
+    href: '/cat/auto'
+  },
+  {
+    title: 'Фольксваген',
+    href: '/cat/auto/volkswagen'
+  },
+  {
+    title: 'Главная',
+    href: '/'
+  },
+  {
+    title: 'Категории',
+    href: '/cat'
+  },
+  {
+    title: 'Автомобили',
+    href: '/cat/auto'
+  },
+  {
+    title: 'Фольксваген',
+    href: '/cat/auto/volkswagen'
+  },
+  {
+    title: 'Главная',
+    href: '/'
+  },
+  {
+    title: 'Категории',
+    href: '/cat'
+  },
+  {
+    title: 'Автомобили',
+    href: '/cat/auto'
+  },
+  {
+    title: 'Фольксваген',
+    href: '/cat/auto/volkswagen'
+  },
+  {
+    title: 'Главная',
+    href: '/',
+    disabled: true
+  },
+  {
+    title: 'Категории',
+    href: '/cat'
+  },
+  {
+    title: 'Автомобили',
+    href: '/cat/auto'
+  },
+  {
+    title: 'Фольксваген',
+    href: '/cat/auto/volkswagen'
+  },
+  {
+    title: 'Главная',
+    href: '/'
+  },
+  {
+    title: 'Категории',
+    href: '/cat'
+  },
+  {
+    title: 'Автомобили',
+    href: '/cat/auto'
+  },
+  {
+    title: 'Фольксваген',
+    href: '/cat/auto/volkswagen'
+  }
+]);
 
 const selectedValue = ref<string | null>(null);
 const valuesSelect = ref([
