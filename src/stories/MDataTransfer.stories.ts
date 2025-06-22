@@ -3,7 +3,7 @@ import MDataTransfer from '@/components/MDataTransfer/index.vue';
 import { ref } from 'vue';
 
 const meta = {
-  title: 'Example/MDataTransfer',
+  title: 'Form/Data transfer',
   component: MDataTransfer,
   tags: ['autodocs'],
   argTypes: {

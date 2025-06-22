@@ -2,7 +2,7 @@ import type { Meta, StoryFn, StoryObj } from '@storybook/vue3';
 import MLink from '@/components/MLink/index.vue';
 
 const meta = {
-  title: 'Example/MLink',
+  title: 'Basic/Link',
   component: MLink,
   tags: ['autodocs'],
   argTypes: {

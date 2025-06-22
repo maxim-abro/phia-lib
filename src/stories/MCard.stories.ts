@@ -2,7 +2,7 @@ import type { Meta, StoryFn, StoryObj } from '@storybook/vue3';
 import MCard from '@/components/MCard/index.vue';
 
 const meta = {
-  title: 'Example/MCard',
+  title: 'Data/Card',
   component: MCard,
   tags: ['autodocs'],
   argTypes: {

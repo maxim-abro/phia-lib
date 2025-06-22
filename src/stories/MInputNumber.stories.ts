@@ -3,7 +3,7 @@ import MInputNumber from '@/components/MInputNumber/index.vue';
 import { ref } from 'vue';
 
 const meta = {
-  title: 'Example/MInputNumber',
+  title: 'Form/Input number',
   component: MInputNumber,
   tags: ['autodocs'],
   argTypes: {

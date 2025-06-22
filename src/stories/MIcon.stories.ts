@@ -2,7 +2,7 @@ import MIcon from '@/components/MIcon/index.vue';
 import { Meta, StoryFn, StoryObj } from '@storybook/vue3';
 
 const meta: Meta<typeof MIcon> = {
-  title: 'Example/MIcon',
+  title: 'Basic/Icon',
   component: MIcon,
   tags: ['autodocs'],
   argTypes: {

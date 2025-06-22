@@ -3,7 +3,7 @@ import MSelect from '@/components/MSelect/index.vue';
 import { ref } from 'vue';
 
 const meta = {
-  title: 'Example/MSelect',
+  title: 'Form/Select',
   component: MSelect,
   tags: ['autodocs'],
   argTypes: {

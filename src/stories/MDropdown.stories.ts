@@ -5,7 +5,7 @@ import MButton from '@/components/MButton/index.vue';
 import { Meta, StoryFn, StoryObj } from '@storybook/vue3';
 
 const meta: Meta<typeof MDropdown> = {
-  title: 'Example/MDropdown',
+  title: 'Navigation/Dropdown',
   component: MDropdown,
   tags: ['autodocs'],
   argTypes: {

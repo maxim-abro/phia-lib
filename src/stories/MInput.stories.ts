@@ -3,7 +3,7 @@ import MInput from '@/components/MInput/index.vue';
 import { ref } from 'vue';
 
 const meta = {
-  title: 'Example/MInput',
+  title: 'Form/Input',
   component: MInput,
   tags: ['autodocs'],
   argTypes: {

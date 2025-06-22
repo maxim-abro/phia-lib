@@ -3,7 +3,7 @@ import MTimeSelect from '@/components/MTimeSelect/index.vue';
 import { ref } from 'vue';
 
 const meta = {
-  title: 'Example/MTimeSelect',
+  title: 'Form/Time select',
   component: MTimeSelect,
   tags: ['autodocs'],
   argTypes: {

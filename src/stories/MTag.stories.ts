@@ -2,7 +2,7 @@ import type { Meta, StoryFn, StoryObj } from '@storybook/vue3';
 import MTag from '@/components/MTag/index.vue';
 
 const meta = {
-  title: 'Example/MTag',
+  title: 'Data/Tag',
   component: MTag,
   tags: ['autodocs'],
   argTypes: {

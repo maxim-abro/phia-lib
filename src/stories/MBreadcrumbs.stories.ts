@@ -2,7 +2,7 @@ import type { Meta, StoryFn, StoryObj } from '@storybook/vue3';
 import MBreadcrumbs from '@/components/MBreadcrumbs/index.vue';
 
 const meta = {
-  title: 'Example/MBreadcrumbs',
+  title: 'Navigation/Breadcrumbs',
   component: MBreadcrumbs,
   tags: ['autodocs'],
   argTypes: {

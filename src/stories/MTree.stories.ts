@@ -2,7 +2,7 @@ import type { Meta, StoryFn, StoryObj } from '@storybook/vue3';
 import MTree from '@/components/MTree/index.vue';
 
 const meta = {
-  title: 'Example/MTree',
+  title: 'Data/Tree',
   component: MTree,
   tags: ['autodocs'],
   argTypes: {

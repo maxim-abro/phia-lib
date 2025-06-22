@@ -2,7 +2,7 @@ import type { Meta, StoryFn, StoryObj } from '@storybook/vue3';
 import MCollapse from '@/components/MCollapse/index.vue';
 
 const meta = {
-  title: 'Example/MCollapse',
+  title: 'Data/Collapse',
   component: MCollapse,
   tags: ['autodocs'],
   argTypes: {

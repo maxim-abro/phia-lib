@@ -4,7 +4,7 @@ import { MTab } from '@/components';
 import { ref } from 'vue';
 
 const meta = {
-  title: 'Example/MTabs',
+  title: 'Navigation/Tabs',
   tags: ['autodocs'],
   component: MTabs,
   argTypes: {

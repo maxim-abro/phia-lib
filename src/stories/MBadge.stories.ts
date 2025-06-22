@@ -2,7 +2,7 @@ import type { Meta, StoryFn, StoryObj } from '@storybook/vue3';
 import MBadge from '@/components/MBadge/index.vue';
 
 const meta = {
-  title: 'Example/MBadge',
+  title: 'Data/Badge',
   component: MBadge,
   tags: ['autodocs'],
   argTypes: {
