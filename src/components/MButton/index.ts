@@ -1,1 +1,1 @@
-export { default as MButton } from './index.vue';
+export { default as MButton } from './MButton.vue';

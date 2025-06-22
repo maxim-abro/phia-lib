@@ -35,7 +35,7 @@ export default {
 <script setup lang="ts">
 import type { MInputEmits, MInputProps } from '@/components/MInput/types';
 import { computed, ref } from 'vue';
-import MIcon from '@/components/MIcon/index.vue';
+import MIcon from '../MIcon/MIcon.vue';
 
 const isFocus = ref<boolean>(false);
 

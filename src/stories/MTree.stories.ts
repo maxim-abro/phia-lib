@@ -1,5 +1,5 @@
 import type { Meta, StoryFn, StoryObj } from '@storybook/vue3';
-import MTree from '@/components/MTree/index.vue';
+import MTree from '../components/MTree/MTree.vue';
 
 const meta = {
   title: 'Data/Tree',

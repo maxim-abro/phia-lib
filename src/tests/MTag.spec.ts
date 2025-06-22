@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { mount } from '@vue/test-utils';
-import MTag from '@/components/MTag/index.vue';
+import MTag from '../components/MTag/MTag.vue';
 
 describe('MTag', () => {
   it('Renders correctly', () => {

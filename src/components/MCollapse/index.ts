@@ -1,1 +1,1 @@
-export { default as MCollapse } from './index.vue';
+export { default as MCollapse } from './MCollapse.vue';

@@ -5,7 +5,7 @@ const config: StorybookConfig = {
   typescript: {
     check: false,
     checkOptions: {},
-    reactDocgen: 'vue-docgen', // явное указание парсера
+    reactDocgen: 'vue-docgen',
     reactDocgenTypescriptOptions: {
       shouldExtractLiteralValuesFromEnum: true,
       propFilter: (prop) => (prop.parent ? !/node_modules/.test(prop.parent.fileName) : true),
@@ -30,7 +30,6 @@ const config: StorybookConfig = {
     builder: '@storybook/builder-vite',
   },
   async viteFinal(config) {
-    console.log('work');
     return {
       ...config,
       define: { 'process.env': {} },
@@ -38,7 +37,6 @@ const config: StorybookConfig = {
         ...config.resolve,
         alias: {
           ...config.resolve.alias,
-          // Пример алиаса
           '@': path.resolve(__dirname, '../src'),
         }
       }

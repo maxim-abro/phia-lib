@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { mount } from '@vue/test-utils';
-import MBreadcrumbs from '@/components/MBreadcrumbs/index.vue';
+import MBreadcrumbs from '../components/MBreadcrumbs/MBreadcrumbs.vue';
 
 describe('MBreadcrumbs', () => {
   it('renders correctly', () => {

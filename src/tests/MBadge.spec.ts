@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { mount } from '@vue/test-utils';
-import MBadge from '../components/MBadge/index.vue';
+import MBadge from '../components/MBadge/MBadge.vue';
 
 describe('MBadge', () => {
   it('renders correctly', () => {

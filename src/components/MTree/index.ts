@@ -1,1 +1,1 @@
-export { default as MTree } from './index.vue';
+export { default as MTree } from './MTree.vue';

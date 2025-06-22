@@ -1,5 +1,5 @@
 import type { Meta, StoryFn, StoryObj } from '@storybook/vue3';
-import MDataTransfer from '@/components/MDataTransfer/index.vue';
+import MDataTransfer from '../components/MDataTransfer/MDataTransfer.vue';
 import { ref } from 'vue';
 
 const meta = {

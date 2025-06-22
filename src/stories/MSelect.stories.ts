@@ -1,11 +1,20 @@
 import type { Meta, StoryFn, StoryObj } from '@storybook/vue3';
-import MSelect from '@/components/MSelect/index.vue';
+import MSelect from '../components/MSelect/MSelect.vue';
 import { ref } from 'vue';
 
 const meta = {
   title: 'Form/Select',
   component: MSelect,
   tags: ['autodocs'],
+  decorators: [
+    () => ({
+      template: `
+        <div style="height: 500px;">
+          <story />
+        </div>
+      `
+    })
+  ],
   argTypes: {
     disabled: { control: 'boolean' }
   },

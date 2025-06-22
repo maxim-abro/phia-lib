@@ -55,7 +55,7 @@ export default {
 <script setup lang="ts">
 import { IEmitsSelect, IPropsSelect } from '@/components/MSelect/types';
 import { computed, ref } from 'vue';
-import MIcon from '@/components/MIcon/index.vue';
+import MIcon from '../MIcon/MIcon.vue';
 
 const props = withDefaults(defineProps<IPropsSelect>(), {
   valueKey: 'value',

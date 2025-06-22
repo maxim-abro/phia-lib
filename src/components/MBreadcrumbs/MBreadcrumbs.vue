@@ -33,7 +33,7 @@ export default {
 
 <script setup lang="ts">
 import { IBreadcrumbsProps } from '@/components/MBreadcrumbs/types';
-import MLink from '@/components/MLink/index.vue';
+import MLink from '../MLink/MLink.vue';
 
 const props = withDefaults(defineProps<IBreadcrumbsProps>(), {
   separator: '/'

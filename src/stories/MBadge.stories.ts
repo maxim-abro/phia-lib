@@ -1,5 +1,5 @@
 import type { Meta, StoryFn, StoryObj } from '@storybook/vue3';
-import MBadge from '@/components/MBadge/index.vue';
+import MBadge from '../components/MBadge/MBadge.vue';
 
 const meta = {
   title: 'Data/Badge',

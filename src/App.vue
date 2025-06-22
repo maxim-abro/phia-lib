@@ -481,7 +481,7 @@ import useNotify from '@/components/MNotify/useNotify';
 import type { INotifyProps } from '@/components/MNotify/types';
 import { ref } from 'vue';
 import { IMTree } from '@/components/MTree/types';
-import MDataTransfer from '@/components/MDataTransfer/index.vue';
+import MDataTransfer from './components/MDataTransfer/MDataTransfer.vue';
 import { IBreadcrumbItem } from '@/components/MBreadcrumbs/types';
 const propsNotify: INotifyProps = {
   title: 'title',

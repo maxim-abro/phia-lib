@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { mount } from '@vue/test-utils';
-import MLink from '../components/MLink/index.vue';
+import MLink from '../components/MLink/MLink.vue';
 
 describe('MButton', () => {
   it('renders correctly', () => {

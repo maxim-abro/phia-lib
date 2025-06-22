@@ -1,5 +1,5 @@
 import type { Meta, StoryFn, StoryObj } from '@storybook/vue3';
-import MInputNumber from '@/components/MInputNumber/index.vue';
+import MInputNumber from '../components/MInputNumber/MInputNumber.vue';
 import { ref } from 'vue';
 
 const meta = {

@@ -42,7 +42,7 @@ export default {
 <script setup lang="ts">
 import { ITreeEmits, ITreeProps, MTreeWithToggle } from '@/components/MTree/types';
 import { onBeforeMount, ref } from 'vue';
-import MIcon from '@/components/MIcon/index.vue';
+import MIcon from '../MIcon/MIcon.vue';
 
 const props = defineProps<ITreeProps>();
 const emits = defineEmits<ITreeEmits>();

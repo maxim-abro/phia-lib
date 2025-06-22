@@ -1,6 +1,6 @@
 import { beforeEach, it, expect, describe } from 'vitest';
 import { mount } from '@vue/test-utils';
-import MSelect from '@/components/MSelect/index.vue';
+import MSelect from '../components/MSelect/MSelect.vue';
 
 describe('MSelect', () => {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment

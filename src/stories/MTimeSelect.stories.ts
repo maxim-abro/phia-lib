@@ -1,11 +1,20 @@
 import type { Meta, StoryFn, StoryObj } from '@storybook/vue3';
-import MTimeSelect from '@/components/MTimeSelect/index.vue';
+import MTimeSelect from '../components/MTimeSelect/MTimeSelect.vue';
 import { ref } from 'vue';
 
 const meta = {
   title: 'Form/Time select',
   component: MTimeSelect,
   tags: ['autodocs'],
+  decorators: [
+    () => ({
+      template: `
+        <div style="height: 500px;">
+          <story />
+        </div>
+      `
+    })
+  ],
   argTypes: {
     disabled: {
       control: {

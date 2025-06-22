@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 import { mount } from '@vue/test-utils';
-import MInput from '@/components/MInput/index.vue';
+import MInput from '../components/MInput/MInput.vue';
 
 describe('MInput', () => {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment

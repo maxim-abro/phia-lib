@@ -16,7 +16,7 @@ export default {
 </script>
 
 <script setup lang="ts">
-import MSelect from '@/components/MSelect/index.vue';
+import MSelect from '../MSelect/MSelect.vue';
 import { ITimeSelectEmits, ITimeSelectProps } from '@/components/MTimeSelect/types';
 import { toMinutes, formatTime } from './helpers';
 import { computed } from 'vue';

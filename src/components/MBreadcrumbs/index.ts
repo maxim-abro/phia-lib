@@ -1,1 +1,1 @@
-export { default as MBreadcrumbs } from './index.vue';
+export { default as MBreadcrumbs } from './MBreadcrumbs.vue';

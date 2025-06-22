@@ -1,5 +1,5 @@
 import type { Meta, StoryFn, StoryObj } from '@storybook/vue3';
-import MCard from '@/components/MCard/index.vue';
+import MCard from '../components/MCard/MCard.vue';
 
 const meta = {
   title: 'Data/Card',

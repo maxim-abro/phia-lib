@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { mount } from '@vue/test-utils';
-import MTree from '@/components/MTree/index.vue';
+import MTree from '../components/MTree/MTree.vue';
 
 describe('MTree', () => {
   it('Renders correctly', () => {

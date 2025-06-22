@@ -1,1 +1,1 @@
-export { default as MTag } from './index.vue';
+export { default as MTag } from './MTag.vue';

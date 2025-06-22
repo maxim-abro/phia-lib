@@ -1,5 +1,5 @@
 import type { Meta, StoryFn, StoryObj } from '@storybook/vue3';
-import MTag from '@/components/MTag/index.vue';
+import MTag from '../components/MTag/MTag.vue';
 
 const meta = {
   title: 'Data/Tag',

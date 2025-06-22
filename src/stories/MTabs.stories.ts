@@ -1,5 +1,5 @@
 import type { Meta, StoryFn, StoryObj } from '@storybook/vue3';
-import MTabs from '@/components/MTabs/index.vue';
+import MTabs from '../components/MTabs/MTabs.vue';
 import { MTab } from '@/components';
 import { ref } from 'vue';
 

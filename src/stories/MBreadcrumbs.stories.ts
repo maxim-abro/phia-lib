@@ -1,5 +1,5 @@
 import type { Meta, StoryFn, StoryObj } from '@storybook/vue3';
-import MBreadcrumbs from '@/components/MBreadcrumbs/index.vue';
+import MBreadcrumbs from '@/components/MBreadcrumbs/MBreadcrumbs.vue';
 
 const meta = {
   title: 'Navigation/Breadcrumbs',

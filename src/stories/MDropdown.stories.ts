@@ -1,13 +1,22 @@
-import MDropdown from '@/components/MDropdown/index.vue';
+import MDropdown from '../components/MDropdown/MDropdown.vue';
 import MDropdownMenu from '@/components/MDropdown/MDropdownMenu.vue';
 import MDropdownMenuItem from '@/components/MDropdown/MDropdownMenuItem.vue';
-import MButton from '@/components/MButton/index.vue';
+import MButton from '../components/MButton/MButton.vue';
 import { Meta, StoryFn, StoryObj } from '@storybook/vue3';
 
 const meta: Meta<typeof MDropdown> = {
   title: 'Navigation/Dropdown',
   component: MDropdown,
   tags: ['autodocs'],
+  decorators: [
+    () => ({
+      template: `
+        <div style="height: 500px; display: flex; align-items: center; justify-content: center">
+          <story />
+        </div>
+      `
+    })
+  ],
   argTypes: {
     maxHeight: {
       control: {

@@ -1,4 +1,4 @@
-import MIcon from '@/components/MIcon/index.vue';
+import MIcon from '../components/MIcon/MIcon.vue';
 import { Meta, StoryFn, StoryObj } from '@storybook/vue3';
 
 const meta: Meta<typeof MIcon> = {

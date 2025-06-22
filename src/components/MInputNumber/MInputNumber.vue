@@ -33,7 +33,7 @@ export default {
 </script>
 
 <script setup lang="ts">
-import MIcon from '@/components/MIcon/index.vue';
+import MIcon from '../MIcon/MIcon.vue';
 import type { IInputNumberProps, IInputNumberEmits } from '@/components/MInputNumber/types';
 import { computed } from 'vue';
 

@@ -1,1 +1,1 @@
-export { default as MTimeSelect } from './index.vue';
+export { default as MTimeSelect } from './MTimeSelect.vue';

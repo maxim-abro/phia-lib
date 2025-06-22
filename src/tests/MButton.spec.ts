@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { mount } from '@vue/test-utils';
-import MButton from '../components/MButton/./index.vue';
+import MButton from '../components/MButton/MButton.vue';
 
 describe('MButton', () => {
   it('renders correctly', () => {

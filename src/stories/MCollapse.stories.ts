@@ -1,5 +1,5 @@
 import type { Meta, StoryFn, StoryObj } from '@storybook/vue3';
-import MCollapse from '@/components/MCollapse/index.vue';
+import MCollapse from '../components/MCollapse/MCollapse.vue';
 
 const meta = {
   title: 'Data/Collapse',

@@ -1,1 +1,1 @@
-export { default as MIcon } from './index.vue';
+export { default as MIcon } from './MIcon.vue';
