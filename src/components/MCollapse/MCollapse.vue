@@ -1,6 +1,6 @@
 <template>
   <div class="m-collapse">
-    <div class="m-activator">
+    <div class="m-collapse__activator">
       <slot
         name="default"
         v-bind="activatorProps"
@@ -109,9 +109,9 @@ const leave = (el: Element, done: () => void): void => {
   border-top: 1px solid rgb(var(--m-border-color));
   border-bottom: 1px solid rgb(var(--m-border-color));
   padding: 10px 0;
-}
-.m-activator {
-  margin-bottom: 8px;
-  cursor: pointer;
+  &__activator {
+    margin-bottom: 8px;
+    cursor: pointer;
+  }
 }
 </style>

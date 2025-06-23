@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { mount } from '@vue/test-utils';
-import { MDataTransfer } from '@/components';
+import MDataTransfer from '@/components/MDataTransfer/MDataTransfer.vue';
 
 describe('MDataTransfer', () => {
   it('renders correctly', async () => {
@@ -15,7 +15,9 @@ describe('MDataTransfer', () => {
       }
     });
 
-    const foundWrapper = wrapper.find('.transfer-panel__list__item__label>input[type="checkbox"]');
+    const foundWrapper = wrapper.find(
+      '.m-transfer-panel__list__item__label>input[type="checkbox"]'
+    );
 
     expect(foundWrapper.element._value).toBe('moscow_0');
   });

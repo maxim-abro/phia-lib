@@ -1,0 +1,1 @@
+{"version":3,"file":"types.d.ts","sourceRoot":"","sources":["../../../src/components/MBreadcrumbs/types.ts"],"names":[],"mappings":"AAAA,MAAM,WAAW,eAAe;IAC9B,KAAK,EAAE,MAAM,CAAC;IACd,QAAQ,CAAC,EAAE,OAAO,CAAC;IACnB,IAAI,EAAE,MAAM,CAAC;CACd;AAED,MAAM,WAAW,iBAAiB;IAChC,KAAK,EAAE,eAAe,EAAE,CAAC;IACzB,SAAS,CAAC,EAAE,MAAM,CAAC;CACpB"}

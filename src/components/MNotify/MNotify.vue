@@ -1,12 +1,12 @@
 <template>
   <div
     :id="id"
-    class="notify-container"
+    class="m-notify-container"
   >
-    <div class="notify-container__title">
+    <div class="m-notify-container__title">
       {{ title }}
     </div>
-    <div class="notify-container__body">
+    <div class="m-notify-container__body">
       {{ message }}
     </div>
   </div>
@@ -19,7 +19,7 @@ defineProps<INotifyProps>();
 </script>
 
 <style lang="scss">
-.notify-container {
+.m-notify-container {
   background: rgb(var(--m-white));
   padding: 10px;
   border-radius: 4px;

@@ -16,3 +16,4 @@ export * from './MDataTransfer';
 export * from './MTabs';
 export * from './MTab';
 export * from './MBreadcrumbs';
+export * from './MPagination';

@@ -1,2 +1,2 @@
-export { default as MDataTransfer } from './index.vue';
+export { default as MDataTransfer } from './MDataTransfer.vue';
 //# sourceMappingURL=index.d.ts.map

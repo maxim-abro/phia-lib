@@ -1,2 +1,2 @@
-export { default as MInput } from './index.vue';
+export { default as MInput } from './MInput.vue';
 //# sourceMappingURL=index.d.ts.map

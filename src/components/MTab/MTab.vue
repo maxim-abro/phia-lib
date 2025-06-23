@@ -1,7 +1,7 @@
 <template>
   <div
     v-show="isActive"
-    class="tabs__content__item"
+    class="m-tabs__content__item"
   >
     <slot />
   </div>
@@ -23,7 +23,7 @@ const isActive = computed(() => props.index === props.activeIndex);
 </script>
 
 <style lang="scss">
-.tabs {
+.m-tabs {
   &__content {
     &__item {
       padding: 16px;

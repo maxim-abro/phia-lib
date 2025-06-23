@@ -3,7 +3,7 @@ import { mount } from '@vue/test-utils';
 import { MTimeSelect } from '@/components';
 
 describe('MTimeSelect', () => {
-  it('renders correctly', () => {
+  it('renders correctly', async () => {
     const wrapper = mount(MTimeSelect, {
       props: {
         modelValue: '10:00',
@@ -13,10 +13,10 @@ describe('MTimeSelect', () => {
       }
     });
 
-    const select = wrapper.find('.select');
+    const select = wrapper.findComponent('.m-select');
 
     expect(wrapper.text()).toContain('10:00');
-    select.trigger('click');
+    await select.trigger('click');
     expect(wrapper.text()).toContain('10:15');
     expect(wrapper.text()).toContain('10:30');
     expect(wrapper.text()).toContain('18:00');
