@@ -1,7 +1,7 @@
 <template>
   <div class="m-pagination">
     <m-button
-      :disabled="isFirstPage"
+      :disabled="isFirstPage || disabled"
       @click="decrementPage"
     >
       <m-icon icon="mdi-chevron-left" />
@@ -9,6 +9,7 @@
 
     <m-button
       :type="isActivePage(1) ? 'primary' : 'default'"
+      :disabled="disabled"
       @click="choosePage(1)"
     >
       1
@@ -24,6 +25,7 @@
     <m-button
       v-for="item of computeActivePages"
       :key="item"
+      :disabled="disabled"
       :type="isActivePage(item) ? 'primary' : 'default'"
       @click="choosePage(item)"
     >
@@ -40,17 +42,17 @@
     <m-button
       v-if="pages > 1"
       :type="isActivePage(pages) ? 'primary' : 'default'"
+      :disabled="disabled"
       @click="choosePage(pages)"
     >
       {{ pages }}
     </m-button>
     <m-button
-      :disabled="isLastPage"
+      :disabled="isLastPage || disabled"
       @click="incrementPage"
     >
       <m-icon icon="mdi-chevron-right" />
     </m-button>
-    {{ computeActivePages }}
   </div>
 </template>
 

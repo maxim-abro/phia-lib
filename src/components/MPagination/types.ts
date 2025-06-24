@@ -3,6 +3,7 @@ export interface IPaginationProps {
   pages: number;
   disabled?: boolean;
   visibleLength?: number;
+  // todo
   arrowsOnly?: boolean;
 }
 
