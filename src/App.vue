@@ -1,5 +1,12 @@
 <template>
   <div style="margin-bottom: 300px">
+    <m-cascader
+      v-model="cascaderItem"
+      :items="dataTree"
+      placeholder="choose item"
+    />
+  </div>
+  <div style="margin-bottom: 300px">
     <m-button @click="isDialogOpen = true"> open dialog {{ isDialogOpen }} </m-button>
 
     <m-dialog v-model="isDialogOpen">
@@ -494,7 +501,8 @@ import {
   MTab,
   MBreadcrumbs,
   MPagination,
-  MDialog
+  MDialog,
+  MCascader
 } from '@/components';
 import useNotify from '@/components/MNotify/useNotify';
 import type { INotifyProps } from '@/components/MNotify/types';
@@ -506,6 +514,7 @@ const propsNotify: INotifyProps = {
   title: 'title',
   message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, harum?'
 };
+const cascaderItem = ref(null);
 const isDialogOpen = ref(false);
 const page = ref(1);
 const testVal = ref('');
@@ -787,12 +796,15 @@ const valuesSelect = ref([
 const dataTree: IMTree[] = [
   {
     label: 'Level one 1',
+    id: '1',
     children: [
       {
         label: 'Level two 1-1',
+        id: '1-1',
         children: [
           {
-            label: 'Level three 1-1-1'
+            label: 'Level three 1-1-1',
+            id: '1-1-1'
           }
         ]
       }
@@ -800,20 +812,25 @@ const dataTree: IMTree[] = [
   },
   {
     label: 'Level one 2',
+    id: '2',
     children: [
       {
         label: 'Level two 2-1',
+        id: '2-1',
         children: [
           {
-            label: 'Level three 2-1-1'
+            label: 'Level three 2-1-1',
+            id: '2-1-1'
           }
         ]
       },
       {
         label: 'Level two 2-2',
+        id: '2-2',
         children: [
           {
-            label: 'Level three 2-2-1'
+            label: 'Level three 2-2-1',
+            id: '2-2-1'
           }
         ]
       }
@@ -821,20 +838,25 @@ const dataTree: IMTree[] = [
   },
   {
     label: 'Level one 3',
+    id: '3',
     children: [
       {
         label: 'Level two 3-1',
+        id: '3-1',
         children: [
           {
-            label: 'Level three 3-1-1'
+            label: 'Level three 3-1-1',
+            id: '3-1-1'
           }
         ]
       },
       {
         label: 'Level two 3-2',
+        id: '3-2',
         children: [
           {
-            label: 'Level three 3-2-1'
+            label: 'Level three 3-2-1',
+            id: '3-2-1'
           }
         ]
       }

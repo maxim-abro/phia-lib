@@ -18,3 +18,4 @@ export * from './MTab';
 export * from './MBreadcrumbs';
 export * from './MPagination';
 export * from './MDialog';
+export * from './MCascader';
