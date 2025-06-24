@@ -1,5 +1,5 @@
 export interface IMTree {
-  id?: number | string;
+  id: number | string;
   label: string;
   children?: IMTree[];
 }

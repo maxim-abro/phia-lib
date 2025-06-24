@@ -5,6 +5,7 @@
   "type": "module",
   "author": "Abrosimov Maxim <maxim.abro@yandex.ru>",
   "description": "Vue 3 ui library",
+  "keywords": ["vue 3", "component", "library"],
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
