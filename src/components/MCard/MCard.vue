@@ -40,6 +40,7 @@ defineSlots<ICardSlots>();
   border-radius: 4px;
   border: 1px solid rgb(var(--m-border-color));
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.12);
+  background: rgb(var(--m-white));
   &__footer,
   &__body,
   &__header {
