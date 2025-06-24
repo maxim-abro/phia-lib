@@ -1,5 +1,15 @@
 <template>
   <div style="margin-bottom: 300px">
+    <m-button @click="isDialogOpen = true"> open dialog {{ isDialogOpen }} </m-button>
+
+    <m-dialog v-model="isDialogOpen">
+      <m-card style="height: 100%">
+        <template #header> Header </template>
+        abracadabra
+      </m-card>
+    </m-dialog>
+  </div>
+  <div style="margin-bottom: 300px">
     <m-pagination
       v-model="page"
       :pages="30"
@@ -483,7 +493,8 @@ import {
   MTabs,
   MTab,
   MBreadcrumbs,
-  MPagination
+  MPagination,
+  MDialog
 } from '@/components';
 import useNotify from '@/components/MNotify/useNotify';
 import type { INotifyProps } from '@/components/MNotify/types';
@@ -495,6 +506,7 @@ const propsNotify: INotifyProps = {
   title: 'title',
   message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, harum?'
 };
+const isDialogOpen = ref(false);
 const page = ref(1);
 const testVal = ref('');
 const testValNumber = ref(0);
