@@ -1,11 +1,10 @@
 <template>
-  <!--  {{treeWithToggle}}-->
   <div
     v-for="(item, _idx) of treeWithToggle"
     :key="_idx"
   >
     <div
-      class="tree-item"
+      class="m-tree-item"
       @click="onClick(!!item.children?.length, item.id || item.label, _idx)"
     >
       {{ item.label }}
@@ -13,7 +12,7 @@
       <MIcon
         v-if="item.children?.length"
         icon="mdi-chevron-right"
-        class="tree-item__icon"
+        class="m-tree-item__icon"
         :class="{
           opened: item.collapse
         }"
@@ -73,7 +72,7 @@ onBeforeMount(() => {
 .child {
   padding-left: 24px;
 }
-.tree-item {
+.m-tree-item {
   &:hover {
     cursor: pointer;
     background: rgb(var(--m-primary-light));

@@ -1,8 +1,8 @@
 <template>
-  <div class="transfer-panel">
-    <div class="transfer-panel__header">
-      <div class="transfer-panel__header__left">
-        <label class="transfer-panel__header__left__label">
+  <div class="m-transfer-panel">
+    <div class="m-transfer-panel__header">
+      <div class="m-transfer-panel__header__left">
+        <label class="m-transfer-panel__header__left__label">
           <input
             type="checkbox"
             :checked="isAllItemsChose"
@@ -12,24 +12,24 @@
           {{ titlePanel }}
         </label>
       </div>
-      <div class="transfer-panel__header__right">{{ activeItemsLength }}/{{ itemsLength }}</div>
+      <div class="m-transfer-panel__header__right">{{ activeItemsLength }}/{{ itemsLength }}</div>
     </div>
-    <div class="transfer-panel__input">
+    <div class="m-transfer-panel__input">
       <m-input
         v-if="filterable"
         v-model="filterValue"
-        class="transfer-panel__input__element"
+        class="m-transfer-panel__input__element"
         clearable
         :placeholder="filterPlaceholder"
       />
     </div>
-    <div class="transfer-panel__list">
+    <div class="m-transfer-panel__list">
       <div
         v-for="(item, _idx) of filteredItems"
         :key="_idx"
-        class="transfer-panel__list__item"
+        class="m-transfer-panel__list__item"
       >
-        <label class="transfer-panel__list__item__label">
+        <label class="m-transfer-panel__list__item__label">
           <input
             v-model="chosenItems"
             :value="item[itemValue]"
@@ -98,7 +98,7 @@ function toggleAllItems(): void {
 </script>
 
 <style lang="scss">
-.transfer-panel {
+.m-transfer-panel {
   width: 300px;
   border-radius: 4px;
   border: 1px solid rgb(var(--m-border-transfer));

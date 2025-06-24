@@ -1,5 +1,12 @@
 <template>
   <div style="margin-bottom: 300px">
+    <m-pagination
+      v-model="page"
+      :pages="30"
+      :visible-length="10"
+    />
+  </div>
+  <div style="margin-bottom: 300px">
     <m-breadcrumbs
       :items="bc"
       separator="//"
@@ -475,7 +482,8 @@ import {
   MTimeSelect,
   MTabs,
   MTab,
-  MBreadcrumbs
+  MBreadcrumbs,
+  MPagination
 } from '@/components';
 import useNotify from '@/components/MNotify/useNotify';
 import type { INotifyProps } from '@/components/MNotify/types';
@@ -487,6 +495,7 @@ const propsNotify: INotifyProps = {
   title: 'title',
   message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, harum?'
 };
+const page = ref(1);
 const testVal = ref('');
 const testValNumber = ref(0);
 const notify = useNotify();

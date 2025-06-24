@@ -1,17 +1,17 @@
 <template>
-  <div class="tabs">
-    <div class="tabs__header">
+  <div class="m-tabs">
+    <div class="m-tabs__header">
       <div
         v-for="(tab, _idx) of tabTitles"
         :key="_idx"
-        class="tabs__header__item"
+        class="m-tabs__header__item"
         :class="{ active: _idx === activeIndex }"
         @click="setActiveTab(_idx)"
       >
         {{ tab }}
       </div>
     </div>
-    <div class="tabs__content">
+    <div class="m-tabs__content">
       <slot :activeIndex="activeIndex" />
     </div>
   </div>
@@ -60,7 +60,7 @@ watch(() => slots.default?.(), updateTabTitles);
 </script>
 
 <style lang="scss">
-.tabs {
+.m-tabs {
   &__header {
     display: flex;
     background: rgb(var(--m-gray-color));

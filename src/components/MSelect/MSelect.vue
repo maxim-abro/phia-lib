@@ -1,19 +1,19 @@
 <template>
-  <div class="select">
+  <div class="m-select">
     <div
       v-click-outside="closeMenu"
-      class="select__activator"
+      class="m-select__activator"
       :class="{
         active: openMenu,
         disabled: disabled
       }"
       @click="toggleMenu"
     >
-      <span class="select__activator__text">
+      <span class="m-select__activator__text">
         {{ chosenTitle }}
       </span>
       <span
-        class="select__activator__icon"
+        class="m-select__activator__icon"
         :class="{
           rotate: openMenu
         }"
@@ -24,12 +24,12 @@
 
     <div
       v-show="openMenu"
-      class="select__menu"
+      class="m-select__menu"
     >
       <div
         v-for="(item, _idx) of values"
         :key="_idx"
-        class="select__menu__item"
+        class="m-select__menu__item"
         :class="{
           active: valueKey ? item[valueKey] === chosenValue : item === chosenValue
         }"
@@ -105,7 +105,7 @@ function chooseItem(value: string | number | boolean): void {
 
 <style lang="scss">
 @import 'src/assets/scss/_mixins';
-.select {
+.m-select {
   position: relative;
   color: rgb(var(--m-text-color));
   &__activator {

@@ -1,5 +1,5 @@
 <template>
-  <div class="transfer">
+  <div class="m-transfer">
     <MDataTransferPanel
       v-model:active-items="leftItems"
       :filter-placeholder="props.filterPlaceholder"
@@ -10,10 +10,10 @@
       :item-title="itemTitle"
       :items="filteredItems"
     />
-    <div class="transfer__buttons">
+    <div class="m-transfer__buttons">
       <m-button
         type="primary"
-        class="transfer__buttons__button"
+        class="m-transfer__buttons__button"
         :disabled="!isHasRightItems"
         @click="removeItems"
       >
@@ -22,7 +22,7 @@
       </m-button>
       <m-button
         type="primary"
-        class="transfer__buttons__button"
+        class="m-transfer__buttons__button"
         :disabled="!isHasLeftItems"
         @click="addItems"
       >
@@ -91,7 +91,7 @@ function removeItems(): void {
 </script>
 
 <style lang="scss">
-.transfer {
+.m-transfer {
   display: flex;
   align-items: center;
   width: max-content;
